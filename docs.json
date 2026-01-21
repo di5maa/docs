@@ -7,7 +7,6 @@
     "light": "#07C983",
     "dark": "#15803D"
   },
-  "favicon": "/favicon.svg",
   "navigation": {
     "global": {
       "anchors": [
@@ -179,14 +178,16 @@
       }
     ]
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
+  "logo": "/logo/long_local_canada_wht-copy-2048x467.png",
   "description": "Use this portal to find tutorials, user documentation, features roadmap and other information relevant to various sections of the Local Pass platform.",
   "footer": {
     "socials": {
       "website": "https://localpass.ca"
+    }
+  },
+  "background": {
+    "color": {
+      "light": "#ffffff"
     }
   }
 }
