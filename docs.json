@@ -23,6 +23,16 @@
         "tab": "Customers",
         "groups": [
           {
+            "group": "Referral",
+            "pages": []
+          },
+          {
+            "group": "Payments",
+            "pages": [
+              "customers/payments/local-coins"
+            ]
+          },
+          {
             "group": "Getting Started",
             "pages": [
               "customers/intro",
@@ -47,11 +57,34 @@
         ]
       },
       {
-        "tab": "Merchants & Restaurants",
-        "groups": [
+        "tab": "Agrifood Merchants",
+        "pages": [
+          "agrifood-merchants/store-settings",
+          "agrifood-merchants/locations",
+          {
+            "group": "Payments",
+            "pages": []
+          },
           {
             "group": "Order Fulfillment",
-            "pages": []
+            "pages": [
+              "agrifood-merchants/order-fulfillment/dashboard",
+              "agrifood-merchants/order-fulfillment/order-picklist",
+              {
+                "group": "Pickup",
+                "pages": [
+                  "agrifood-merchants/order-fulfillment/pickup/configuration",
+                  "agrifood-merchants/order-fulfillment/delivery"
+                ]
+              },
+              {
+                "group": "Delivery",
+                "pages": [
+                  "agrifood-merchants/order-fulfillment/delivery/configuration",
+                  "agrifood-merchants/order-fulfillment/pickup"
+                ]
+              }
+            ]
           },
           {
             "group": "Inventory Management",
@@ -80,6 +113,18 @@
         "tab": "Drivers",
         "groups": [
           {
+            "group": "Getting Started",
+            "pages": [
+              "drivers/getting-started/account-setup",
+              "drivers/getting-started/contract-agreement-and-terms",
+              "drivers/getting-started"
+            ]
+          },
+          {
+            "group": "Payments",
+            "pages": []
+          },
+          {
             "group": "Delivery Drivers",
             "pages": [
               "drivers/delivery/signup",
@@ -106,7 +151,25 @@
         "tab": "Restaurants",
         "groups": [
           {
-            "group": "Restaurants",
+            "group": "Order Fulfillment",
+            "pages": [
+              {
+                "group": "Own Delivery",
+                "pages": [
+                  "restaurants/order-fulfillment/own-delivery"
+                ]
+              },
+              "restaurants/order-fulfillment/pickup",
+              "restaurants/order-fulfillment/delivery",
+              "restaurants/order-fulfillment/configuration"
+            ]
+          },
+          {
+            "group": "Payments",
+            "pages": []
+          },
+          {
+            "group": "Menu",
             "pages": [
               "merchants/restaurants/menu-management",
               "merchants/restaurants/orders"

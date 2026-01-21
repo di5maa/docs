@@ -1,0 +1,130 @@
+---
+title: "Order Fulfillment Dashboard"
+description: "The Order Fulfillment Dashboard is the central hub for managing incoming orders. It provides a real-time view of order status, financial details, and logistics, while offering direct tools to communicate with customers and manage fulfillment."
+---
+
+## Dashboard Layout
+
+The dashboard is divided into three main areas to help you process orders efficiently:
+
+1. **Header & Quick Stats:** Immediate visibility on order status and totals.
+2. **Left Column (Details):** Customer notes, item lists, payment breakdowns, and fulfillment timeline.
+3. **Right Column (Actions):** Management tools, customer contact details, and driver information.
+
+## 1. Quick Stats & Header
+
+At the top of the panel, you will find high-level metrics for the specific order.
+
+- **Order ID & Status:** Unique reference number (e.g., `#12345`) and the current status pill (e.g., `PENDING`, `COMPLETED`).
+- **Timeline:** Shows when the order was placed relative to now.
+- **Total Value:** The final order total including all fees and tips.
+- **Fulfillment Type:** Indicates if the order is for **Delivery** or **Pickup**.
+- **Distance/Time:** \* _For Delivery:_ Shows the distance to the customer (e.g., "3.5 km").
+  - _For Pickup:_ Shows how long ago the order was placed (e.g., "15 min ago").
+
+### Printing Invoices
+
+<Info>
+  **Print Invoice:** Click the `Print Invoice` button in the top right corner. This generates a professional PDF invoice including item details, tax breakdowns, and customer information, compatible with thermal printers or standard A4 printers. 
+</Info>
+
+## 2. Order Processing Pipeline
+
+The **Timeline** section visually tracks the lifecycle of an order.
+
+<Steps>
+  <Step title="Placed" stepNumber={1}>
+    The customer has submitted the order. Payment has been processed. 
+  </Step>
+  <Step title="Preparing" stepNumber={2}>
+    The vendor has accepted the order and is preparing the items.
+  </Step>
+  <Step title="Packaged" stepNumber={3}>
+    Order has been packaged and ready for pickup or delivery.
+  </Step>
+  <Step title="Ready for pickup">
+    Order is ready for pickup
+  </Step>
+  <Step title="Out for delivery">
+    Order has been sent out for delivery.
+  </Step>
+  <Step title="Delivered">
+    Order has been delivered and marked complete.
+  </Step>
+</Steps>
+
+### Updating Order Status
+
+Use the **Management** card in the right column to progress the order:
+
+1. Click **Update Status**.
+2. Select the new status (e.g., "Ready for Pickup").
+3. The timeline will update automatically to reflect the change.
+
+### The Picklist
+
+Click the **Picklist** button to open a dedicated view for picking items from your inventory. This is useful for large grocery or retail orders where checking off items ensures accuracy.
+
+## 3. Order Details
+
+### Customer Notes
+
+<Info>
+   **Attention Required:** If the customer has left a note (e.g., "Leave at front door", "Allergies"), it will appear in a prominent yellow box at the top of the details column. Always review this first. 
+</Info>
+
+### Logistics Info
+
+For delivery orders, a Logistics card displays:
+
+- **Scheduled Time:** The expected delivery or pickup window.
+- **Address:** The delivery destination.
+- **Edit Date:** You can modify the expected delivery date if delays occur by clicking the **"Edit"** button.
+
+### Ordered Items
+
+A list of all items in the order.
+
+- **Tap an item** to view detailed options (e.g., selected toppings, variants, or specific unit measurements).
+- **Images:** Thumbnail images help quick visual identification.
+
+### Payment Summary
+
+A complete breakdown of the financial transaction:
+
+- Subtotal
+- Delivery Fees (or "Free")
+- Driver Tips
+- Taxes & Platform Fees
+- **Discounts:** Promotional discounts are highlighted in green.
+
+## 4. Customer CRM & Support
+
+The right-hand column provides tools to manage customer relationships. At this time, we only allow direct messaging without advanced marketing features like email marketing, push notifications, etc.
+
+### Contact Options
+
+You can contact the customer directly from the dashboard:
+
+| Action      | Icon | Function                                                                                                                      |
+| :---------- | :--- | :---------------------------------------------------------------------------------------------------------------------------- |
+| **Call**    | 📞   | Launches your device's phone dialer with the customer's number.                                                               |
+| **Message** | 💬   | Opens the internal **Chat System**. If you haven't messaged this customer before, it automatically starts a new conversation. |
+| **Email**   | ✉️   | Opens your default email client with the customer's email address pre-filled.                                                 |
+
+### Driver Assignment
+
+If a driver has been assigned to the order by the system, their details will appear in the **Delivery Driver** card.
+
+- **Name:** Name of the courier.
+- **Status:** Typically shows "Assigned" once a driver accepts the job.
+
+## Common Questions
+
+**Why don't I see the "Update Status" or "Picklist" buttons?**
+
+These features are hidden for **Restaurant** accounts because they typically use a separate Kitchen Display System (KDS) flow. If you are a retail or grocery vendor and cannot see these buttons, please contact support to verify your account type.
+
+**Can I print invoices for thermal printers?**
+
+Yes, the **Print Invoice** feature generates a responsive PDF that scales well for both standard office printers and smaller receipt (thermal) printers.
