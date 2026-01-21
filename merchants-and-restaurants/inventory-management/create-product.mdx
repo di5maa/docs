@@ -1,0 +1,129 @@
+---
+title: "Creating & Managing Products"
+description: "This guide details how Agri-food Vendors can add new items to their inventory or edit existing ones using the Product Settings interface. This page allows for detailed specification of pricing, categorization, logistics, and media."
+---
+
+## Page Overview
+
+The **Create Product** page is designed to handle both retail and wholesale product definitions. It includes smart features like AI-generated descriptions and dynamic bundle configurations.
+
+**Status Indicators:**
+
+- **Draft:** The product is saved in your inventory but **not visible** to customers in the marketplace.
+- **Published:** The product is live and immediately purchasable.
+
+<Info>
+  **Note:** Editing a product that is already "Published" will keep it live. If you wish to hide a product without deleting it, you must archive it or change its status to Draft.
+</Info>
+
+## 1. Basic Information
+
+### Product Name
+
+Enter the display name of the product.
+
+- **Format:** Capitalize the first letter of every word (e.g., _"Organic Gala Apples"_).
+- **Requirement:** Mandatory field.
+
+### Description & AI Assistant
+
+A detailed description of the produce, origin, or taste profile.
+
+{% hint style="success" %} **AI Feature:** Tap the **"Ask Kyla AI to generate description"** button. This opens the AI Assistant which analyzes your product name and automatically generates a professional, sales-oriented description. {% endhint %}
+
+## 2. Pricing & Units
+
+This section defines how the product is sold and measuring units.
+
+### Price Configuration
+
+- **Regular Price (\$):** The standard selling price per unit.
+- **Promotion Price (\$):** (Optional) A discounted price. If set, a "On Sale" badge will typically appear on the listing.
+
+### Unit Measurement
+
+Define the quantity per unit sold (e.g., 500g, 1kg, 1lb).
+
+- **Standard Units:** Select from the predefined dropdown options (e.g., kg, lb, g, oz).
+- **Custom Units:** Toggle the **"Custom Order"** switch to define specific measurements not listed in the standard dropdown.
+  - _Example:_ "per crate", "per bunch", "per box".
+  - _Input Required:_ `Unit Quantity` (e.g., 1) + `Unit Measurement` (e.g., Box).
+
+### Sales Model (Wholesale vs. Retail)
+
+Toggle the specific sales channels for this item using the switches provided:
+
+1. **Retail:** Available to individual consumers.
+2. **Wholesale:** Available to B2B buyers (restaurants, bulk purchasers).
+
+{% hint style="info" %} **Hybrid Selling:** You can enable **Both** options simultaneously if you sell the same SKU to both individual customers and business accounts. {% endhint %}
+
+## 3. Categorization & Search
+
+Proper categorization ensures customers find your products in the marketplace.
+
+### Critical Categorization Rules
+
+The system uses a strict referencing system for categories to ensure search indexing works correctly.
+
+1. **Selection Required:** You typically cannot type a free-text category. You must select from the validated list provided by the platform.
+2. **Backend Indexing:** When you publish a product, the system runs an update on the **Marketplace Category Index**. This ensures your product appears immediately in search filters.
+
+- **Category:** Broad classification (e.g., "Fruits").
+- **Subcategory:** Specific classification (e.g., "Apples").
+
+{% hint style="warning" %} **Missing a Category?** If the dropdown does not contain the specific subcategory you need, click the **"Don't see your product category?"** link. This opens a request form to add a new validated subcategory to the system. {% endhint %}
+
+- **Dietary Labels:** Select all that apply (e.g., Organic, Gluten-Free, Vegan). These appear as visual badges on the product card.
+- **Search Keywords:** Add specific tags to improve search result visibility (e.g., "Red", "Sweet", "Crunchy").
+  - _How to use:_ Type a keyword in the text field and tap the **"+" (check)** icon to add it. Tap the **"X"** on a tag to remove it.
+
+## 4. Media
+
+Upload high-quality images of your product to attract customers.
+
+- **Upload Photo:** Buttons are provided to select an image from your device gallery.
+- **Supported Formats:** JPEG, JPG.
+- **Recommendation:** Use high-resolution, square (1:1) images for the best display layout.
+
+<Info>
+  **Fallback Image:** If you do not upload an image, the system will automatically assign a default "Food Placeholder" image to your product listing. 
+</Info>
+
+## 5. Inventory & Logistics
+
+### Stock Management
+
+- **Stock Level:** Enter the current available quantity.
+- **SKU:** (Stock Keeping Unit) Enter your internal reference code for inventory tracking.
+
+### Pickup Locations
+
+Select the specific service locations where this product is available for pickup.
+
+- **Multi-Location Support:** You can add or remove multiple locations based on where the stock is physically held.
+- **Default:** It will often default to your primary registered address.
+
+## 6. Advanced Options
+
+### Product Bundles
+
+Toggle the **"Product Bundle"** switch if this item consists of multiple other products (e.g., "Fruit Basket", "Sampler Pack").
+
+- **Action:** When enabled, a list of your existing products will appear. Select the specific items that are included in this bundle.
+
+### Cross-Selling
+
+Toggle **"Cross-selling item"** to mark this product as an add-on suggestion. These items are often recommended to customers during checkout when they purchase related items.
+
+## 7. Saving & Publishing
+
+Once the form is filled, use the action buttons at the bottom of the page.
+
+{% hint style="danger" %} **Mandatory Requirement:** You **must** check the box "I have reviewed and agree to the Local Pass Terms & Conditions" before the Save or Publish buttons will function. The system prevents any database writes until this is checked. {% endhint %}
+
+| Button      | Action                             | Outcome                                                                    |
+| :---------- | :--------------------------------- | :------------------------------------------------------------------------- |
+| **Cancel**  | Discards changes                   | Returns to the Inventory Management screen without saving.                 |
+| **Save**    | Writes to Database                 | Saves the product as a **Draft**. It will not be visible to customers yet. |
+| **Publish** | Writes to Database + Updates Index | Saves the product and sets status to **Published**.                        |

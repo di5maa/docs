@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Your App Name",
+  "name": "Local Pass",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
@@ -9,6 +9,15 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Support",
+          "icon": "envelope",
+          "href": "mailto:support@yourapp.com"
+        }
+      ]
+    },
     "tabs": [
       {
         "tab": "Customers",
@@ -41,18 +50,21 @@
         "tab": "Merchants & Restaurants",
         "groups": [
           {
+            "group": "Order Fulfillment",
+            "pages": []
+          },
+          {
+            "group": "Inventory Management",
+            "pages": [
+              "merchants-and-restaurants/inventory-management/create-product"
+            ]
+          },
+          {
             "group": "Agri-Food Merchants",
             "pages": [
               "merchants/agri/onboarding",
               "merchants/agri/product-listing",
               "merchants/agri/guides"
-            ]
-          },
-          {
-            "group": "Restaurants",
-            "pages": [
-              "merchants/restaurants/menu-management",
-              "merchants/restaurants/orders"
             ]
           },
           {
@@ -89,20 +101,29 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "Restaurants",
+        "groups": [
+          {
+            "group": "Restaurants",
+            "pages": [
+              "merchants/restaurants/menu-management",
+              "merchants/restaurants/orders"
+            ]
+          }
+        ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Support",
-          "href": "mailto:support@yourapp.com",
-          "icon": "envelope"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
+  },
+  "description": "Use this portal to find tutorials, user documentation, features roadmap and other information relevant to various sections of the Local Pass platform.",
+  "footer": {
+    "socials": {
+      "website": "https://localpass.ca"
+    }
   }
 }
