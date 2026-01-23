@@ -1,3 +1,90 @@
 ---
 title: "Menu Management"
+description: "The Menu page is the control center for your restaurant's digital presence. Use this interface to arrange how items appear to customers, manage inventory status in real-time, and perform bulk updates to save time during service."
 ---
+
+## Menu Categories
+
+Your menu is organized into horizontal categories (e.g., "Starters", "Mains", "Drinks") at the top of the page. This navigation bar determines what products are displayed in the list below.
+
+### Navigation & Status
+
+- **Active Category:** The category currently being viewed is highlighted in **green** (or your primary theme color). Use this visual cue to know exactly which section of the menu you are editing.
+- **Item Count:** Each category pill displays a small number indicating how many items are inside.
+- **Scrolling:** If you have many categories, you can swipe or scroll horizontally to reveal them all.
+
+### Creating a Category
+
+1. Click the **"Add category"** button at the far right of the category bar.
+2. A dialog will open asking for the **Category Name** and a short **Description**.
+3. Click **Save** to create the new section.
+
+<Tip>
+  **First Time Setup:** If you see a yellow warning banner stating _"Before you create any products..."_, it means you have no categories yet. You must create at least one category to start adding items. 
+</Tip>
+
+## Managing Products
+
+The main area of the screen displays the product list for the selected category.
+
+### Visual Status Indicators
+
+The interface uses color and text styling to give you an instant overview of item status:
+
+- **Standard Text:** The item is **Published** and available for order.
+- **Red Strikethrough:** The item is marked as **Out-of-stock**. Customers cannot order this item.
+- **<kbd>[soon-to-go] Badge:</kbd>** A green text indicator appears above items marked for quick sale (usually for end-of-day inventory clearance).
+
+### Adding & Editing
+
+- **Add Item:** Click the large **"Add item"** button at the bottom of the list to open the full configuration form. For details on filling out the product form, refer to the [<kbd>Menu Item Configuration</kbd>](/restaurants/menu/add-new-item)<kbd> guide. </kbd>
+- **Quick Edit:** Tap any product card to open the quick-edit dialog for immediate changes to price or description.
+- **Options Menu:** Tap the **three dots** icon on any product card to access advanced options or delete the item.
+
+### Reordering Items (Drag & Drop)
+
+You can customize the sequence of items to prioritize high-margin dishes or specials.
+
+1. **Long press and hold** on a product card.
+2. **Drag** it to a new position in the list and release.
+3. **Save Changes:** A **"Save"** button will appear in the category header as soon as you change the order. You **must click Save** to publish the new arrangement to the customer app.
+
+<Warning>
+  **Unsaved Changes:** If you leave the category or page without clicking "Save" after reordering, the items will revert to their previous order. 
+</Warning>
+
+## Bulk Actions
+
+The Bulk Action Mode allows you to apply changes to multiple products simultaneously, saving you from editing items one by one.
+
+### Using Bulk Mode
+
+1. **Select:** Tap the **checkbox** icon on the left side of any product card. The interface will switch to selection mode.
+2. **Multi-Select:** Continue tapping checkboxes on other products to add them to your group.
+3. **Deselect:** Tap a checked box again to remove it from the selection.
+
+### Available Bulk Tools
+
+Once items are selected, a floating action bar appears at the bottom of the screen with three powerful tools:
+
+| Tool               | Function                                                                                                                                                                                                                               |
+| :----------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Update Status**  | Instantly change the visibility of all selected items.   **Options:**   • **Published:** Visible and orderable.   • **Draft:** Hidden from customers, saved for later.   • **Archive:** Removed from active lists but kept in history. |
+| **Set Discount %** | Apply a percentage discount (e.g., 20%) to all selected items.   _Note: This automatically calculates the "Promotion Price" based on the regular price for every selected item._                                                       |
+| **Soon-to-Go**     | Marks selected items with a "Soon-to-Go" badge. Use this for items you want to clear out quickly before they expire.                                                                                                                   |
+
+## QR Menu
+
+You can instantly generate a printable QR code that links directly to your digital menu.
+
+1. Click the **"QR Menu"** button located at the top of the page, next to the page title.
+2. A bottom sheet will slide up displaying your unique QR code.
+3. You can show this to customers for scanning or take a screenshot to print it for tables.
+
+## Troubleshooting
+
+| Issue                                   | Solution                                                                                                                                                                      |
+| :-------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **"Before you create any products..."** | You see a yellow warning banner. This means you have no categories yet. You must create at least one category before you can add products.                                    |
+| **Changes not showing**                 | If you reordered items but the customer app hasn't changed, ensure you clicked the **"Save"** button that appeared after dragging the items.                                  |
+| **Item shows strikethrough**            | If an item name has a line through it and appears red/grey, it is currently marked as **Out-of-stock**. Use the bulk update or individual edit to set it back to "Published". |

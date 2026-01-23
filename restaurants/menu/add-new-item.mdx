@@ -1,0 +1,100 @@
+---
+title: "Add new menu item"
+description: "This guide details how to add new items to your menu or edit existing ones using the Product Settings interface in the Vendor Dashboard. Use this tool to keep your menu fresh, update prices, and manage out-of-stock items."
+---
+
+<Info>
+  Changes made here update your live menu immediately after clicking **Publish**. Ensure all details are correct before saving.
+</Info>
+
+## Basic Information
+
+When you open the product editor (Add or Edit mode), start by configuring the core identity of your item.
+
+### Core Details
+
+- **Name:** The display name of the item as it appears to customers. Use clear, capitalized names (e.g., "Double Cheeseburger").
+- **Description:** A detailed explanation of the dish, ingredients, and potential allergens. 
+
+  <Tip>
+    **Use AI for Speed**\
+    Click the **"Ask Kyla to generate description"** button (Sparkles icon) next to the description field. Our AI will analyze your product name and generate a mouth-watering description automatically. 
+  </Tip>
+- **Preparation Time:** An approximate time (in minutes) it takes to prepare this specific item. This helps calculate accurate delivery/pickup estimates.
+
+### Pricing Strategies
+
+Manage how your product is priced and displayed.
+
+1. **Regular Price:** The standard selling price.
+2. **Promotion Price (Optional):** If you enter a value here, the system will:
+   - Cross out the regular price.
+   - Display the promotion price.
+   - Show the item as "On Sale."
+
+     <Info>
+       **Note, **promotion price is a separate value from a standalone **Promotion** that you run at the store level. 
+     </Info>
+
+## Media & Gallery
+
+Visuals are the #1 driver for menu conversion. You can manage your product imagery directly from this form.
+
+- **Upload Photo:** Upload a new image directly from your device.
+- **Gallery:** Select from images you have previously uploaded to your media library.
+
+<Warning>
+  **File Requirements:** The system supports **JPEG** and **JPG** formats. Ensure your images are high-quality and centered, as they may be cropped for different device sizes. 
+</Warning>
+
+## Product Visibility & Flags
+
+Toggle specific attributes to change how the product is displayed or recommended in the app.
+
+| Setting                | Function                          | Impact on App                                                                                 |
+| :--------------------- | :-------------------------------- | :-------------------------------------------------------------------------------------------- |
+| **Featured item**      | Highlights the product.           | Adds a "Featured" badge to the card and may place it in a special carousel on your menu page. |
+| **Cross-selling item** | Suggests the product at checkout. | Prompts the user to add this item (e.g., drinks, sides) right before they pay.                |
+
+## Menu Options & Modifiers
+
+If your product has variations (like sizes) or add-ons (like toppings), use the **Menu Options** configuration tool.
+
+<Steps>
+  <Step title="Create an Option Group">
+    Click the **"This item has options"** button (or the **\+** icon) to create a container for your choices. 
+  </Step>
+  <Step title="Configure Logic" stepNumber={2}>
+    Define how the customer interacts with this group: \
+    - **Name:** e.g., "Select Size", "Choice of Sauce". \
+    - **Required:** Toggle **ON** if a choice is mandatory (e.g., Size). Toggle **OFF** for optional add-ons. \
+    - **Multiple Selection:** Toggle **ON** to allow selecting more than one option (e.g., "Add Extra Toppings"). Toggle **OFF** for single-choice lists (e.g., "Cook Style").
+  </Step>
+  <Step title="Add Choices" stepNumber={3}>
+    Add specific items to the group: \
+    - **Name:** "Small", "Medium", "Large". \
+    - **Price:** Enter the _additional cost_ for this choice. Enter `0.00` if it's free.
+  </Step>
+</Steps>
+
+### Managing Choices
+
+- **Reorder:** Use the **Up/Down arrows** to change the order in which choices appear to the customer.
+- **Remove:** Click the **Trash** icon to delete a specific choice or an entire option group.
+
+## Publishing Changes
+
+Once configuration is complete:
+
+1. Click the **Publish** button at the bottom of the form.
+2. The system will validate your entries (e.g., ensuring a name and price exist).
+3. A confirmation dialog will appear: _"Product has been published/updated."_
+4. The item is now live.
+
+### Status Indicators
+
+In the top right corner of the editor, you will see a status badge:
+
+- **Draft:** The item is being created.
+- **Published:** The item is live.
+- **Out-of-stock:** The item is currently unavailable to customers. (To change this, use the main inventory toggle on the menu list page).

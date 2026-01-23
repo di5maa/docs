@@ -1,0 +1,97 @@
+---
+title: "Payment Settings"
+description: "This guide outlines how to configure your payment settings, manage your Stripe Connect account, and view your transaction fees directly from the Vendor Dashboard."
+---
+
+## Accessing Payments
+
+1. Log in to the Vendor Dashboard.
+2. Navigate to the **Payments** tab in the sidebar menu (or the drawer menu on mobile devices).
+
+## Setting Up Payouts
+
+If your account is not yet configured to receive payments, the system will present the appropriate setup option based on your account status.
+
+### Option 1: New Account Setup
+
+If you are a new partner setting up for the first time:
+
+1. Click the **Set up payment** button.
+2. A secure form will appear (modal). Enter your business details, bank account information, and tax details.
+3. Follow the on-screen prompts to create your connected Stripe account.
+
+### Option 2: Linking Multiple Locations
+
+_Available only for vendors managing multiple stores under one login._
+
+If you already have a Stripe account connected to another store on the platform:
+
+1. Click the **Import existing ID** button.
+2. A dialog will confirm: _"We have found an existing Stripe Id in other locations."_
+3. Click **CONFIRM** to link this store to your existing payout account instantly.
+
+### Option 3: Completing Onboarding
+
+If your setup was interrupted or Stripe requires additional verification (KYC):
+
+1. You will see a banner stating: _"You need to provide more information..."_
+2. Click the **Complete onboarding** button.
+3. You will be redirected to **Stripe Express** to upload required ID documents or verify bank details.
+4. Once verified, you will be redirected back to the dashboard, and your status will update automatically.
+
+## Managing Your Account
+
+Once your account shows **Charges Enabled**, the interface changes to provide account management tools.
+
+### Stripe Express Portal
+
+To view detailed payout schedules, download tax forms (1099-K), or update your bank account:
+
+1. Locate the **Payment Settings** card.
+2. Click the **Access Payment Portal** button (External Link icon).
+3. Log in to the secure Stripe Express dashboard using the credentials created during setup.
+
+### Copying Merchant ID
+
+Your unique **Stripe Merchant ID** is displayed at the top of the page.
+
+- Click the **Copy ID** button to copy this string to your clipboard.
+- A "Copied" toast message will confirm the action.
+- _Note: Platform support may ask for this ID to troubleshoot specific payout issues._
+
+## Transaction Fees & Contracts
+
+The dashboard displays your specific contract rates for transparency. These fees are automatically deducted from transactions before the net amount is added to your payout balance.
+
+### Accepted Payment Methods
+
+The platform securely processes the following:
+
+- Mastercard
+- Visa
+- Google Pay
+- Apple Pay
+
+### Fee Structure
+
+Your current rates are visible under the **Transaction fees** section. These are specific to your vendor contract:
+
+- **Delivery:** Percentage fee taken for delivery orders.
+- **Pickup:** Percentage fee taken for pickup orders.
+- **Self Delivery:** Percentage fee taken if you utilize your own in-house drivers (if applicable).
+
+## Vendor Earnings
+
+The **Vendor Earnings** section at the bottom of the page provides a snapshot of your financial performance.
+
+- **Payout Balance:** The current funds cleared and ready for payout.
+- **Performance:** Links to the **Store Performance** page for detailed analytics on sales trends.
+- **Cashout:** Links to the **Wallet Verification** page to view wallet history or trigger manual cashouts (if enabled).
+
+## Troubleshooting
+
+| Issue                     | Potential Cause                         | Solution                                                                                                                              |
+| :------------------------ | :-------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------ |
+| **"Failed" Error**        | Network connectivity or server timeout. | Check your internet connection. The system has a 4-second timeout for security; please refresh and try the button again.              |
+| **"Provide more info"**   | Stripe KYC requirements.                | Click **Complete onboarding**. You likely need to upload a photo ID or proof of address to Stripe to comply with banking regulations. |
+| **No "Import ID" Button** | Single store account.                   | This feature only appears if your user account is an admin for multiple merchant locations.                                           |

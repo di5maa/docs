@@ -19,8 +19,9 @@
     },
     "tabs": [
       {
-        "tab": "Customers",
-        "groups": [
+        "tab": "Local Pass ",
+        "pages": [
+          "customers/getting-started",
           {
             "group": "Referral",
             "pages": []
@@ -110,9 +111,10 @@
       },
       {
         "tab": "Drivers",
-        "groups": [
+        "pages": [
+          "drivers/getting-started-1",
           {
-            "group": "Getting Started",
+            "group": "Account",
             "pages": [
               "drivers/getting-started/account-setup",
               "drivers/getting-started/contract-agreement-and-terms",
@@ -150,28 +152,41 @@
         "tab": "Restaurants",
         "groups": [
           {
+            "group": "Promotions",
+            "pages": [
+              "restaurants/promotions/start-here",
+              "restaurants/promotions/add-new-promotion",
+              "restaurants/promotions/edit-existing-promotion"
+            ]
+          },
+          {
             "group": "Order Fulfillment",
             "pages": [
+              "restaurants/order-fulfillment/configuration",
+              "restaurants/order-fulfillment/pickup",
+              "restaurants/order-fulfillment/delivery",
               {
                 "group": "Own Delivery",
                 "pages": [
                   "restaurants/order-fulfillment/own-delivery"
                 ]
-              },
-              "restaurants/order-fulfillment/pickup",
-              "restaurants/order-fulfillment/delivery",
-              "restaurants/order-fulfillment/configuration"
+              }
             ]
           },
           {
             "group": "Payments",
-            "pages": []
+            "pages": [
+              "restaurants/payments/payment-structure-1",
+              "restaurants/payments/payment-structure",
+              "restaurants/payments/new-account"
+            ]
           },
           {
             "group": "Menu",
             "pages": [
               "merchants/restaurants/menu-management",
-              "merchants/restaurants/orders"
+              "restaurants/menu/add-new-item",
+              "restaurants/menu/categories"
             ]
           }
         ]
