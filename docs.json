@@ -17,185 +17,202 @@
         }
       ]
     },
-    "tabs": [
+    "products": [
       {
-        "tab": "Local Pass ",
-        "pages": [
-          "customers/getting-started",
+        "product": "Local Pass",
+        "tabs": [
           {
-            "group": "Referral",
-            "pages": []
-          },
-          {
-            "group": "Payments",
+            "tab": "Local Pass ",
             "pages": [
-              "customers/payments/local-coins"
-            ]
-          },
-          {
-            "group": "Getting Started",
-            "pages": [
-              "customers/intro",
-              "customers/account-setup"
-            ]
-          },
-          {
-            "group": "Services",
-            "pages": [
-              "customers/ordering-food",
-              "customers/marketplace",
-              "customers/ride-share"
-            ]
-          },
-          {
-            "group": "Updates & Features",
-            "pages": [
-              "customers/changelog",
-              "customers/roadmap"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Agrifood Merchants",
-        "pages": [
-          "agrifood-merchants/start-here",
-          "agrifood-merchants/store-settings",
-          "agrifood-merchants/locations",
-          {
-            "group": "Payments",
-            "pages": []
-          },
-          {
-            "group": "Order Fulfillment",
-            "pages": [
-              "agrifood-merchants/order-fulfillment/dashboard",
-              "agrifood-merchants/order-fulfillment/order-picklist",
+              "customers/getting-started",
               {
-                "group": "Pickup",
+                "group": "Referral",
+                "pages": []
+              },
+              {
+                "group": "Payments",
                 "pages": [
-                  "agrifood-merchants/order-fulfillment/pickup/configuration",
-                  "agrifood-merchants/order-fulfillment/delivery"
+                  "customers/payments/local-coins"
                 ]
               },
               {
-                "group": "Delivery",
+                "group": "Getting Started",
                 "pages": [
-                  "agrifood-merchants/order-fulfillment/delivery/configuration",
-                  "agrifood-merchants/order-fulfillment/pickup"
+                  "customers/intro",
+                  "customers/account-setup"
                 ]
-              }
-            ]
-          },
-          {
-            "group": "Inventory Management",
-            "pages": [
-              "merchants-and-restaurants/inventory-management/create-product"
-            ]
-          },
-          {
-            "group": "Agri-Food Merchants",
-            "pages": [
-              "merchants/agri/onboarding",
-              "merchants/agri/product-listing",
-              "merchants/agri/guides"
-            ]
-          },
-          {
-            "group": "Releases & Roadmap",
-            "pages": [
-              "merchants/changelog",
-              "merchants/roadmap"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Drivers",
-        "pages": [
-          "drivers/getting-started-1",
-          {
-            "group": "Account",
-            "pages": [
-              "drivers/getting-started/account-setup",
-              "drivers/getting-started/contract-agreement-and-terms",
-              "drivers/getting-started"
-            ]
-          },
-          {
-            "group": "Payments",
-            "pages": []
-          },
-          {
-            "group": "Delivery Drivers",
-            "pages": [
-              "drivers/delivery/signup",
-              "drivers/delivery/how-to-deliver"
-            ]
-          },
-          {
-            "group": "Ride Share Drivers",
-            "pages": [
-              "drivers/rideshare/requirements",
-              "drivers/rideshare/accepting-trips"
-            ]
-          },
-          {
-            "group": "Driver Updates",
-            "pages": [
-              "drivers/changelog",
-              "drivers/roadmap"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Restaurants",
-        "pages": [
-          "restaurants/start-here",
-          {
-            "group": "Promotions",
-            "pages": [
-              "restaurants/promotions/start-here",
-              "restaurants/promotions/add-new-promotion",
-              "restaurants/promotions/edit-existing-promotion"
-            ]
-          },
-          {
-            "group": "Order Fulfillment",
-            "pages": [
-              "restaurants/order-fulfillment/configuration",
-              "restaurants/order-fulfillment/pickup",
-              "restaurants/order-fulfillment/delivery",
+              },
               {
-                "group": "Own Delivery",
+                "group": "Services",
                 "pages": [
-                  "restaurants/order-fulfillment/own-delivery"
+                  "customers/ordering-food",
+                  "customers/marketplace",
+                  "customers/ride-share"
+                ]
+              },
+              {
+                "group": "Updates & Features",
+                "pages": [
+                  "customers/changelog",
+                  "customers/roadmap"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "product": "Local Pass Business",
+        "tabs": [
+          {
+            "tab": "Agrifood Merchants",
+            "pages": [
+              "agrifood-merchants/start-here",
+              "agrifood-merchants/store-settings",
+              "agrifood-merchants/locations",
+              {
+                "group": "Payments",
+                "pages": []
+              },
+              {
+                "group": "Order Fulfillment",
+                "pages": [
+                  "agrifood-merchants/order-fulfillment/dashboard",
+                  "agrifood-merchants/order-fulfillment/order-picklist",
+                  {
+                    "group": "Pickup",
+                    "pages": [
+                      "agrifood-merchants/order-fulfillment/pickup/configuration",
+                      "agrifood-merchants/order-fulfillment/delivery"
+                    ]
+                  },
+                  {
+                    "group": "Delivery",
+                    "pages": [
+                      "agrifood-merchants/order-fulfillment/delivery/configuration",
+                      "agrifood-merchants/order-fulfillment/pickup"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Inventory Management",
+                "pages": [
+                  "merchants-and-restaurants/inventory-management/create-product"
+                ]
+              },
+              {
+                "group": "Agri-Food Merchants",
+                "pages": [
+                  "merchants/agri/onboarding",
+                  "merchants/agri/product-listing",
+                  "merchants/agri/guides"
+                ]
+              },
+              {
+                "group": "Releases & Roadmap",
+                "pages": [
+                  "merchants/changelog",
+                  "merchants/roadmap"
                 ]
               }
             ]
           },
           {
-            "group": "Payments",
+            "tab": "Restaurants",
             "pages": [
-              "restaurants/payments/payment-structure-1",
-              "restaurants/payments/payment-structure",
-              "restaurants/payments/new-account"
+              "restaurants/start-here",
+              {
+                "group": "Promotions",
+                "pages": [
+                  "restaurants/promotions/start-here",
+                  "restaurants/promotions/add-new-promotion",
+                  "restaurants/promotions/edit-existing-promotion"
+                ]
+              },
+              {
+                "group": "Order Fulfillment",
+                "pages": [
+                  "restaurants/order-fulfillment/configuration",
+                  "restaurants/order-fulfillment/pickup",
+                  "restaurants/order-fulfillment/delivery",
+                  {
+                    "group": "Own Delivery",
+                    "pages": [
+                      "restaurants/order-fulfillment/own-delivery"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Payments",
+                "pages": [
+                  "restaurants/payments/payment-structure-1",
+                  "restaurants/payments/payment-structure",
+                  "restaurants/payments/new-account"
+                ]
+              },
+              {
+                "group": "Menu",
+                "pages": [
+                  "merchants/restaurants/menu-management",
+                  "restaurants/menu/add-new-item",
+                  "restaurants/menu/categories"
+                ]
+              }
             ]
           },
           {
-            "group": "Menu",
+            "tab": "Academy"
+          }
+        ]
+      },
+      {
+        "product": "Local Pass Drivers",
+        "tabs": [
+          {
+            "tab": "Delivery",
             "pages": [
-              "merchants/restaurants/menu-management",
-              "restaurants/menu/add-new-item",
-              "restaurants/menu/categories"
+              "drivers/getting-started-1",
+              {
+                "group": "Account",
+                "pages": [
+                  "drivers/delivery/how-to-deliver",
+                  "drivers/getting-started/account-setup",
+                  "drivers/getting-started/contract-agreement-and-terms",
+                  "drivers/getting-started"
+                ]
+              },
+              "drivers/delivery/signup",
+              {
+                "group": "Payments",
+                "pages": []
+              }
             ]
+          },
+          {
+            "tab": "Rideshare",
+            "pages": [
+              {
+                "group": "Ride Share Drivers",
+                "pages": [
+                  "drivers/rideshare/requirements",
+                  "drivers/rideshare/accepting-trips"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Changelog"
           }
         ]
       }
     ]
   },
-  "logo": "/logo/long_local_canada_wht-copy-2048x467.png",
+  "logo": {
+    "light": "/images/long_local_green_canada_wht_copy.png",
+    "dark": "/logo/long_local_canada_wht-copy-2048x467.png"
+  },
   "description": "Use this portal to find tutorials, user documentation, features roadmap and other information relevant to various sections of the Local Pass platform.",
   "footer": {
     "socials": {
