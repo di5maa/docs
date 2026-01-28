@@ -71,6 +71,14 @@
               "agrifood-merchants/store-settings",
               "agrifood-merchants/locations",
               {
+                "group": "Promotions",
+                "pages": [
+                  "restaurants/promotions/start-here",
+                  "restaurants/promotions/add-new-promotion",
+                  "restaurants/promotions/edit-existing-promotion"
+                ]
+              },
+              {
                 "group": "Payments",
                 "pages": []
               },
@@ -122,12 +130,14 @@
             "tab": "Restaurants",
             "pages": [
               "restaurants/start-here",
+              "agrifood-merchants/locations-copied-1",
+              "agrifood-merchants/store-settings-copied-1",
               {
                 "group": "Promotions",
                 "pages": [
-                  "restaurants/promotions/start-here",
-                  "restaurants/promotions/add-new-promotion",
-                  "restaurants/promotions/edit-existing-promotion"
+                  "restaurants/promotions-copied-1/start-here",
+                  "restaurants/promotions-copied-1/add-new-promotion",
+                  "restaurants/promotions-copied-1/edit-existing-promotion"
                 ]
               },
               {
@@ -163,7 +173,10 @@
             ]
           },
           {
-            "tab": "Academy"
+            "tab": "Academy",
+            "pages": [
+              "local-pass-business/academy/untitled-page"
+            ]
           }
         ]
       },
