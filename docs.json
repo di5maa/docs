@@ -59,6 +59,7 @@
       {
         "tab": "Agrifood Merchants",
         "pages": [
+          "agrifood-merchants/start-here",
           "agrifood-merchants/store-settings",
           "agrifood-merchants/locations",
           {
@@ -150,7 +151,8 @@
       },
       {
         "tab": "Restaurants",
-        "groups": [
+        "pages": [
+          "restaurants/start-here",
           {
             "group": "Promotions",
             "pages": [
