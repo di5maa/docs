@@ -204,18 +204,6 @@
             ]
           },
           {
-            "tab": "Rideshare",
-            "pages": [
-              {
-                "group": "Ride Share Drivers",
-                "pages": [
-                  "drivers/rideshare/requirements",
-                  "drivers/rideshare/accepting-trips"
-                ]
-              }
-            ]
-          },
-          {
             "tab": "Changelog"
           }
         ]
