@@ -88,19 +88,13 @@
                   "agrifood-merchants/order-fulfillment/dashboard",
                   "agrifood-merchants/order-fulfillment/order-picklist",
                   {
-                    "group": "Pickup",
-                    "pages": [
-                      "agrifood-merchants/order-fulfillment/pickup/configuration",
-                      "agrifood-merchants/order-fulfillment/delivery"
-                    ]
-                  },
-                  {
                     "group": "Delivery",
                     "pages": [
                       "agrifood-merchants/order-fulfillment/delivery/configuration",
                       "agrifood-merchants/order-fulfillment/pickup"
                     ]
-                  }
+                  },
+                  "agrifood-merchants/order-fulfillment/pickup-1"
                 ]
               },
               {
@@ -130,8 +124,24 @@
             "tab": "Restaurants",
             "pages": [
               "restaurants/start-here",
-              "agrifood-merchants/locations-copied-1",
-              "agrifood-merchants/store-settings-copied-1",
+              "agrifood-merchants/account-registration",
+              {
+                "group": "Store Settings",
+                "pages": [
+                  "agrifood-merchants/store-settings-copied-1",
+                  "agrifood-merchants/locations-copied-1",
+                  "agrifood-merchants/reviews"
+                ]
+              },
+              {
+                "group": "Menu",
+                "pages": [
+                  "merchants/restaurants/menu-management",
+                  "restaurants/menu/add-new-item",
+                  "merchants/restaurants/categories",
+                  "merchants/restaurants/qr-code"
+                ]
+              },
               {
                 "group": "Promotions",
                 "pages": [
@@ -144,12 +154,12 @@
                 "group": "Order Fulfillment",
                 "pages": [
                   "restaurants/order-fulfillment/configuration",
-                  "restaurants/order-fulfillment/pickup",
-                  "restaurants/order-fulfillment/delivery",
+                  "restaurants/order-fulfillment/live-orders",
                   {
-                    "group": "Own Delivery",
+                    "group": "Configuration",
                     "pages": [
-                      "restaurants/order-fulfillment/own-delivery"
+                      "restaurants/order-fulfillment/delivery",
+                      "restaurants/order-fulfillment/pickup"
                     ]
                   }
                 ]
@@ -157,17 +167,25 @@
               {
                 "group": "Payments",
                 "pages": [
-                  "restaurants/payments/payment-structure-1",
                   "restaurants/payments/payment-structure",
+                  "restaurants/payments/payment-structure-1",
                   "restaurants/payments/new-account"
                 ]
               },
+              "agrifood-merchants/analytics",
               {
-                "group": "Menu",
+                "group": "Orders",
                 "pages": [
-                  "merchants/restaurants/menu-management",
-                  "restaurants/menu/add-new-item",
-                  "restaurants/menu/categories"
+                  "order-history",
+                  "order-details"
+                ]
+              },
+              {
+                "group": "Live Orders",
+                "pages": [
+                  "accepting-orders",
+                  "fulfillment",
+                  "Fulfillment-with-own-drivers"
                 ]
               }
             ]

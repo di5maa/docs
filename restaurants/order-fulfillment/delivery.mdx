@@ -1,4 +1,115 @@
 ---
-title: 'Delivery'
+title: "Delivery"
 ---
 
+Welcome to your **Fulfillment Settings**! The Delivery tab is your central hub for controlling how and when your food gets to your customers.
+
+As a restaurant partner, you have the flexibility to use our built-in driver network or manage your own delivery staff. This guide will walk you through exactly how to configure your settings to suit your business model.
+
+## 1. The Basics: Turning Delivery On/Off and Setting Hours
+
+At the top of the page, you control the master switches for your delivery operations.
+
+### Toggle Delivery Status
+
+- **What it does:** Instantly turns your delivery offering on or off.
+- **How to use:** Toggle the switch next to **Delivery**. It will display **"Offering delivery"** when active, and **"Not offering delivery"** when paused.
+
+### Set Delivery Hours
+
+By default, your delivery hours match your normal restaurant business hours. If your kitchen stops offering delivery before your dining room actually closes, you can set specific hours.
+
+- **Step 1:** Look for the switch labeled **"Delivery available during normal business hours."**
+- **Step 2:** Toggle this **OFF** to set specific hours.
+- **Step 3:** A weekly schedule will appear. Adjust the **Open From** and **Open Until** times for each day, or mark specific days as **Closed** for delivery.
+
+<Tip>
+  💡 PRO TIP: If you ever need a quick refresher on a feature while on the page, look for the small Document Icon next to a section title. Clicking it will open a quick info sheet with an explanation of that specific feature!
+</Tip>
+
+## 2. Choosing Your Delivery Network
+
+As a restaurant, your most important decision on this page is whether to use the platform's drivers or your own staff. This is controlled by the **Own Delivery** toggle.
+
+- 🔴 **When 'Own Delivery' is OFF:** You are automatically set to use the **Local Pass delivery driver network**. We handle the dispatching, routing, and delivery calculations for you.
+- 🟢 **When 'Own Delivery' is ON:** You opt out of the Local Pass network and choose to use your own staff. **You are now responsible for managing your own drivers, setting delivery fees, and drawing delivery zones.** _(Note: The configuration options below will ONLY appear if you have turned_ **_Own Delivery ON_**_.)_
+
+## 3. Configuring 'Own Delivery' Settings
+
+If you have chosen to manage your own deliveries, you will need to set up how your fees and radiuses are calculated, and register your drivers.
+
+### 3.1 Standard (Default) Delivery Configuration
+
+Standard Delivery is your default method when using your own fleet. It applies fixed rules for calculating your delivery costs and service area.
+
+1. Locate the **Default delivery** section.
+2. Click the black **Edit** button. A panel will slide up from the bottom.
+3. Fill in your default parameters:
+   - **Min order \$:** The minimum cart subtotal a customer must reach before they are allowed to request delivery (e.g., `$15.00`).
+   - **Radius (in min):** Your maximum delivery distance measured in driving minutes.
+   - **Delivery fee (\$):** The flat rate you charge for delivery (e.g., `$5.00`).
+   - **Free delivery from:** An optional threshold to incentivize larger orders. If a customer spends this amount, their delivery fee is waived.
+
+### 3.2 Advanced Delivery Zones
+
+Want to charge a \$5 fee for customers within a 15-minute drive, but an \$8 fee for customers 30 minutes away? **Delivery Zones** allow you to do exactly that by drawing smart boundaries around your restaurant.
+
+1. Scroll to the **Delivery Zones** section and toggle the switch to **ON**.
+2. Click the **\+ Add radius** button (or click **Edit** on an existing zone). A panel will slide up displaying the **Add/Edit Delivery Zone** tool.
+3. Fill in the details for this specific zone (Name, Fee, Min Order).
+4. **Set Your Drive Time Range (Smart Mapping):** Use the slider below the text fields to set your maximum drive time. **Note: We currently support a maximum of 60 minutes of driving time from your location.**
+   - **How Drive Time is Calculated:** Unlike a simple radius (which just draws an unrealistic perfect circle on a map), our smart mapping technology queries actual road networks, speed limits, and average travel times to calculate a realistic delivery boundary. This means it naturally accounts for natural barriers like rivers, bridges, and highway layouts.
+   - **What to Pay Attention To:**
+     - **Interactive Map (Mobile Users):** As you adjust the slider, you will see a visual map updating in real-time. The blue shaded polygon represents the exact streets your drivers can reach within the selected time limit. Always check this visual shape to ensure it covers your intended target neighborhoods without stretching too far into heavy-traffic areas.
+     - **Wait for Calculation:** When you move the slider, the system needs a moment to crunch the traffic data. You must wait for the green **"Zone Calculated"** checkmark to appear in the top right corner of the panel. If you try to save before this appears, your boundaries will not be saved properly.
+5. Click the solid **Save Zone** button at the bottom of the panel.
+
+<Warning>
+  ⚠️ IMPORTANT: When Delivery Zones are enabled, they will override your Standard Delivery settings based on the customer's exact location.
+</Warning>
+
+### 3.3 Managing Your Driver Fleet
+
+If you are using **Own Delivery**, you need a way to track your staff.
+
+1. Scroll down to **Enable delivery fleet**.
+2. If this is your first time, click **Generate Code**. The system will create a unique Driver Registration Code (e.g., `#YourStore1234`).
+3. **Onboard Drivers:** \* Tap directly on the generated code to **Copy to Clipboard** and text it to your staff. Alternatively, in Manage Drivers portal, you can send registration code directly to multiple drivers via SMS. They will use a registration code to connect their new driver profile with your restaurant. 
+   - Or, click the **QR Code** button. Drivers can simply scan this from your screen using their driver app to automatically register under your restaurant.
+
+<Info>
+  Please note, drivers will still be able to receive job requests from other merchants. We're working on the functionality to make this optional.
+</Info>
+
+1. **Driver Management Dashboard:** Click the **Manage Drivers** button to view your active fleet, check who is currently online, and monitor their active deliveries.
+
+_(Drivers in your fleet will be paid out according to the fees you configured in your Standard Delivery or Delivery Zones settings)._
+
+### Driver Payments & Payouts
+
+Currently, we support two ways for your drivers to receive their payouts:
+
+1. Drivers receive money directly from customers 
+2. Drivers receive money from Local Pass, and in turn, Local Pass deducts driver's pay from you. 
+
+**How Customer-to-Driver Payments Work**\
+When a customer pays for their delivery (e.g., a \$5 delivery fee), this money goes straight into the driver's wallet. Local Pass does not take any commission from drivers or their tips. Their balance will be reflected in their wallet and they can cash out at any time. Similar to regular platform drivers, your drivers will need to connect a Stripe account. You can connect your existing merchant Stripe account, or let your drivers create their own so that they can manage their individual payments.
+
+**How Local Pass-to-Driver Payments Work (Free Delivery Thresholds)**\
+When you enable "free delivery from" thresholds, qualifying customers skip paying the delivery fee. However, if your delivery fee for that zone is set to \$5, the driver still needs to receive \$5 for that particular delivery.
+
+In these cases, Local Pass covers the cost of the free delivery by adding the required amount directly to the driver's wallet. To balance this out, Local Pass adds a "driver payout fee" deduction to your merchant wallet. This ensures the driver is paid correctly, and the corresponding cost for offering free delivery is reflected during your standard payout period.  
+
+## 4. Saving Your Changes
+
+<Warning>
+  🛑 CRITICAL STEP: Your changes are NOT saved automatically!
+</Warning>
+
+Once you have configured your delivery settings perfectly, you must save them.
+
+- Look for the **Floating Black "Save" Button** at the bottom right corner of your screen.
+- Click **Save**.
+- Wait for the pop-up dialogue confirming **"Changes saved: You have successfully updated delivery settings."** Click **Close**.
+
+**Need to adjust Pickup or General settings?** Use the menu on the left side of your screen (or the top Navigation bar on mobile) to seamlessly switch between your **Delivery**, **Pickup**, and **General** Fulfillment Settings.
