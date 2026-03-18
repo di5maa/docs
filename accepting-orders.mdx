@@ -1,4 +1,135 @@
 ---
-title: 'Accepting orders'
+title: 'Accepting Orders'
 ---
 
+**Where to find it:** Tap any order in your orders list to open the panel
+
+The Order Fulfillment Panel gives you full control over a single order from the moment it arrives to the moment it's completed. It's designed for fast, confident action with minimal taps.
+
+---
+
+## Order Header
+
+At the top of the panel you'll see:
+- The **order number**
+- Current **status** (e.g., "Placed", "Preparing", "Ready for pickup")
+- Whether it is a **Pickup** or **Delivery** order
+- A subtle spinner if a **payment capture** is processing in the background
+
+---
+
+## Adjusting the Ready Time
+
+The large time display in the centre of the panel shows when the order needs to be ready.
+
+- Tap **− 5** to subtract 5 minutes from the ready time
+- Tap **+ 5** to add 5 minutes
+
+When you've changed the time, a **SAVE** button appears below. Tap it to confirm — the customer and any assigned driver will both receive a push notification with the updated time automatically.
+
+---
+
+## Customer & Driver Info
+
+### Customer row
+Shows the customer's first name and phone number so you can contact them if needed.
+
+### Driver row (delivery orders only)
+Shows the name of the assigned driver and their estimated arrival time at your location. If no driver has been matched yet, a live search animation shows the system is actively looking for a nearby driver.
+
+<Note>
+  For delivery orders, the driver search begins automatically when you tap **Accept Order**. You don't need to do anything to initiate it.
+</Note>
+
+---
+
+## Customer Notes
+
+If a customer left special instructions (e.g., "no onions", "please double-bag", "allergy to nuts"), they appear in a **blue card** below the customer info row.
+
+Always check this before preparing the order.
+
+---
+
+## Items Table
+
+A full breakdown of everything in the order, showing:
+- Item name and quantity (e.g., "2 × Sourdough Loaf")
+- Selected options or customisations (e.g., "...Extra seeds", "...No salt")
+- Price per line item
+
+---
+
+## Action Buttons
+
+The main action button at the bottom of the panel changes based on the current order status:
+
+| Current Status | Button Shown |
+|---|---|
+| Placed | **Accept Order** |
+| Accepted / Preparing / Packaged / Ready | **Ready for Pickup** |
+| Ready for pickup | **Order Picked Up** |
+
+### Accept Order
+Tapping this confirms you've received the order and will prepare it. For delivery orders, this simultaneously:
+- Creates a delivery request
+- Begins searching for an available driver
+
+### Ready for Pickup
+Tapping this marks the order as prepared and ready to hand off. It also:
+- Notifies the customer (for pickup orders) that their order is ready
+- Notifies the assigned driver (for delivery orders) to come collect it
+- Starts an early payment capture in the background so handoff is instant
+
+### Order Picked Up
+Tapping this completes the order and finalises payment. For pickup orders, it marks the order as **Completed**. For delivery orders, it marks the order as handed to the courier.
+
+<Tip>
+  The system starts capturing payment when you tap **Ready for Pickup**. By the time you tap **Order Picked Up**, the payment is already processed — so there's no delay at the handoff moment.
+</Tip>
+
+---
+
+## Cancelling an order
+
+Tap the **Cancel** button (to the right of the main action button) to cancel the order.
+
+A confirmation sheet will appear asking you to confirm. Once cancelled:
+- The payment hold on the customer's card is **automatically released** — no charge is made
+- The customer receives a push notification
+- The order disappears from your active queue
+
+<Warning>
+  The Cancel button is hidden once a driver has already picked up the food. Cancelling after this point is not supported to protect the driver and customer.
+</Warning>
+
+---
+
+## Payment capture errors
+
+If something goes wrong when capturing payment, a **red error banner** appears at the top of the panel explaining what failed.
+
+Tap **Retry** to attempt the capture again. Common causes of failure include temporary network issues or card problems — retrying usually resolves it. If the problem persists, contact support.
+
+---
+
+## Support button
+
+Tap the **headset icon** (bottom right of the action bar) to open a live support chat with the Local Pass team. This is pre-filled with your order details so support can help faster.
+
+---
+
+## Completed orders
+
+When an order is fully completed, a **green overlay** appears on the panel showing:
+- A pulsing green checkmark
+- A delivery timeline animation (Kitchen → Driver → Customer)
+- A note confirming the customer has been notified
+
+Tap **Got it** to dismiss the overlay and move on to your next order.
+
+---
+
+## Cancelled orders
+
+If an order is cancelled (by you or by the system), a **grey overlay** appears explaining that the payment hold has been released and no charge was made. Tap **Close** to return to your order list.

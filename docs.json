@@ -65,76 +65,37 @@
         "product": "Local Pass Business",
         "tabs": [
           {
-            "tab": "Agrifood Merchants",
-            "pages": [
-              "agrifood-merchants/start-here",
-              "agrifood-merchants/store-settings",
-              "agrifood-merchants/locations",
-              {
-                "group": "Promotions",
-                "pages": [
-                  "restaurants/promotions/start-here",
-                  "restaurants/promotions/add-new-promotion",
-                  "restaurants/promotions/edit-existing-promotion"
-                ]
-              },
-              {
-                "group": "Payments",
-                "pages": []
-              },
-              {
-                "group": "Order Fulfillment",
-                "pages": [
-                  "agrifood-merchants/order-fulfillment/dashboard",
-                  "agrifood-merchants/order-fulfillment/order-picklist",
-                  {
-                    "group": "Delivery",
-                    "pages": [
-                      "agrifood-merchants/order-fulfillment/delivery/configuration",
-                      "agrifood-merchants/order-fulfillment/pickup"
-                    ]
-                  },
-                  "agrifood-merchants/order-fulfillment/pickup-1"
-                ]
-              },
-              {
-                "group": "Inventory Management",
-                "pages": [
-                  "merchants-and-restaurants/inventory-management/create-product"
-                ]
-              },
-              {
-                "group": "Agri-Food Merchants",
-                "pages": [
-                  "merchants/agri/onboarding",
-                  "merchants/agri/product-listing",
-                  "merchants/agri/guides"
-                ]
-              },
-              {
-                "group": "Releases & Roadmap",
-                "pages": [
-                  "merchants/changelog",
-                  "merchants/roadmap"
-                ]
-              }
-            ]
-          },
-          {
-            "tab": "Restaurants",
+            "tab": "Merchants",
             "pages": [
               "restaurants/start-here",
-              "agrifood-merchants/account-registration",
+              "restaurants/dashboard",
+              {
+                "group": "Create account",
+                "pages": [
+                  "agrifood-merchants/sign-in",
+                  "agrifood-merchants/sign-up",
+                  "agrifood-merchants/account-set-up",
+                  "agrifood-merchants/onboarding"
+                ]
+              },
               {
                 "group": "Store Settings",
                 "pages": [
                   "agrifood-merchants/settings",
                   "agrifood-merchants/location",
-                  "agrifood-merchants/import-reviews"
+                  "agrifood-merchants/import-reviews",
+                  "agrifood-merchants/update-address",
+                  "agrifood-merchants/appearance",
+                  "agrifood-merchants/social-media",
+                  "agrifood-merchants/certifications",
+                  "agrifood-merchants/awards",
+                  "agrifood-merchants/store-growth",
+                  "agrifood-merchants/support",
+                  "agrifood-merchants/delete-account"
                 ]
               },
               {
-                "group": "Menu",
+                "group": "Menu - Restaurants",
                 "pages": [
                   "merchants/restaurants/menu-management",
                   "restaurants/menu/add-new-item",
@@ -145,21 +106,36 @@
               {
                 "group": "Promotions",
                 "pages": [
-                  "restaurants/promotions-copied-1/start-here",
-                  "restaurants/promotions-copied-1/add-new-promotion",
-                  "restaurants/promotions-copied-1/edit-existing-promotion"
+                  "restaurants/promotions-manager/start-here",
+                  "restaurants/promotions-manager/add-new-promotion",
+                  "restaurants/promotions-manager/edit-existing-promotion"
                 ]
               },
               {
                 "group": "Order Fulfillment",
                 "pages": [
                   "restaurants/order-fulfillment/configuration",
-                  "restaurants/order-fulfillment/live-orders",
+                  {
+                    "group": "Live Orders",
+                    "pages": [
+                      "accepting-orders",
+                      "fulfillment",
+                      "Fulfillment-with-own-drivers"
+                    ]
+                  },
                   {
                     "group": "Configuration",
                     "pages": [
                       "restaurants/order-fulfillment/delivery",
-                      "restaurants/order-fulfillment/pickup"
+                      "restaurants/order-fulfillment/pickup",
+                      "restaurants/order-fulfillment/driver-fleet",
+                      "restaurants/order-fulfillment/delivery-zones"
+                    ]
+                  },
+                  {
+                    "group": "Agrifood",
+                    "pages": [
+                      "restaurants/order-fulfillment/dashboard"
                     ]
                   }
                 ]
@@ -168,7 +144,7 @@
                 "group": "Payments",
                 "pages": [
                   "restaurants/payments/payment-structure",
-                  "restaurants/payments/payment-structure-1",
+                  "restaurants/payments/Add-Payment-Method",
                   "restaurants/payments/new-account"
                 ]
               },
@@ -181,12 +157,8 @@
                 ]
               },
               {
-                "group": "Live Orders",
-                "pages": [
-                  "accepting-orders",
-                  "fulfillment",
-                  "Fulfillment-with-own-drivers"
-                ]
+                "group": "Inventory Management - Agrifood",
+                "pages": []
               }
             ]
           },
