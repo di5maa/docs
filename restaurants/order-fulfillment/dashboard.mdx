@@ -6,8 +6,6 @@ title: "Dashboard"
 
 The Order Fulfillment Dashboard is your real-time command centre for all active orders. It organises orders by time of day so you always know what needs attention first and nothing slips through the cracks.
 
----
-
 ## Quick Stats (Top of Page)
 
 Five summary cards give you an instant snapshot of your day:
@@ -22,8 +20,6 @@ Five summary cards give you an instant snapshot of your day:
 
 A red **Needs Action** count is your highest priority — these are customers waiting on you right now.
 
----
-
 ## Views
 
 Switch between different layouts using the view toggle buttons:
@@ -34,8 +30,6 @@ Switch between different layouts using the view toggle buttons:
 | **Compact** | Dense row list — great for high-volume days |
 | **Calendar** | Viewing all orders scheduled for a specific date |
 | **Route** | Coming soon — AI-powered delivery routing |
-
----
 
 ## Filters
 
@@ -58,8 +52,6 @@ A second row of chips lets you narrow orders by status: All, Placed, Preparing, 
 
 Type any order number or customer name to jump straight to a specific order.
 
----
-
 ## How orders are grouped
 
 In **Card view**, orders are automatically grouped by time of day:
@@ -71,31 +63,38 @@ In **Card view**, orders are automatically grouped by time of day:
 | **Afternoon** | Fulfillment time from 12:00 PM to 5:00 PM |
 | **Evening** | Fulfillment time after 5:00 PM |
 
----
-
 ## Advancing an order
 
 Every order card shows a **"Mark as \[Next Status\]"** button at the bottom. Tap it to move the order forward.
 
 The standard order progression is:
 
-```text
-Placed → Preparing → Packaged → Ready → Out for Delivery / Shipped → Completed
-```
+<Steps>
+  <Step title="Placed">
+  </Step>
+  <Step title="Preparing">
+  </Step>
+  <Step title="Packaged">
+  </Step>
+  <Step title="Ready ">
+  </Step>
+  <Step title="Out for Delivery">
+  </Step>
+  <Step title="Shipped">
+  </Step>
+  <Step title="Completed ">
+  </Step>
+</Steps>
 
 Pickup orders skip "Out for Delivery" and go straight to Completed once picked up.
 
 You can also **swipe right** on any card to advance it instantly — great for busy periods.
-
----
 
 ## New order alerts
 
 When a new order arrives while the dashboard is open, a **red alert banner** appears at the top of the screen. It shows how many new orders just came in and plays a notification sound.
 
 Tap **View** on the banner to jump straight to those orders. Tap **X** to dismiss the banner without changing your current filter.
-
----
 
 ## Expanding order details
 
@@ -108,13 +107,9 @@ Tap the **chevron arrow (˅)** on any order card to expand it and see a full ite
 
 Tap the chevron again to collapse.
 
----
-
 ## Setting an ETA
 
 Tap the **"Set ETA"** chip on any delivery or pickup order card to set a specific ready time. A time picker will open — select the time and confirm. The customer will receive an automatic push notification with their updated pickup/delivery time.
-
----
 
 ## Printing
 

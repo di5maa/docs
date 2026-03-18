@@ -20,6 +20,7 @@
     "products": [
       {
         "product": "Local Pass",
+        "icon": "location-check",
         "tabs": [
           {
             "tab": "Local Pass ",
@@ -63,6 +64,7 @@
       },
       {
         "product": "Local Pass Business",
+        "icon": "pot-food",
         "tabs": [
           {
             "tab": "Merchants",
@@ -114,22 +116,20 @@
               {
                 "group": "Order Fulfillment",
                 "pages": [
-                  "restaurants/order-fulfillment/configuration",
+                  {
+                    "group": "Restaurants",
+                    "pages": [
+                      "restaurants/order-fulfillment/configuration",
+                      "restaurants/order-fulfillment/delivery-zones",
+                      "restaurants/order-fulfillment/driver-fleet"
+                    ]
+                  },
                   {
                     "group": "Live Orders",
                     "pages": [
                       "accepting-orders",
                       "fulfillment",
                       "Fulfillment-with-own-drivers"
-                    ]
-                  },
-                  {
-                    "group": "Configuration",
-                    "pages": [
-                      "restaurants/order-fulfillment/delivery",
-                      "restaurants/order-fulfillment/pickup",
-                      "restaurants/order-fulfillment/driver-fleet",
-                      "restaurants/order-fulfillment/delivery-zones"
                     ]
                   },
                   {
@@ -145,7 +145,8 @@
                 "pages": [
                   "restaurants/payments/payment-structure",
                   "restaurants/payments/Add-Payment-Method",
-                  "restaurants/payments/new-account"
+                  "restaurants/payments/new-account",
+                  "restaurants/payments/payouts"
                 ]
               },
               "agrifood-merchants/analytics",
@@ -172,6 +173,7 @@
       },
       {
         "product": "Local Pass Drivers",
+        "icon": "taxi",
         "tabs": [
           {
             "tab": "Delivery",
