@@ -1,0 +1,116 @@
+---
+title: "Delivery Lobby Tips"
+---
+
+Once your account is approved and you toggle your shift on, you'll land on the **dispatch lobby** — the screen where you wait for incoming delivery orders. This page explains what's happening in the background, what you'll see when a request arrives, and how to respond.
+
+## The Waiting Screen
+
+When no orders are currently available for you, the screen shows a delivery icon and the message **Waiting for Delivery Requests**. This is normal — it means the system is active and monitoring for orders near your location.
+
+### What's Happening in the Background
+
+While you wait, Local Pass is running several processes silently:
+
+- **Sending your GPS position to the dispatch system every 2 minutes.** This keeps you visible to the algorithm that matches drivers to nearby orders. If your location stops updating, new orders won't be routed to you.
+- **Listening for new delivery requests in real time.** The moment an order is matched to you, the screen updates instantly.
+- **Running a background service** (Android only) that keeps location updates going even if you switch to another app or lock your screen. A small notification in your status bar confirms it's running.
+
+<Note>
+  Location updates stop automatically when you toggle your shift off. Once off shift, the system removes you from the available driver pool and no orders will be sent to you.
+</Note>
+
+<Tip>
+  Keep the app open in the foreground when possible for the most reliable experience. The background service handles brief interruptions, but sustained background use can occasionally be affected by battery optimisation settings on some Android phones. If you notice you're missing requests, check that battery optimisation is disabled for Local Pass in your phone settings.
+</Tip>
+
+## When a Delivery Request Arrives
+
+As soon as an order is matched to you, your phone will:
+
+1. **Ring** — the Local Pass alert tone plays on a loop until you respond or the timer runs out
+2. **Vibrate** — a single buzz to grab your attention if the sound is off
+3. **Display a delivery card** on screen with all the details of the order
+
+## Reading the Delivery Card
+
+The delivery card shows everything you need to decide whether to accept the order. Here's what each piece of information means:
+
+| Field | What it tells you |
+| --- | --- |
+| **From** | The restaurant or store name and its address — your pickup point |
+| **To** | The customer's delivery address — your dropoff point |
+| **To Pickup** | Estimated minutes from your current location to the restaurant, based on your delivery method |
+| **To Customer** | Estimated minutes from the restaurant to the customer once you've picked up |
+| **Base Pay** | The flat delivery fee you earn for completing this order |
+| **Tip** | The tip the customer added before placing the order |
+| **Total Earnings** | Base pay and tip combined — your expected payout for this delivery |
+| **Timer bar** | A countdown showing how long you have to respond |
+
+<Note>
+  The **tip shown is a pre-delivery tip** — what the customer set when they placed the order. If the customer adds an additional tip after delivery, it will be credited to your wallet within 48 hours separately.
+</Note>
+
+### How Long Do You Have?
+
+You have **40 seconds** to accept or decline. The green progress bar at the bottom of the card counts down. If the timer reaches zero without a response, the order is automatically passed to the next available driver — the same as if you had tapped Decline.
+
+---
+
+## Accepting a Request
+
+Tap the green **Accept** button.
+
+When you accept, Local Pass runs a quick background check to confirm the order is still available at the exact moment you tap (another driver won't be able to claim the same order simultaneously). If everything checks out:
+
+- The order is locked to you
+- You are marked as busy — no new orders will be sent until this one is complete
+- A chat channel opens between you and the customer
+- You are navigated to the [Active Delivery screen](/active-delivery-and-navigation) to begin the trip
+
+<Warning>
+  In rare cases, you may see an error after tapping Accept. This happens when two drivers tap at almost the same instant and the other driver's tap is processed first. If this happens, the card disappears and you return to the waiting screen. Simply wait for the next available order — this does not affect your acceptance rate.
+</Warning>
+
+---
+
+## Declining a Request
+
+Tap the red **Decline** button — or let the 40-second timer run out.
+
+When you decline:
+
+- The order is immediately offered to the next nearest driver
+- Your driver ID is added to this specific order's "ignored" list, so you won't be offered the same order again
+- You return to the waiting screen for the next available request
+
+<Note>
+  **Repeated declines affect your acceptance rate.** Local Pass requires drivers to maintain an acceptance rate of at least 80%. Occasionally declining is fine, but consistently ignoring requests or letting timers expire can lower your rate and affect your standing on the platform.
+</Note>
+
+---
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Why am I not receiving any requests?">
+    A few common reasons:
+
+    - **You're not on shift.** Make sure your shift is toggled on in your Driver Profile.
+    - **Location permission is not set to Always.** Go to phone Settings → Local Pass → Location and set it to Always. The dispatch system uses your location to match you with orders — if it can't see you, no orders will be routed your way.
+    - **Low demand in your area right now.** Try checking the [Demand Map](/demand-map) to find a busier zone to position yourself in.
+    - **Your account is not yet verified.** You won't receive orders until your documents have been approved. Check your profile for your verification status.
+  </Accordion>
+
+  <Accordion title="Can I see the full delivery route before accepting?">
+    The card shows you the restaurant name and the customer's delivery address. You can gauge distance from the estimated times shown. A full turn-by-turn route is displayed once you accept and the navigation screen opens.
+  </Accordion>
+
+  <Accordion title="What if I accept and then can't complete the delivery?">
+    Once you've accepted, try to complete the delivery. If something genuinely prevents you — vehicle breakdown, emergency, etc. — contact Local Pass support. Cancelling after accepting counts against your completion rate and may affect your standing.
+  </Accordion>
+
+  <Accordion title="My phone rings but I don't see the delivery card">
+    This usually means the app is running in the background and your screen is locked. Unlock your screen and open Local Pass — the delivery card should be waiting. If the card is gone by the time you open the app, the timer has already expired. Make sure your screen stays on while you're on shift, or adjust your screen timeout settings.
+  </Accordion>
+</AccordionGroup>

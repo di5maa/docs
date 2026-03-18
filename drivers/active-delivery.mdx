@@ -1,0 +1,147 @@
+---
+title: "Active Delivery"
+---
+
+Once you accept a delivery request, the navigation screen opens automatically. This screen is your home for the entire delivery — it guides you from your current location to the restaurant, and then from the restaurant to the customer. Here's everything you need to know about how it works.
+
+## The Two Phases of Every Delivery
+
+Every delivery has exactly two phases. The map and navigation destination switch between them as you progress through the trip.
+
+| Phase | Route | When it starts |
+| --- | --- | --- |
+| **Pickup** | Your location → Restaurant | Immediately after you accept |
+| **Dropoff** | Restaurant → Customer | After you confirm pickup at the restaurant |
+
+The app knows which phase you're in and displays the correct destination automatically. You don't need to manually switch between them.
+
+<Note>
+  Several features — including customer notifications and the back-to-back order system — are **only active during the Dropoff phase**. The app doesn't know your exact drop-off route until you've actually picked up the order, so these features activate only once you're heading to the customer.
+</Note>
+
+---
+
+## The Navigation Map
+
+The navigation screen is built around a full-screen map powered by Google Maps Navigation. It provides:
+
+- **Turn-by-turn voice directions** — the same quality you'd get from Google Maps
+- **Live traffic awareness** — the route updates automatically if traffic conditions change
+- **Your position** shown as a moving icon on the map
+
+### Map Controls
+
+Two circular buttons sit in the top-right corner of the map:
+
+| Button | What it does |
+| --- | --- |
+| **Location icon** | Centres the map back on your current position and switches to a tilted "driving" perspective. Tap this if you've panned the map and want to return to following your route. |
+| **Speaker icon** | Toggles voice guidance on and off. When the speaker shows as active, you'll hear spoken turn instructions through your phone's speaker or connected Bluetooth. Tap it again to mute voice and navigate silently. |
+
+<Tip>
+  If you have a Bluetooth speaker or car audio system, connect it before starting your shift. Google Navigation audio routes through Bluetooth automatically, so directions play through your car speakers without you needing to do anything extra.
+</Tip>
+
+---
+
+## Location Tracking During Delivery
+
+Your phone's GPS runs continuously throughout the delivery. This powers three important things:
+
+1. **Customer tracking** — customers can see your live position on their tracking screen
+2. **ETA updates** — estimated arrival times update in real time as you move
+3. **Earnings calculation** — your total distance travelled is used to calculate distance-based earnings components
+
+### How the System Filters GPS to Stay Accurate
+
+Not every GPS reading from your phone is reliable — signals bounce off buildings, drift indoors, or occasionally "jump" to a wrong location. Local Pass automatically filters out bad readings:
+
+| Filter | Rule | Why it matters |
+| --- | --- | --- |
+| Accuracy gate | Readings less accurate than **25 metres** are discarded | Removes weak or indoor signals |
+| Minimum movement | Movements under **5 metres** are ignored | Avoids counting stationary wobble while waiting |
+| Maximum movement | Movements over **200 metres** in a single update are ignored | Prevents GPS "teleport" glitches |
+| Stream trigger | Updates only fire when you move at least **5 metres** | Reduces unnecessary battery drain |
+
+Only GPS readings that pass all of these filters are counted toward your distance and earnings. This means your tracked distance is always an honest reflection of how far you actually drove — not inflated by sensor noise.
+
+<Note>
+  Your **screen stays on automatically** throughout the delivery. Local Pass prevents your phone from sleeping so the map is always visible and navigation never pauses. This uses more battery than normal — keep a charger in your vehicle if possible, especially for longer deliveries.
+</Note>
+
+---
+
+## Customer Notifications
+
+During the **dropoff phase**, Local Pass automatically sends two notifications to the customer as you get close. You don't need to do anything — these fire in the background.
+
+| Notification | Triggered when you are within... |
+| --- | --- |
+| "Your driver is on the way" / approaching alert | **Vehicle:** 1,200 metres  ·  **Bike/Scooter:** 600 metres  ·  **Foot:** 300 metres |
+| "Your driver has arrived" | All methods: **150 metres** |
+
+The approaching threshold is also capped at **40% of the total delivery distance**. This prevents the "approaching" notification from firing too early on short trips where you'd technically be within 1,200 metres of the customer before you've even left the restaurant.
+
+<Note>
+  Each notification fires only once per delivery, no matter how many times you enter and leave the radius. The customer won't receive duplicates.
+</Note>
+
+<Tip>
+  Once the "arrived" notification fires, the customer knows you're outside. If you're waiting at a building entrance or in a lobby, you can also message them directly through the in-app delivery chat.
+</Tip>
+
+---
+
+## What If the Order Gets Cancelled Mid-Delivery?
+
+Occasionally a restaurant or customer will cancel an order while you're already navigating. When this happens, Local Pass alerts you immediately:
+
+<Steps>
+  <Step title="Alert tone plays">
+    An audio alert sounds right away to get your attention, even if your phone is in your pocket or on your dashboard mount.
+  </Step>
+  <Step title="Cancellation dialog appears">
+    A dialog box appears over the map explaining that the order has been cancelled. It tells you that navigation has been stopped and you've been unassigned from the delivery.
+  </Step>
+  <Step title="Tap Return to Lobby">
+    Tap the **Return to Lobby** button. This:
+
+    - Stops the audio alert
+    - Stops navigation
+    - Takes you back to the dispatch waiting screen, ready for your next order
+  </Step>
+</Steps>
+
+<Warning>
+  The cancellation dialog cannot be dismissed by tapping outside it or pressing the back button. You must tap **Return to Lobby** to proceed. This is intentional — the app wants to make sure you've seen the cancellation before you continue driving toward a destination that no longer needs you.
+</Warning>
+
+<Note>
+  Cancellations that happen after you've already picked up the order and are on your way to the customer are handled differently. Contact Local Pass support immediately if you are holding an order and the delivery is cancelled — do not leave food unattended.
+</Note>
+
+---
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="My navigation went quiet — has it stopped?">
+    The navigation is still running even if the voice goes quiet between turns. Voice guidance only speaks at each turn instruction. If you want to confirm navigation is active, look at the map — your position icon should be moving along the route. You can also tap the speaker button to check the voice guidance state.
+  </Accordion>
+
+  <Accordion title="The map is showing me going the wrong way — what do I do?">
+    Google Navigation recalculates your route automatically if you deviate. Simply keep driving safely and it will provide new directions. If the route seems seriously wrong (for example, it's routing you out of the city), pull over safely and tap the location icon to re-centre the map, then check the destination shown at the top of the navigation card.
+  </Accordion>
+
+  <Accordion title="My phone is overheating or battery is draining fast">
+    Navigation with a live map, GPS, and screen-on is battery-intensive. Use a phone mount and car charger to keep the phone cool and powered during your shift. Reducing screen brightness also helps with heat.
+  </Accordion>
+
+  <Accordion title="I can't find the pickup address on arrival">
+    The navigation will take you to the address on record. If the restaurant is in a mall or complex with multiple entrances, check the in-app delivery chat — the merchant may have left pickup instructions. You can also call or message the restaurant directly from the order details.
+  </Accordion>
+
+  <Accordion title="I can't find the customer's door">
+    The navigation takes you to the address provided. For apartments or complexes, the customer may have left delivery instructions in their order. Check the order notes and the in-app delivery chat. If you genuinely cannot complete the delivery after reasonable attempts, contact support before leaving the order unattended.
+  </Accordion>
+</AccordionGroup>

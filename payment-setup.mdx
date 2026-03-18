@@ -1,0 +1,70 @@
+---
+title: "Payment setup"
+---
+
+To receive payouts from Local Pass, you need to connect a **Stripe Express** account. Stripe is the payment platform Local Pass uses to transfer your earnings directly to your bank account.
+
+## Why Stripe?
+
+Stripe handles all money movement securely. Once connected, Local Pass sends your earnings to your Stripe account and Stripe deposits them to your bank — your banking details are never shared with Local Pass directly.
+
+## How to Set Up
+
+Go to **Driver Profile → Payment Settings** and tap **Set up payment**.
+
+You'll be asked one question: do you already have a Stripe account?
+
+### Option 1 — I Don't Have a Stripe Account
+
+Tap the **"I don't have a Stripe account"** tile. The app will:
+
+1. Create a new Stripe Express account for you automatically.
+2. Generate a secure onboarding link.
+3. Open the Stripe onboarding page in your browser.
+
+Complete the Stripe onboarding form (takes about 5–10 minutes). You'll need to provide your personal information, banking details, and identity verification.
+
+Once you finish, return to the app. Your account will be linked.
+
+### Option 2 — I Already Have a Stripe Account
+
+Tap the **"I have a Stripe account"** tile. You'll be asked to enter your **Stripe Account ID** — this looks like `acct_XXXXXXXXX`.
+
+To find your Stripe Account ID:
+
+1. Log into your [Stripe Dashboard](https://dashboard.stripe.com/).
+2. Go to Settings → Business details. Your Account ID is listed there.
+
+Tap **Next** and the app will open your Stripe onboarding link to complete the connection.
+
+## Completing Onboarding
+
+After the initial setup, your account status shows in the **Payment Settings** screen. If Stripe still needs more information from you (common for newer accounts), you'll see a **Complete Onboarding** button.
+
+Tap it to return to Stripe and finish any outstanding requirements. Until onboarding is complete, your account cannot receive transfers.
+
+<Warning>
+  You must complete Stripe onboarding fully before Local Pass can send any earnings to you. Payouts will not process until your account shows as charges-enabled. 
+</Warning>
+
+## Accessing Your Stripe Portal
+
+Once your account is connected, a **Access Payment Portal** button appears in Payment Settings. Tapping it opens the [Stripe Express login](https://connect.stripe.com/express_login) where you can:
+
+- View your balance and transfer history
+- Manage your bank account details
+- Enable instant payouts (requires a debit card on file)
+- Download tax documents
+
+## Copying Your Stripe ID
+
+Your Stripe Account ID is displayed in the Payment Settings header. Tap **Copy ID** to copy it to your clipboard — useful if you need it for support inquiries.
+
+## Troubleshooting
+
+| Issue | What to Do |
+| :-- | :-- |
+| **"Complete onboarding" button appears** | Stripe still needs more information — tap it and finish the form |
+| **Payouts not arriving** | Check that your Stripe account shows charges enabled in Payment Settings |
+| **Instant payout not available** | Open the Wallet Help Centre and tap "Check for Instant Payouts Eligibility" |
+| **Wrong bank account connected** | Log into your Stripe portal directly to update banking details |

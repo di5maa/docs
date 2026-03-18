@@ -128,9 +128,9 @@
               {
                 "group": "Store Settings",
                 "pages": [
-                  "agrifood-merchants/store-settings-copied-1",
-                  "agrifood-merchants/locations-copied-1",
-                  "agrifood-merchants/reviews"
+                  "agrifood-merchants/settings",
+                  "agrifood-merchants/location",
+                  "agrifood-merchants/import-reviews"
                 ]
               },
               {
@@ -208,21 +208,68 @@
               {
                 "group": "Account",
                 "pages": [
-                  "drivers/delivery/how-to-deliver",
-                  "drivers/getting-started/account-setup",
+                  {
+                    "group": "Registration",
+                    "pages": [
+                      "drivers/getting-started/account-setup",
+                      "drivers/getting-started/verifying-your-phone",
+                      "drivers/getting-started/driver-onboarding",
+                      "drivers/getting-started/completing-driver-profile",
+                      "drivers/getting-started/account-created"
+                    ]
+                  },
+                  "drivers/verification",
                   "drivers/getting-started/contract-agreement-and-terms",
-                  "drivers/getting-started"
+                  "drivers/getting-started/sign-in"
                 ]
               },
-              "drivers/delivery/signup",
               {
                 "group": "Payments",
-                "pages": []
-              }
+                "pages": [
+                  "payouts",
+                  "payment-setup",
+                  "driver-wallet"
+                ]
+              },
+              {
+                "group": "Driver profile",
+                "pages": [
+                  "vehicle",
+                  "delivery-method"
+                ]
+              },
+              {
+                "group": "Orders",
+                "pages": [
+                  "drivers/lobby",
+                  "drivers/active-delivery",
+                  "drivers/back-to-back-orders",
+                  "drivers/delivery-lobby-tips",
+                  "rules",
+                  "navigation-and-delivery",
+                  "completing-delivery",
+                  "cancelling-order",
+                  "customer-chat",
+                  "order-history-1",
+                  "drivers/delivery-shifts",
+                  "drivers/delivery-history",
+                  "drivers/demand-map"
+                ]
+              },
+              "drivers/reviews",
+              "drivers/legal"
             ]
           },
           {
-            "tab": "Changelog"
+            "tab": "Changelog",
+            "versions": [
+              {
+                "version": "March",
+                "pages": [
+                  "updatades"
+                ]
+              }
+            ]
           }
         ]
       }
