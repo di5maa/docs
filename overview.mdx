@@ -1,0 +1,97 @@
+---
+title: "Overview"
+---
+
+Placing an order on Local Pass is designed to be simple, transparent, and fair. This guide walks you through everything that happens between tapping **Checkout** and getting your order.
+
+---
+
+## Step 1 — Review Your Cart
+
+Before you reach checkout, you'll land on the **Cart** screen. Here you can:
+
+- Increase or decrease the quantity of any item
+- Remove items entirely using the trash icon
+- Add more items by tapping **Add more items**
+- Leave order instructions for the vendor (allergies, special requests, etc.)
+
+You'll also see an **Order Goal Tracker** at the top of your cart — more on that below.
+
+---
+
+## Step 2 — The Loading Screen
+
+After tapping the checkout button in your cart, Local Pass runs a quick calculation in the background. This is where we:
+
+- Confirm your delivery address and distance to the vendor
+- Calculate your delivery fee, service fee, and estimated delivery or pickup time
+- Check whether you qualify for free delivery
+- Check if any promotions apply to your order
+
+This only takes a few seconds. You'll see a loading animation while it runs.
+
+---
+
+## Step 3 — The Checkout Summary
+
+Once the loading screen finishes, you'll arrive at the **Checkout Summary**. This is where you:
+
+- Choose your **fulfillment type** (how you want your order delivered or picked up)
+- Review your delivery address or pickup location
+- See your estimated delivery or pickup time
+- Add delivery notes (e.g. "Leave at door", "Buzzer code 42")
+- Optionally apply **Local Coins** to reduce your total
+- Review a full breakdown of all fees
+- Add a tip (for delivery orders)
+- Confirm your **total** and tap **Checkout**
+
+---
+
+## Step 4 — Payment
+
+Local Pass uses **Stripe** to process all payments securely. When you tap **Checkout**:
+
+- A secure payment sheet opens — you can pay with a saved card, Apple Pay, or Google Pay
+- Your card is authorized (a hold is placed)
+- For most order types, the charge is finalized when your order is confirmed
+- For Express (on-demand) deliveries, the charge is only captured once your driver picks up your order
+
+You'll never be charged a markup. Every fee is itemized and explained. See [Understanding Your Fees](/checkout/understanding-fees) for a full breakdown.
+
+---
+
+## Step 5 — Order Processing
+
+After payment, you're taken to the **Order Processing** screen. Please stay on this screen while we:
+
+- Confirm your payment with Stripe
+- Create your order record
+- Notify the vendor
+- (For delivery orders) Begin matching you with a driver
+
+This usually takes 10–20 seconds. Do not close the app.
+
+---
+
+## Step 6 — Order Tracking
+
+Once processing is complete, you'll be taken to the **Order Tracking** screen where you can follow your order in real time.
+
+<Note>
+  Your order confirmation and receipt will be available in the **Orders** section of the app. You'll also receive push notifications at key status changes.
+</Note>
+
+---
+
+## Agrifood vs. Restaurant Orders
+
+Local Pass serves two types of vendors, and the checkout experience is slightly different for each.
+
+|  | **Restaurant Orders** | **Agrifood / Marketplace Orders** |
+| --- | --- | --- |
+| Fulfillment options | Delivery, Pickup | Delivery, Express, Pickup, Shipping |
+| Who delivers | Local Pass drivers (or vendor's own drivers) | Local Pass drivers, vendor's own drivers, or shipping carriers |
+| Payment capture | Pre-authorized, captured on confirmation | Immediate (Delivery/Pickup) or pre-authorized (Express) |
+| Shipping available | No | Yes (for products that require it) |
+
+See [Fulfillment Types](/checkout/fulfillment-types) for a full explanation of each option.

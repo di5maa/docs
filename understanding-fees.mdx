@@ -1,0 +1,175 @@
+---
+title: "Understanding fees"
+---
+
+We believe you should know exactly what you're paying for and why. This page explains every line item you might see at checkout on Local Pass. Nothing is hidden, and nothing is marked up.
+
+---
+
+## Subtotal
+
+This is the total cost of the items in your cart before any fees, taxes, or discounts are applied. It's calculated directly from the prices set by the vendor.
+
+---
+
+## Tax
+
+Taxes are calculated based on your province and the type of order.
+
+### Food Tax (GST)
+
+All food items are subject to **5% GST**, regardless of province.
+
+### Platform Fee Tax
+
+The service fee is a digital marketplace service, so it's taxed separately:
+
+| Province | Tax on service fee |
+| --- | --- |
+| British Columbia (BC) | 12% (5% GST \+ 7% PST) |
+| Saskatchewan (SK) | 11% (5% GST \+ 6% PST) |
+| Alberta (AB) | 5% (GST only) |
+
+The tax amounts shown at checkout are real — they're remitted to the government. Local Pass does not profit from taxes.
+
+---
+
+## Service Fee
+
+The service fee covers the cost of running the Local Pass platform — including payment processing, order management, driver dispatch, and customer support.
+
+It is made up of several components:
+
+- **Platform fee** — covers technology and operational costs
+- **Regulatory fee** — applies to delivery orders to help cover driver compliance costs (not charged on pickup orders)
+- **Small order surcharge** — applies when your cart is below a certain threshold (see below)
+- **Payment processing fee** — a flat Stripe fee of \$0.30 included per transaction
+
+<Info>
+  The service fee is always shown before you confirm payment. There are no surprise charges after checkout.
+</Info>
+
+---
+
+## Small Order Fee
+
+When your cart subtotal is below a vendor's minimum order threshold, a small order fee is added to your service fee. This is not a penalty — it covers the baseline cost of processing a small order (payment processing, packaging handling, etc.).
+
+You can **avoid the small order fee** by adding more items to your cart. The [Order Goal Tracker](/checkout/goal-tracker) in your cart will show you exactly how much more you need to add to waive it.
+
+<Tip>
+  The Goal Tracker in your cart will label this milestone as **"Fee"** so you always know when you're close to waiving it.
+</Tip>
+
+---
+
+## Delivery Fee
+
+The delivery fee goes directly to covering the cost of getting your order from the vendor to you. How it's calculated depends on your fulfillment type:
+
+### Standard Delivery
+
+The delivery fee is calculated based on your distance from the vendor, order size, and any vendor subsidies. Some vendors partially or fully subsidize their delivery fee — if so, you'll see a reduced or free delivery fee at checkout.
+
+### Express Delivery
+
+Express uses a separate, real-time rate that reflects on-demand driver costs. It is typically higher than standard delivery.
+
+### Pickup
+
+No delivery fee is charged.
+
+### Shipping
+
+Shipping fees are set by the carrier (Canada Post, Purolator, etc.) based on your address and the weight/dimensions of your order. 
+
+Alternatively, each vendor can set a flat shipping rate, which will be different from the carrier fees. 
+
+Local Pass does not mark up shipping rates.
+
+---
+
+## Long Distance Charge
+
+If your delivery address is significantly further than the vendor's standard delivery zone (typically beyond 9 km), a long distance charge may be added. You'll see a yellow warning at checkout if this applies to your order.
+
+---
+
+## Bag Fee
+
+A **\$0.25 bag fee** is applied to delivery orders. This is a provincially mandated charge in BC (and other provinces) for single-use bags. It is remitted to the appropriate regulatory authority and is not kept by Local Pass.
+
+---
+
+## Driver Tip
+
+Tips are optional and go **100% to the driver** who delivers your order. Local Pass does not take any portion of tips.
+
+For delivery orders, you'll see preset tip options:
+
+- \$1.50
+- \$2.50 _(default)_
+- \$3.50
+- Custom amount
+- No tip
+
+For pickup and shipping orders, no tip is shown.
+
+<Note>
+  Tips are only available for orders fulfilled by Local Pass drivers or vendor-operated delivery. They are not shown for pickup or shipping orders.
+</Note>
+
+---
+
+## Discount
+
+If a promotion has been applied to your order, the discount will appear as a negative line item (e.g. **-\$5.00**). Promotions are applied automatically — you don't need to enter a code. See [Promotions & Discounts](/checkout/promotions) for details.
+
+---
+
+## Local Coins
+
+Local Coins are rewards earned from previous orders on Local Pass. You can redeem them at checkout to reduce your total. The amount redeemed appears as a negative line item.
+
+See [Local Coins & Rewards](/account/local-coins) to learn how to earn and use them.
+
+---
+
+## Total
+
+The total is the final amount charged to your payment method. It is calculated as:
+
+```text
+Subtotal
++ Tax
++ Service Fee
++ Delivery Fee (if applicable)
++ Long Distance Charge (if applicable)
++ Bag Fee (if applicable)
++ Driver Tip (if applicable)
+− Discount (if applicable)
+− Redeemed Local Coins (if applicable)
+= Total
+```
+
+The total shown at checkout is the exact amount Stripe will charge. There are no hidden fees added after you confirm.
+
+---
+
+## Where Does Your Money Go?
+
+We want to be fully transparent about how every dollar is allocated. Here is the honest answer:
+
+| Fee | Who receives it |
+| --- | --- |
+| Subtotal | The vendor (minus a small platform commission) |
+| Service fee | Local Pass (operations, tech, support) |
+| Delivery fee | Local Pass drivers and driver operations |
+| Long distance charge | Additional driver compensation |
+| Regulatory fee | Driver compliance and regulatory costs |
+| Bag fee | Government (remitted by Local Pass) |
+| Tax | Government (remitted by Local Pass) |
+| Driver tip | Your driver — 100% |
+| Shipping fee | The shipping carrier |
+
+Local Pass does not add markups to any third-party cost. The delivery fee you see is not inflated — it reflects the real cost of moving your order.

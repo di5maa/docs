@@ -1,0 +1,123 @@
+---
+title: "Local Coins"
+---
+
+## How Payments Work
+
+Local Pass processes all payments through **Stripe**, one of the world's most trusted payment platforms. Your card information is never stored on Local Pass servers — it's handled entirely by Stripe's secure infrastructure.
+
+### What Payment Methods Are Accepted?
+
+At checkout you can pay with:
+
+- Credit or debit card (Visa, Mastercard, Amex)
+- **Apple Pay** (on iPhone and iPad)
+- **Google Pay** (on Android)
+
+### When Is My Card Charged?
+
+This depends on the type of order you're placing:
+
+| Order Type | When you're charged |
+| --- | --- |
+| Standard Delivery (LP drivers) | Pre-authorized payment at checkout, captured when driver picks up |
+| Standard Delivery (vendor's own drivers) | Pre-authorized at checkout, captured when products are ready |
+| Express Delivery | Pre-authorized at checkout, captured when driver picks up |
+| Pickup | Pre-authorized at checkout, captured when products are ready |
+| Shipping | Immediately at checkout |
+| Food Marketplace | Immediately unless vendor offers "Express" delivery |
+
+**Pre-authorization** means a hold is placed on your card but no money moves until the order progresses. If your order is cancelled before the charge is captured, the hold is released automatically. Depending on your bank, this can take 1–5 business days to disappear from your statement.
+
+<Note>
+  A pre-authorization is not a charge. It will appear as "pending" on your bank statement until it's either captured or released.
+</Note>
+
+### Is My Payment Secure?
+
+Yes. All transactions on Local Pass are:
+
+- Encrypted end-to-end using TLS
+- Processed by Stripe, which is PCI-DSS Level 1 certified
+- Protected by 3D Secure when required by your bank
+
+Local Pass never sees your full card number. Stripe handles all sensitive payment data.
+
+---
+
+## Local Coins
+
+Local Coins are Local Pass's built-in rewards program. You earn them by placing orders, and you can redeem them to reduce the cost of future orders.
+
+### How Do I Earn Local Coins?
+
+Local Coins are credited to your account automatically when you complete eligible orders. The amount you earn is based on the size and type of your order.
+
+You can check your current Local Coins balance in the **Account** section of the app, or it will be shown directly at checkout if you have a balance.
+
+### How Do I Use Local Coins?
+
+At checkout, if you have a Local Coins balance, a **Use your Local Coins** section will appear above the fee breakdown. You'll see selectable amounts — for example:
+
+- **\$2.50** (25% of your balance)
+- **\$5.00** (50% of your balance)
+- **\$10.00** (your full balance)
+
+Tap the amount you'd like to apply. It will appear as a discount line in your fee breakdown and will reduce your total accordingly.
+
+<Tip>
+  You can only redeem Local Coins up to the value of your subtotal — you won't be able to bring your total below \$0.
+</Tip>
+
+### Can I Use Local Coins With a Promo?
+
+Yes. Local Coins and promotional discounts can be combined at checkout. Both will appear as separate negative line items in your fee breakdown.
+
+### Do Local Coins Expire?
+
+Free delivery rewards earned through the Local Coins program have an expiry date. Regular coin balances may also have expiry rules — check the **Account** section of the app for the current status of your balance.
+
+---
+
+## Promotions & Discounts
+
+When a vendor is running a promotion that applies to your order, Local Pass applies it **automatically** — no code needed.
+
+You'll see the promotion details in your cart before checkout, and the discount will appear as a line item on your checkout summary:
+
+> **Discount** — -\$5.00
+
+Promotions can take the form of:
+
+- A fixed dollar amount off (e.g. \$5.00 off your order)
+- A percentage off (e.g. 10% off your subtotal)
+
+<Note>
+  Promotions are vendor-specific and are only applied when your order meets the promotion's eligibility criteria (e.g. minimum cart value). Local Pass does not set or fund vendor promotions.
+</Note>
+
+---
+
+## Receipts
+
+After your order is placed, a receipt is available in the **Orders** section of the app. It includes a full itemized breakdown of everything you paid, including:
+
+- All individual item prices
+- Every fee
+- Any discounts or Local Coins applied
+- The final total charged to your payment method
+
+If you need a receipt for expense purposes, you can access it anytime from your order history.
+
+---
+
+## Payment Failures
+
+If your payment fails at checkout, here's what to check:
+
+1. **Insufficient funds** — ensure your card has enough available balance
+2. **Card declined** — contact your bank if you believe the card should work
+3. **Apple Pay / Google Pay issues** — try switching to a manual card entry
+4. **Network issues** — ensure you have a stable internet connection and try again
+
+If payment continues to fail, contact us through the **Support** section of the app.

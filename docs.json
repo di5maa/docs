@@ -25,24 +25,66 @@
           {
             "tab": "Account",
             "pages": [
-              "customers/getting-started",
+              "legal-1",
               {
-                "group": "Referral",
-                "pages": []
+                "group": "Profile settings",
+                "pages": [
+                  "customers/getting-started",
+                  "sign-in",
+                  "onboarding",
+                  "personal-details",
+                  "updating-address",
+                  "settings",
+                  "favourite-locations",
+                  "favourite-vendors",
+                  "personalizing-local-pass",
+                  "wallet",
+                  "deleting-your-account"
+                ]
               },
               {
                 "group": "Payments",
+                "pages": []
+              },
+              "customers/activity-history",
+              "customers/referrals",
+              {
+                "group": "Checkout",
                 "pages": [
-                  "customers/payments/local-coins"
+                  "overview",
+                  "fulfillment-types",
+                  "understanding-fees",
+                  "mystery-box",
+                  "local-coins",
+                  "refunds-and-cancellations"
                 ]
-              }
+              },
+              "customers/order-tracking",
+              "customers/leaving-review"
             ]
           },
           {
-            "tab": "Restaurants"
+            "tab": "Restaurants",
+            "pages": [
+              "finding-restaurants-near-you",
+              "searching-restaurants",
+              "restaurant-profiles",
+              "ordering-food",
+              "reviews-and-ratings"
+            ]
           },
           {
-            "tab": "Food Marketplace"
+            "tab": "Food Marketplace",
+            "pages": [
+              "Local-Market",
+              "product-search",
+              "product-filters",
+              "soon-to-go-program",
+              "product-page",
+              "merchant-store",
+              "shopping-cart",
+              "merchant-chat"
+            ]
           }
         ]
       },
