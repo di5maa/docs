@@ -1,0 +1,162 @@
+---
+title: "Analytics - Restaurants"
+---
+
+Your Analytics dashboard shows you how your restaurant is performing — from gross revenue and order volume to your busiest hours and fastest-moving menu items. This page explains every metric, chart, and section so you can read your data confidently and act on it.
+
+---
+
+## Getting There
+
+Go to **Analytics** in your dashboard sidebar. The dashboard loads with the last 7 days selected by default.
+
+---
+
+## Selecting Your Date Range
+
+Use the **date range dropdown** at the top right to change the reporting window:
+
+| Option | What It Shows |
+| --- | --- |
+| Today | Current day only |
+| Last 7 Days | Rolling 7-day window |
+| Last 30 Days | Rolling 30-day window |
+| Last 90 Days | Rolling 90-day window |
+| Last Year | Rolling 365-day window |
+| Custom | Pick any start and end date |
+
+### Grouping Charts
+
+The **Group by** selector (Daily / Weekly / Monthly) controls how data points are bucketed across all charts. For a 7-day view, Daily is most useful. For a quarterly or annual view, Weekly or Monthly gives a cleaner picture.
+
+### Compare to Previous Period
+
+Toggle **Compare** to see the equivalent prior period overlaid on your charts as a dashed grey line. Trend badges (small percentage indicators) appear on each metric card to show whether you're tracking ahead or behind the prior period.
+
+---
+
+## Top Metrics
+
+### Financial
+
+| Metric | What It Means |
+| --- | --- |
+| **Total Sales** | Gross revenue from all completed orders, including delivery fees and tips |
+| **Net Sales** | Revenue from food subtotals only, excluding delivery fees and tips |
+| **Store Traffic** | Total page views your menu page received. The subtitle shows unique visitor count. |
+
+### Operational
+
+| Metric | What It Means |
+| --- | --- |
+| **Total Orders** | All orders placed in the period. The subtitle shows cancelled and refunded counts. |
+| **Avg Order Value** | Total gross sales divided by the number of completed orders |
+| **Cancel Rate** | The percentage of orders that were cancelled. Shown in red when above 5%. |
+| **Avg Prep Time** | The average time from order placement to completion, measured from your order timestamps. Lower is better. |
+
+<Tip>
+  If your Avg Prep Time is climbing week over week, it's often a signal that a specific part of the kitchen workflow needs attention — not necessarily that the whole kitchen is slow. Cross-reference with your Peak Hours chart to see if delays are concentrated at busy times.
+</Tip>
+
+---
+
+## Sales & Orders Chart
+
+The main chart visualises your data over time. Use the tabs to switch between:
+
+- **Sales** — Net revenue per day/week/month
+- **Orders** — Total order volume over time
+- **AOV** — Average order value per period (completed orders only)
+- **Traffic** — Page views to your storefront
+
+When **Compare** is on, a dashed grey line shows the previous period on the same axis so you can directly compare trends without switching views.
+
+---
+
+## Peak Activity Times
+
+This section answers one of the most practically useful questions in restaurant analytics: _when are customers ordering?_
+
+The bar chart shows order volume by hour of day, across the full selected period. Two callouts appear at the top:
+
+- **Busiest Hour** — the single hour that received the most orders
+- **Quietest Hour** — the hour with the fewest orders among those with any activity
+
+Use this to:
+
+- Staff your kitchen appropriately — don't over-schedule quiet hours or understaff peak ones
+- Time your promotions — launching a flash deal just before a naturally busy hour can amplify impact
+- Plan prep — if your busiest period starts at 6pm, your mise en place schedule should account for it
+
+When **Compare** is on, a dashed grey line overlays the previous period's hourly pattern so you can see whether your peak windows are shifting.
+
+---
+
+## Order Types
+
+This card breaks down your orders by fulfilment type — Delivery, Pickup, and Dine-in — showing the count and percentage of total for each.
+
+A horizontal progress bar for each type shows its relative proportion of your order mix.
+
+Knowing your order type split helps you make decisions about staffing (delivery and pickup require different workflows), packaging investment, and which channels to promote.
+
+---
+
+## Traffic Breakdown
+
+Shows where your page views are coming from, categorised by page type — for example, your main menu page versus individual item pages. Each category shows a count and a proportional bar.
+
+This helps you understand how customers are navigating your menu — whether they're browsing broadly or landing directly on specific items (often from a shared link or promotion).
+
+---
+
+## Customer Heatmap
+
+<Note>
+  The Customer Heatmap is available on the mobile app only. It does not appear on the web dashboard.
+</Note>
+
+A map view showing delivery address density — where your customers are geographically concentrated. Darker hexagonal zones indicate a higher concentration of orders from that area.
+
+Use this to:
+
+- Identify your core delivery zones
+- Spot emerging neighbourhoods that might justify a targeted promotion
+- Evaluate whether your delivery radius is appropriately sized
+
+---
+
+## Top Menu Items
+
+The five best-selling menu items in the selected period, ranked by total revenue. Each row shows the item name, total quantity sold, and revenue. Items with photos display a thumbnail.
+
+---
+
+## Top Customers
+
+The five highest-spending customers in the period, ranked by total spend. Each row shows the customer name, number of orders, and total amount spent.
+
+---
+
+## Recent Orders
+
+The 10 most recent orders in the period, showing order number, date, customer name, order status, and total. Clicking an order number navigates directly to the full order detail view.
+
+---
+
+## Understanding Your Settlement Numbers
+
+The analytics dashboard uses the same settlement calculation shown on individual order detail pages. For each completed order:
+
+- Your **gross sales** are the product subtotal before any platform deductions
+- The **platform commission** is calculated from your contracted rate and deducted from gross
+- **GST (5%) and PST (7% BC)** are applied to the commission itself — these are taxes on the platform's service fee, not on your food revenue
+- **GST collected on food** is shown as an informational figure — this is money you collect from customers on behalf of the CRA and remit separately
+
+Your **net payout** is what remains after all platform deductions.
+
+---
+
+## Refreshing Data
+
+Click the **refresh icon** in the top right header to force a fresh load. Analytics are cached for 5 minutes — the refresh button bypasses the cache and pulls current data from Firestore immediately.

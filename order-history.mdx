@@ -1,4 +1,135 @@
 ---
-title: 'Order History'
+title: "Order History"
 ---
 
+The Orders page is your central view of all customer orders. From here you can search for a specific order, filter by status or date, review key stats at a glance, and click through to any order's full detail view. This guide applies to both agrifood and restaurant vendors.
+
+---
+
+## Getting There
+
+Click **Orders** in your dashboard sidebar. The page loads with the last 7 days of orders by default, sorted from newest to oldest.
+
+---
+
+## Searching for an Order
+
+Use the **search bar** at the top of the page to find orders by:
+
+- Order number
+- Customer full name
+- Customer email address
+- Customer phone number
+- Delivery address
+
+Type any part of any of these — results filter in real time as you type.
+
+---
+
+## Filtering by Date
+
+Use the **date dropdown** to change the time window:
+
+| Filter | What It Shows |
+| --- | --- |
+| Last 7 Days | The most recent 7 days (default) |
+| Last 14 Days | 14-day rolling window |
+| Last 30 Days | 30-day rolling window |
+| Last 90 Days | 90-day rolling window |
+| This Quarter | From the start of the current quarter |
+| Year to Date | From January 1st of the current year |
+| Custom Range | Pick any specific start and end date |
+
+To use a **Custom Range**, select it from the dropdown. A date range picker appears — select your start date, then your end date, and click Confirm. The order list updates immediately.
+
+---
+
+## Filtering by Status
+
+Status filter chips appear next to the date dropdown:
+
+| Chip | Orders Shown |
+| --- | --- |
+| **All** | Every order in the selected date range |
+| **Pending** | Orders placed but not yet completed |
+| **Completed** | Fulfilled and closed orders |
+| **Cancelled** | Orders that were cancelled |
+
+Click any chip to apply that filter. Click **All** to clear the filter and return to the full list.
+
+---
+
+## Stats Row
+
+When at least one order matches your current filters, a row of summary cards appears above the list:
+
+| Card | What It Shows |
+| --- | --- |
+| **Total Revenue** | Gross revenue from all orders matching your filters |
+| **Orders** | Total order count |
+| **Avg. Value** | Average order value (total revenue ÷ order count) |
+| **Top Selling** | The single most ordered menu item or product name in this filtered set |
+
+These stats update whenever you change a filter or the date range. They reflect only the orders currently visible — so if you filter to _Cancelled_ orders only, the revenue shown is the revenue from those cancelled orders.
+
+---
+
+## Reading the Orders List
+
+### Desktop (Table View)
+
+On screens wider than 1024px, orders appear in a table with columns for:
+
+- **Order number** — your reference ID
+- **Date** — the date and time the order was placed
+- **Customer** — the customer's name, which is also a clickable link to the order detail view
+- **Type** — Delivery, Pickup, Own Delivery, or Dine-in
+- **Total** — the order total charged to the customer
+- **Status** — current order status (colour-coded badge)
+- **Arrow** — a navigation button to open the full order detail
+
+For **agrifood vendors**, the table also includes Phone and Email columns so your team can quickly contact customers about their orders without opening each individual record.
+
+### Mobile (Card View)
+
+On smaller screens, each order appears as a card showing:
+
+- Order number and total
+- Customer name
+- Order type
+- Status badge and timestamp
+
+Tap any card to open the full order detail view.
+
+---
+
+## Opening an Order
+
+Click any order number or customer name (desktop) or tap any order card (mobile) to open the **Order Details** page.
+
+On desktop, the detail view opens as a panel. On mobile, it opens full screen. Use the **back arrow** at the top to return to the orders list without losing your current filters.
+
+---
+
+## What Each Status Means
+
+Statuses appear as colour-coded badges throughout the orders list:
+
+| Badge Colour | Status | What It Means |
+| --- | --- | --- |
+| 🟢 Green | Completed | Order fulfilled and closed |
+| 🔵 Blue | Pending / Accepted | Order received, being processed |
+| 🔴 Red | Cancelled / Declined | Order was not fulfilled |
+| 🟣 Purple | Refunded | A refund has been issued |
+
+---
+
+## Tips for Navigating Your Orders
+
+**Use the search field for customer service situations.** If a customer calls about their order, type their name or phone number into the search bar to find all their orders instantly — regardless of date range.
+
+**Use date \+ status filters together.** To find all cancelled orders from last month, set the date to Last 30 Days and click the Cancelled chip. The stats row will update to show you the total value of cancelled orders in that period.
+
+**The stats row updates with your filters.** This makes it useful for quick revenue checks — set a date range and leave the status on All to see your gross revenue, or switch to Completed to see revenue from fulfilled orders only.
+
+**Refresh to see new orders.** The orders list is a live stream — new orders appear automatically. If you've had the page open for a while, a browser refresh will ensure you're seeing the latest data.

@@ -1,0 +1,228 @@
+---
+title: "Order Details - Restaurants"
+---
+
+The Order Details page gives your team everything needed to manage a single order from the moment it arrives to the moment it's closed — items ordered, customer info, delivery or pickup details, your payout breakdown, and a running timeline of every update. This guide explains what you're looking at and what you can do.
+
+---
+
+## Getting to an Order
+
+Open the **Orders** page and click any order number to open its detail view. On desktop the panel opens to the right. On mobile it opens full screen.
+
+Use the **Back** arrow at the top left to return to the orders list.
+
+---
+
+## Order Header
+
+At the top of the page:
+
+- **Order number** with the date and time it was placed
+- **Status badge** — the current order status (see the status reference at the bottom of this page)
+- **Flagged badge** — shown in red if a staff member has flagged this order for attention
+- **Dispute badge** — shown in amber if a dispute update has been logged by the Local Pass team
+
+**Header action buttons** (desktop) or a second row (mobile):
+
+| Button | What It Does |
+| --- | --- |
+| **Refund** | Opens the refund dialog — only shown when a refund is applicable |
+| **Print Invoice** | Generates and opens a printable PDF invoice for this order |
+
+---
+
+## Quick Facts
+
+A row of stat cards gives you an at-a-glance summary before you scroll into the details:
+
+| Card | What It Shows |
+| --- | --- |
+| **Gross Sales** | The product subtotal for this order |
+| **Net Payout** | Your take-home after platform deductions |
+| **Items** | Number of line items in the order |
+| **Type** | Delivery, Pickup, Own Delivery, or Dine-in |
+| **Order Age** | How long ago the order was placed |
+
+---
+
+## Notes
+
+If notes are present they appear as coloured banners directly below the Quick Facts row:
+
+- **Customer Note** — a yellow banner showing anything the customer wrote in the order notes field at checkout. Always read this before preparing the order.
+- **Internal Note** — a blue banner showing any note logged by your staff on this order.
+
+---
+
+## Ordered Items
+
+The items section lists everything the customer ordered:
+
+- Product photo, name, and quantity
+- All modifiers the customer selected — for example, _Sauce on the side_, _Extra cheese (\+\$1.00)_, _No onion_. Modifiers are shown in an indented box under the item name.
+- Unit price and line total
+- A sale badge if the item was purchased at a discounted price, with the original price shown crossed out
+
+This is your kitchen reference. The modifiers section is designed to be clear enough that staff can read it at a glance without needing to open a separate ticket.
+
+---
+
+## Payment Summary
+
+Shows exactly what the customer paid:
+
+| Line | Description |
+| --- | --- |
+| Subtotal | Combined item prices |
+| Discount | Any promo code reduction |
+| GST Collected (5%) | Tax collected from the customer |
+| Delivery Fee | Shown for Own Delivery and On-demand Delivery orders |
+| Driver Tip | Shown for Own Delivery and On-demand Delivery orders |
+| Commission | Platform fee at your contracted rate |
+| GST on Commission (5%) | Tax on the platform's service fee |
+| PST on Commission (7% BC) | BC provincial tax on the platform's service fee |
+| **Net Payout** | What you receive after all deductions |
+
+### Understanding Your Settlement
+
+The settlement calculation follows standard Canadian marketplace accounting:
+
+Your **gross sales** are the food subtotal. The platform **commission** is calculated from your contracted rate (which varies by order type — pickup, self-delivery, or platform delivery). GST and BC PST are applied to the commission itself because marketplace facilitation fees are taxable services.
+
+The **GST Collected** line is flagged with a "Remit to CRA" badge. This is tax you've collected from the customer as a trustee — it must be remitted to the Canada Revenue Agency on your regular GST/HST filing. It is not part of your payout.
+
+Your **Net Payout** is what remains after the commission, GST on commission, and PST on commission are deducted.
+
+---
+
+## Customer
+
+This card shows the customer's contact details and delivery address, with direct action buttons:
+
+- **Call** — opens your device's phone app with the customer's number pre-dialled
+- **Email** — opens your email client addressed to the customer
+
+### Returning Customer Badge
+
+A badge in the top right of the customer card shows whether this is a new or returning customer:
+
+- **New Customer** — this is their first order with you
+- **⭐ Nx Returning** — they've ordered from you N times before. The star and count update automatically.
+
+This is useful context for your front-of-house team — a five-time returning customer who calls about an order deserves a different conversation than a first-time guest.
+
+---
+
+## Delivery Driver
+
+If a driver has been assigned to the order, a Driver card appears showing:
+
+- The driver's name
+- An _Assigned_ status indicator
+
+This card only appears when a driver name is on record for the order.
+
+---
+
+## Delivery Proof
+
+If a driver submitted a proof-of-delivery photo through the app, it appears here along with:
+
+- The photo itself
+- Any comment the driver added (e.g., "Left at front door as requested")
+- The timestamp of delivery
+
+This section only appears when a proof photo is available.
+
+---
+
+## Actions
+
+The Actions card gives you three tools beyond the header buttons:
+
+### Add Staff Note
+
+Opens a text dialog. Type your note and click **Save Note**. The note is added to the order timeline immediately, prefixed with 📝 to distinguish it from automatic status updates. Notes are internal — customers never see them.
+
+Use staff notes to log:
+
+- Customer calls and what was discussed
+- Special prep instructions not captured in modifiers
+- Reasons for delays or exceptions
+- Any manual steps taken outside the normal workflow
+
+### Flag Order
+
+Opens a dialog where you select a reason for flagging. Options include: Wrong items delivered, Missing items, Customer complaint, Driver issue, Payment dispute, Fraud concern, Other.
+
+Flagging an order:
+
+1. Adds a 🚩 entry to the order timeline visible to your team
+2. Creates a record in the Local Pass platform operations queue so the support team is notified
+
+A **Flagged** badge appears in the order header once an order is flagged.
+
+### Chat with Support
+
+Opens a support conversation pre-filled with context from this specific order — order number, status, customer address, and fulfillment type. Use this if you need help from the Local Pass team on something that can't be resolved from the dashboard.
+
+---
+
+## Order Timeline
+
+The timeline shows every status change, staff note, flag, and dispute update for this order in chronological order.
+
+### Reading the Timeline
+
+Each entry has a coloured dot that signals its type:
+
+| Dot Colour | Entry Type |
+| --- | --- |
+| 🟢 Green | Standard status updates (most recent entry) |
+| 🔵 Blue/Purple | Historical status updates |
+| ⚫ Grey | Staff notes (📝) |
+| 🔴 Red | Flagged entries (🚩) |
+| 🟡 Amber | Dispute updates |
+
+### Dispute Updates
+
+If the Local Pass team logs a dispute update on an order, it appears as an amber card in the timeline with a **DISPUTE** label. A two-line preview is shown inline. Tap the card to open a bottom sheet with the full dispute text, including context from the platform operations team.
+
+A **Dispute** badge also appears in the order header whenever a dispute entry is present.
+
+### Adding a Comment
+
+Type in the text area at the bottom of the timeline and click **Post**. Comments appear immediately in the timeline with a 📝 prefix and timestamp. They are visible to your team only.
+
+---
+
+## Issuing a Refund
+
+Click **Refund** in the header (or the Refund button in the Actions area if you have scrolled past the header) to open the refund dialog.
+
+**Full Refund** — refunds the complete order total.
+
+**Partial Refund** — shows each item with \+/− controls so you can select exactly which items and how many units to refund. The refund amount calculates automatically, inclusive of tax.
+
+Select a reason from the dropdown before confirming. The refund is processed through Stripe and:
+
+- A refund record is added to the order timeline
+- The customer receives a push notification and email confirmation
+- The order status updates to _Refunded_ if it was a full refund
+- The refund amount is reflected in your payout balance
+
+---
+
+## Status Reference
+
+| Status | What It Means |
+| --- | --- |
+| **Placed** | Order received and paid, awaiting kitchen action |
+| **Accepted** | Kitchen has acknowledged the order |
+| **Preparing** | Order is being made |
+| **Completed** | Order fulfilled and closed |
+| **Delivered** | Delivery confirmed |
+| **Cancelled** | Order was cancelled before fulfillment |
+| **Declined** | Order was declined |
+| **Refunded** | Full refund issued |

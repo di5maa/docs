@@ -1,0 +1,124 @@
+---
+title: "Manual payouts"
+---
+
+Vendors do not need to wait for the Monday automated run. Two manual payout methods are available from **Dashboard → Payments → Wallet**:
+
+<CardGroup cols={2}>
+  <Card title="Cash Out" icon="money-bill-transfer">
+    Standard Stripe transfer. Funds arrive in the vendor's bank account within **2–7 business days**. No fee.
+  </Card>
+
+  <Card title="Instant Payout" icon="bolt">
+    Funds arrive within **minutes**. Requires `stripeChargesEnabled = true`. A **\$1.00 CAD** service fee applies.
+  </Card>
+</CardGroup>
+
+---
+
+## Cash Out
+
+### Flow
+
+<Steps>
+  <Step title="Navigate to the Wallet page">
+    Go to **Dashboard → Payments → Wallet**. The current balance, tax breakdown, and platform fee are displayed on the wallet card.
+  </Step>
+  <Step title="Review the balance">
+    The wallet card shows:
+
+    - **Net earnings \+ taxes** 
+    - **Platform fee** — shown separately below
+    - **Payment breakdown** — full line-item view
+  </Step>
+  <Step title="Tap 'Cash Out Amount'">
+    The button is **disabled** if `total < 1.0` and shows "No funds to transfer".
+
+    When tapped, a confirmation dialog appears showing the exact transfer amount:
+  </Step>
+  <Step title="Confirm the transfer">
+    On confirmation, Local Pass processes the request with the calculated amount in cents (CAD) to the vendor's connected account.
+  </Step>
+  <Step title="Wallet is cleared">
+    On a successful Stripe response, all wallet fields are reset to zero.
+  </Step>
+  <Step title="Transfer appears in history">
+    The transfer is immediately visible in the **Transfer History** section at the bottom of the Wallet page, sourced live from Stripe. Alternatively, you can visit Stripe Express account for more details. [Login here → ](https://dashboard.stripe.com/login?locale=en-CA) or [read documentation →](https://support.stripe.com/express).
+  </Step>
+</Steps>
+
+### What happens on failure
+
+If the Stripe transfer fails, the vendor sees a "Failed" snackbar. **No wallet fields are modified** — the full balance is retained for a subsequent attempt. The vendor can try again immediately. If you still experience issues, please contact our support team via live chat or email at vendors@imlocal.ca
+
+---
+
+## Instant Payout
+
+### Eligibility
+
+Instant Payout is only visible to vendors whose **debit card **is connected to their Stripe account. We detect this automatically from the connected Express account.
+
+<Note>
+  Not all Stripe Express accounts are eligible for instant payouts. Stripe determines eligibility based on account history, verification status, and the connected bank's support for real-time payments. If the button is not visible, the vendor's account has not yet been granted this capability by Stripe.
+</Note>
+
+### Flow
+
+<Steps>
+  <Step title="Tap 'Instant Payout'">
+    The button is visible below the main Cash Out button for eligible vendors. A confirmation dialog explains the \$1.00 fee and shows the net transfer amount after deduction:
+  </Step>
+  <Step title="Standard transfer is created first">
+    Local Pass initiates the process to move funds from the Local Pass platform account to the vendor's connected Stripe account. This is the same first step as a standard Cash Out.
+  </Step>
+  <Step title="Instant payout is triggered">
+    On a successful transfer, Local Pass  pushes the funds from the connected account to the vendor's bank account immediately.
+  </Step>
+  <Step title="Wallet is cleared">
+    On a successful Stripe Payout response, all wallet fields are decremented and reset — identical to the standard Cash Out wallet reset.
+  </Step>
+  <Step title="Confirmation shown">
+    The vendor sees a "Transaction is paid" success dialog. The transfer appears in Transfer History.
+  </Step>
+</Steps>
+
+### Failure modes
+
+<AccordionGroup>
+  <Accordion title="Transfer succeeds but Payout fails">
+    The Stripe transfer to the connected account succeeded, but the instant payout to the bank failed. The vendor sees a "Failed" snackbar. The wallet is **not** cleared since the bank delivery did not complete. The vendor should try again or use standard Cash Out, which will arrive in 2–7 business days through Stripe's normal payout cycle.
+  </Accordion>
+
+  <Accordion title="Transfer fails">
+    Neither step completes. The vendor sees "Failed" and the wallet is unchanged.
+  </Accordion>
+
+  <Accordion title="Vendor dismisses confirmation">
+    No API calls are made. A "Dismissed" snackbar is shown. Wallet is unchanged.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Transfer History
+
+The Transfer History section on the Wallet page lists **all past transfers** — both manual and automated weekly payouts.
+
+| Field | Source |
+| --- | --- |
+| **Date** | `created` Unix timestamp from Stripe, formatted by `formatStripeTimestamp` |
+| **Amount** | `amount` field in Stripe cents, converted by `formatStripeCentsToAmount` |
+| **Label** | "Transfer history" — displayed below each amount |
+
+History is fetched in real time from Stripe. There is no local cache — what you see reflects Stripe's live data.
+
+<Tip>
+  For a more detailed breakdown of individual transfers — including the orders included in each payout batch — vendors can log in to their [Stripe Express dashboard](https://dashboard.stripe.com) directly.
+</Tip>
+
+---
+
+## Payout policy
+
+Vendors can view the full Local Pass payout policy by tapping the **Help** button at the top of the Wallet page. 

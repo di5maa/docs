@@ -1,4 +1,232 @@
 ---
-title: 'Order Details'
+title: "Order Details - Agrifood"
 ---
 
+The Order Details page gives you everything you need to act on a single order — the customer's information, the items they ordered, the fulfillment workflow, your settlement breakdown, and the full order timeline. This guide explains each section and the actions available to you.
+
+---
+
+## Getting to an Order
+
+Open the **Orders** page and click any order number in the list to open its detail view. On desktop, the panel opens to the right of your order list. On mobile, it opens as a full-screen page.
+
+Use the **back arrow** at the top to return to your orders list.
+
+---
+
+## Order Header
+
+At the top of the page you'll see:
+
+- **Order number** — your reference for this transaction
+- **Payment status badge** — either _Paid_ (the charge was successfully collected) or _Unpaid_
+- **Fulfillment status badge** — the current logistics stage of the order (see the full list below)
+- **Order date and time**
+
+---
+
+## Fulfillment Section
+
+This is the core of the order detail page for agrifood vendors. It shows the items in the order and provides the tools to fulfill it.
+
+### Items List
+
+Each item in the order displays:
+
+- Product photo
+- Product name (linked to the product record)
+- SKU if one is set
+- Weight (e.g., `500 g`) if recorded on the product
+- Lot number if applicable — shown when traceability information has been added
+- Any variant or option selected (e.g., size or add-on)
+- Unit price × quantity and line total
+
+### Fulfillment Types
+
+Every order has a fulfillment type. The workflow shown at the bottom of the Fulfillment section depends on which type the customer selected:
+
+---
+
+#### Shipping
+
+Orders fulfilled by carrier (Canada Post, FedEx, UPS, Purolator, Canpar, etc.).
+
+**The shipping workflow has four stages:**
+
+**1. Unfulfilled — enter tracking and ship**
+
+When an order first arrives, you see two options:
+
+- **Buy label** — opens the label purchasing flow powered by EasyPost. You'll see live carrier rates for the order, select the one you want, and pay for the label using your saved payment method. The label is generated immediately and associated with the order.
+- **Fulfill items** — if you're using your own pre-paid label or a carrier account outside of Local Pass, enter the tracking number and carrier manually and click Fulfill items to mark the order as shipped.
+
+You can also scan a tracking barcode using your phone's camera by tapping the scan icon next to the tracking number field.
+
+**2. Label Created**
+
+After purchasing a label through Local Pass, the order moves to _Label Created_ status. This means the label exists, but the package has not yet been handed to the carrier.
+
+A green banner confirms the label is ready. From here:
+
+- Click **Print label** to open and print the PDF shipping label
+- Click **Mark as Shipped** once you've physically handed the package to the carrier
+
+<Warning>
+  The order is not marked as Completed until you click **Mark as Shipped**. Customers do not receive a "your order is on its way" update until this step is completed.
+</Warning>
+
+**3. Shipped (Carrier-Managed)**
+
+Once marked as Shipped, the order becomes Completed. From this point, EasyPost automatically updates the fulfillment status as the carrier scans the package — you'll see statuses like _In Transit_, _Out for Delivery_, and _Delivered_ appear in the timeline without any action required.
+
+Exception statuses (Returned to Sender, Delivery Exception, Shipment Cancelled, Tracking Error) appear in a red banner and indicate that carrier intervention is needed. Check the carrier's tracking page directly for next steps.
+
+**4. Fulfilled**
+
+When the order reaches a terminal status (Shipped, Delivered), the fulfillment header shows _Fulfilled_ and no further action buttons appear. The tracking information remains visible for reference.
+
+---
+
+#### Pickup
+
+Customer is collecting the order from your location.
+
+The section shows:
+
+- Scheduled pickup time
+- Your store's pickup address with a **Map** link
+- An **Edit** button to adjust the pickup time if needed
+
+Click **Mark as ready** when the order is prepared and waiting for the customer. This updates the order status and notifies the customer.
+
+---
+
+#### Own Delivery
+
+You're delivering this order yourself.
+
+The section shows:
+
+- Scheduled delivery date and time
+- **Edit** button to update the delivery window
+- Driver name if one is assigned and distance
+
+Click **Update status** to advance the order through your delivery workflow.
+
+---
+
+#### Platform Delivery
+
+Local Pass is managing delivery through a third-party driver.
+
+The section shows:
+
+- Scheduled delivery time and current fulfillment status
+- Assigned driver name and estimated distance
+- A blue information banner confirming this delivery is managed by Local Pass
+
+No manual fulfillment actions are required for platform-managed delivery — the driver's progress drives the status updates.
+
+---
+
+## Order Summary (What the Customer Paid)
+
+This card shows exactly what the customer was charged:
+
+| Line | Description |
+| --- | --- |
+| Subtotal | Combined item prices |
+| Discount | Any promo code reduction |
+| Shipping | Delivery fee charged to the customer |
+| Tax | GST at 5% |
+| **Total charged** | The full amount collected from the customer's card |
+
+For orders with a sale price set on any item, the regular price and sale price are shown side by side on the item row.
+
+---
+
+## Your Settlement
+
+This card shows what you will receive after all platform deductions are applied. The settlement model follows standard Canadian marketplace commission accounting:
+
+| Line | What It Is |
+| --- | --- |
+| Gross Sales | Total product subtotal |
+| Promo Discount | Any promotional reduction applied |
+| Adjusted Gross | Gross after discount |
+| GST Collected (5%) | Tax collected from the customer on your behalf — shown as informational. You remit this to the CRA. |
+| Commission | Platform fee at your contracted rate |
+| GST on Commission | 5% GST applied to the platform's service fee |
+| PST on Commission | 7% BC provincial tax on the platform's service fee |
+| Total Deductions | Commission \+ GST on commission \+ PST on commission |
+| **Net Payout** | Your take-home after all deductions |
+
+<Note>
+  The GST Collected line is flagged with a "Remit to CRA" badge. This is money you've collected from the customer as a tax trustee — it belongs to the Canada Revenue Agency, not to you. Report and remit it on your regular GST/HST filing.
+</Note>
+
+---
+
+## Customer
+
+This card shows:
+
+- Customer's full name, email address, and phone number — with direct call and email action buttons
+- A **returning customer badge** showing how many prior orders this customer has placed with you. First-time customers are labelled as new.
+- Shipping or delivery address for this order
+
+---
+
+## Actions
+
+| Action | What It Does |
+| --- | --- |
+| **View Picklist** | Opens a pick-and-pack checklist view optimised for warehouse or kitchen fulfillment |
+| **Invoice PDF** | Generates a printable PDF invoice including itemised product lines, your settlement breakdown, and contact details |
+| **Packing Slip** | Generates a printable packing slip showing items, SKUs, lot numbers, and weights — designed for physical inclusion in the shipment |
+| **Issue Refund** | Opens the refund flow (see below) |
+
+---
+
+## Issuing a Refund
+
+Click **Issue Refund** to open the refund dialog. You can choose:
+
+- **Full refund** — refunds the entire order total
+- **Partial refund** — lets you select specific items and quantities to refund using \+/− controls
+
+Select a reason from the dropdown (Customer request, Damaged goods, Wrong item sent, Out of stock, Quality issue, Duplicate order, Other) and confirm the refund amount before proceeding.
+
+The refund is processed through Stripe and the transaction is recorded in the order timeline. The customer receives a refund notification. If it is a full refund, the order status is updated to Refunded.
+
+---
+
+## Order Timeline
+
+The timeline at the bottom of the page shows a reverse-chronological log of every status change, fulfillment update, and internal comment for this order.
+
+### Adding a Comment
+
+Type in the comment field at the bottom of the timeline and click **Post** to add an internal note. Comments are visible only to you and do not notify the customer. They appear inline in the timeline with a timestamp.
+
+Use comments to log calls with customers, note special circumstances, or track any manual steps you take on an order.
+
+---
+
+## Status Reference
+
+| Status | What It Means |
+| --- | --- |
+| **Placed** | Order received, payment collected, awaiting fulfillment |
+| **Label Created** | Shipping label purchased, package not yet with carrier |
+| **Shipped** | Package handed to carrier — order marked Completed |
+| **In Transit** | Carrier has scanned the package and it's moving |
+| **Out for Delivery** | Package is on the delivery vehicle |
+| **Delivered** | Carrier confirmed delivery |
+| **Available for Pickup** | Package at a carrier pickup location |
+| **Returned to Sender** | Package returned — carrier intervention needed |
+| **Delivery Exception** | A delivery problem has occurred |
+| **Tracking Error** | Tracking data could not be read |
+| **Completed** | Order fulfilled and closed |
+| **Cancelled** | Order cancelled |
+| **Refunded** | Full refund issued |

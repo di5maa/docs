@@ -1,0 +1,125 @@
+---
+title: "Delivery modes"
+---
+
+## How Local Pass Delivery, Pickup, and Vendor's Own Delivery affect wallet fields and payouts.
+
+## Overview
+
+Local Pass supports three fulfilment modes. The mode determines **which wallet fields are populated** when an order completes, which in turn affects the net transfer amount at payout time.
+
+<Note>
+  The delivery mode does not change the payout transfer formula — it determines which fee fields (particularly `merchantSubsidy`) are present in the wallet at settlement time.
+</Note>
+
+---
+
+## Mode comparison
+
+<Tabs>
+  <Tab title="Local Pass Delivery">
+    ### Local Pass Delivery
+
+    A customer places an order and selects standard delivery. Local Pass dispatches a driver from its network to collect the order from the vendor and deliver it to the customer.
+
+    **How it works:**
+
+    - Customer pays for delivery at checkout
+    - Local Pass assigns a driver from its network
+    - Driver collects from the vendor's location
+    - Vendor is not involved in the logistics
+
+    **Wallet impact:**
+
+    | Field | Populated? | Notes |
+    | --- | --- | --- |
+    | `Total` | ✅ Yes | Order subtotal |
+    | `Tax` | ✅ Yes | Customer-paid tax |
+    | `Platform fee` | ✅ Yes | Local Pass service fee |
+    | `Merchant subsidy` | ⚠️ Conditional | Populated if vendor contributes to driver costs |
+    | `Cancellation fee` | ⚠️ Conditional | Only if vendor cancels the order |
+    | `Discounts` | ⚠️ Conditional | Only if vendor applied a promotion |
+
+    <Note>
+      `Merchant subsidy`is deducted **after** the Stripe transfer completes, not from the transfer amount itself. It is tracked separately for driver cost accounting purposes.
+    </Note>
+  </Tab>
+  <Tab title="Pickup">
+    ### Pickup
+
+    The customer places an order and collects it directly from the vendor's location. No driver is dispatched.
+
+    **How it works:**
+
+    - Customer selects pickup at checkout
+    - Order is prepared by the vendor
+    - Customer arrives and collects their order
+    - No delivery logistics involved
+
+    **Wallet impact:**
+
+    | Field | Populated? | Notes |
+    | --- | --- | --- |
+    | `total` | ✅ Yes | Order subtotal |
+    | `tax` | ✅ Yes | Customer-paid tax |
+    | `Platform fee` | ✅ Yes | Local Pass service fee |
+    | `Merchant Subsidy` | ❌ No | No driver involved |
+    | `Cancellation Fee` | ⚠️ Conditional | Only if vendor cancels the order |
+    | `Discounts` | ⚠️ Conditional | Only if vendor applied a promotion |
+  </Tab>
+  <Tab title="Vendor's Own Delivery">
+    ### Vendor's Own Delivery
+
+    The vendor uses their own vehicle, staff, or courier to deliver the order. Local Pass handles the order placement and payment, but not the physical logistics.
+
+    **How it works:**
+
+    - Customer selects vendor delivery at checkout
+    - Local Pass processes payment as normal
+    - Vendor arranges delivery using their own resources
+    - No Local Pass driver dispatch
+
+    **Wallet impact:**
+
+    | Field | Populated? | Notes |
+    | --- | --- | --- |
+    | `Total` | ✅ Yes | Order subtotal |
+    | `Tax` | ✅ Yes | Customer-paid tax |
+    | `Platform Fee` | ✅ Yes | Local Pass service fee |
+    | `Merchant Subsidy` | ❌ No | Vendor handles their own delivery costs |
+    | `Cancellation Fee` | ⚠️ Conditional | Only if vendor cancels the order |
+    | `Discounts` | ⚠️ Conditional | Only if vendor applied a promotion |
+  </Tab>
+</Tabs>
+
+## Fee summary by mode
+
+| Fee field | Local Pass Delivery | Pickup | Vendor's Own Delivery |
+| --- | --- | --- | --- |
+| `Platform fee` | ✅ Always | ✅ Always | ✅ Always |
+| `Merchant subsidy` | ⚠️ If configured | ❌ Never | ❌ Never |
+| `Cancellation Fee` | ⚠️ If cancelled | ⚠️ If cancelled | ⚠️ If cancelled |
+| `Discounts` | ⚠️ If promotion active | ⚠️ If promotion active | ⚠️ If promotion active |
+| Driver payout | Handled outside vendor wallet | N/A | Vendor's own cost |
+
+---
+
+## Merchant subsidy explained
+
+The `Merchant subsidy`field appears in the vendor wallet **only for Local Pass Delivery** orders where the vendor contributes toward driver costs.
+
+<AccordionGroup>
+  <Accordion title="What is it?">
+    When a merchant uses their own fleet of drivers and offers free delivery, the customer pays \$0 at checkout. In this case, Local Pass covers any outstanding balance owed to the driver at the end of the billing cycle, and the amount is then deducted from the merchant’s wallet.
+  </Accordion>
+
+  <Accordion title="How is it deducted?">
+    `Merchant subsidy`is **not subtracted from the Stripe transfer amount**. It is instead decremented from the wallet balance fields **after** a successful transfer. This keeps the driver cost accounting separate from the money-in-transit calculation and ensures the Stripe transfer record reflects only the vendor net.
+  </Accordion>
+
+  <Accordion title="Is it shown to vendors?">
+    Yes. When `Merchant subsidy > 0`, a "Driver payouts: −\$X.XX" line item is shown in the Payment Breakdown section of the Wallet page, along with an info button explaining the subsidy.
+  </Accordion>
+</AccordionGroup>
+
+---

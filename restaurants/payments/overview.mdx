@@ -1,0 +1,64 @@
+---
+title: "Overview"
+---
+
+<Note>
+  Before any payouts can be processed, a vendor must connect a **Stripe Express account**. Vendors without one will see a warning banner across their Inventory and Payments screens.
+</Note>
+
+## How it works
+
+Local Pass uses a **wallet-based settlement model**. Revenue accumulates in a vendor's merchant wallet as orders are completed. Funds are then transferred to the vendor's connected Stripe Express account — either automatically every Monday or manually on demand.
+
+<CardGroup cols={2}>
+  <Card title="Stripe Onboarding" icon="stripe" href="/payments/stripe-onboarding">
+    Connect a new or existing Stripe Express account to receive payouts.
+  </Card>
+
+  <Card title="Wallet Structure" icon="wallet" href="/payments/wallet-structure">
+    Understand every field in the merchant wallet and how earnings are calculated.
+  </Card>
+
+  <Card title="Automated Payouts" icon="clock" href="/payments/automated-payouts">
+    Weekly cloud-function schedule, processing logic, and audit logs.
+  </Card>
+
+  <Card title="Manual Payouts" icon="hand-holding-dollar" href="/payments/manual-payouts">
+    Cash Out and Instant Payout — vendor-initiated transfers.
+  </Card>
+
+  <Card title="Delivery Modes" icon="truck" href="/payments/delivery-modes">
+    How Local Pass Delivery, Pickup, and Vendor Delivery affect fees.
+  </Card>
+</CardGroup>
+
+---
+
+## Payout methods at a glance
+
+|  | Auto Weekly | Manual Cash Out | Instant Payout |
+| --- | --- | --- | --- |
+| **Trigger** | Every Monday 3 AM PT | Vendor taps "Cash Out" | Vendor taps "Instant Payout" |
+| **Fee** | None | None | \$1.00 CAD |
+| **Arrival** | 2–7 business days | 2–7 business days | Within minutes |
+| **Minimum** | \$5.00 CAD | Wallet \> \$0 | Wallet \> \$0 |
+| **Eligibility** | All active vendors | All vendors | `Debit card must be connected to your Stripe account` |
+
+---
+
+## Prerequisites checklist
+
+<Steps>
+  <Step title="Connect Stripe Express">
+    Complete onboarding at **Dashboard → Payments → Stripe Setup**. See [Stripe Onboarding](/payments/stripe-onboarding).
+  </Step>
+  <Step title="Stripe verification approved">
+    Stripe reviews the submitted identity and banking details. This can take a few minutes to a few business days.
+  </Step>
+  <Step title="Publish at least one product">
+    Products cannot be published without a connected Stripe account. The wallet will not accumulate a balance until orders are placed.
+  </Step>
+  <Step title="Receive your first payout">
+    Once orders complete, your wallet balance builds. The next Monday at 3 AM PT, the automated run will process the transfer — or you can cash out manually at any time.
+  </Step>
+</Steps>

@@ -1,0 +1,17 @@
+---
+title: "Automated payouts"
+---
+
+Local Pass runs a Firebase Cloud Function every **Monday at 3:00 AM Pacific Time** (America/Vancouver) to automatically process payouts for all active vendors. No vendor or admin action is required — eligible wallets are settled and Stripe transfers are initiated without intervention.
+
+<Tip>
+  The Monday 3 AM schedule follows industry-standard weekly settlement timing. Vendors who prefer more frequent access to their funds can use [Manual Cash Out](/payments/manual-payouts) at any time.
+</Tip>
+
+## Technical specification
+
+| Property | Value |
+| --- | --- |
+| **Schedule** | Every Monday at 03:00 |
+| **Timezone** | `America/Vancouver` (Pacific Time) |
+| **Min payout** | \$5.00 CAD |

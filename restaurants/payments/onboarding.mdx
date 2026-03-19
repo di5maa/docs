@@ -1,0 +1,158 @@
+---
+title: "Onboarding"
+---
+
+<Warning>
+  Vendors **cannot publish products or receive any payouts** until a Stripe Express account is connected and verified. A warning banner appears across Inventory Management and the Wallet page until this is complete.
+</Warning>
+
+## What is Stripe Express?
+
+Local Pass uses **Stripe Connect Express** — a streamlined connected-account model designed for platforms that manage payouts on behalf of their vendors.
+
+Stripe Express gives each vendor:
+
+- A Stripe-hosted dashboard to view their own payouts, balance, and transaction history
+- Direct bank account linkage for receiving CAD transfers
+- Identity verification (KYC) managed entirely by Stripe — Local Pass never sees sensitive personal or financial data
+- PCI-DSS compliant, SOC 2 certified infrastructure
+
+<Note>
+  Vendors can access deeper transaction detail (individual payouts, disputes, bank statements) directly at [dashboard.stripe.com](https://dashboard.stripe.com) using their Stripe Express login. Local Pass shows a summary view only.
+</Note>
+
+---
+
+## Onboarding paths
+
+When a vendor opens **Dashboard → Payments → Stripe Setup**, they choose one of two paths:
+
+<Tabs>
+  <Tab title="New Stripe account">
+    ### For vendors with no existing Stripe account
+
+    Local Pass creates the Stripe Express account automatically and redirects the vendor to Stripe's hosted onboarding flow.
+
+    <Steps>
+      <Step title="Select 'I don't have a Stripe account'">
+        Tap the option on the Stripe setup screen inside the vendor dashboard.
+      </Step>
+      <Step title="Local Pass creates the account">
+        We generate an ID for the account to be used during onboarding.` `
+      </Step>
+      <Step title="Onboarding link generated">
+        You will get a time-limited  URL and be redirected from the Local Pass to Stripe. 
+      </Step>
+      <Step title="Vendor completes Stripe onboarding">
+        The vendor is redirected to Stripe's secure hosted page to provide identity, business, and banking information. All data entry happens on Stripe's domain.
+      </Step>
+      <Step title="Return to Local Pass">
+        After completing (or exiting) the Stripe flow, the vendor is returned to the Local Pass completion page. Stripe asynchronously notifies Local Pass when verification is approved via webhook.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Existing Stripe account">
+    ### For vendors who already have a Stripe account
+
+    Vendors can link an existing account by entering their Stripe Account ID directly.
+
+    <Steps>
+      <Step title="Select 'I have a Stripe account'">
+        An input field appears prompting the vendor for their existing Stripe Account ID.
+      </Step>
+      <Step title="Enter the Stripe Account ID">
+        The ID follows the format `acct_XXXXXXXXXXXXXXXXX`.
+
+        Vendors can find this in:
+
+        - Stripe Dashboard → **Settings → Account Details**
+        - The [Stripe documentation](https://stripe.com/docs/payments/account)
+
+        A direct link to the docs is shown on the setup screen.
+      </Step>
+      <Step title="Local Pass validates & generates onboarding link">
+        Local Pass requests an `account_onboarding` link for the provided account ID. If successful, the Stripe ID is persisted to `payment.stripeId` and the vendor is redirected to complete any additional requirements Stripe needs for the Express connection.
+      </Step>
+      <Step title="Account connected">
+        Once Stripe confirms, the vendor's record is updated and payouts can be initiated.
+      </Step>
+    </Steps>
+
+    <Tip>
+      If the onboarding link fails, the most common cause is an invalid or non-Express account ID. Double-check the format starts with `acct_` and was copied from the correct Stripe account.
+    </Tip>
+  </Tab>
+</Tabs>
+
+---
+
+## What Stripe collects
+
+Stripe manages all KYC (Know Your Customer) requirements. Local Pass never stores, views, or processes the following — it is handled entirely on Stripe's infrastructure.
+
+<AccordionGroup>
+  <Accordion title="Personal information">
+    | Field | Notes |
+    | --- | --- |
+    | **Legal name** | Must match government-issued photo ID |
+    | **Date of birth** | Required for identity verification |
+    | **Home address** | Current address in Canada |
+    | **Phone number** | Used for 2FA and account recovery |
+    | **Email address** | Pre-filled from the vendor's Local Pass account |
+  </Accordion>
+
+  <Accordion title="Business information">
+    | Field | Notes |
+    | --- | --- |
+    | **Business type** | Defaulted to `Individual` by Local Pass. Sole proprietors and small businesses qualify. |
+    | **Business description** | Brief description of what the vendor sells |
+    | **SIN / Tax number** | Required by Stripe Canada for tax compliance — collected directly by Stripe, never seen by Local Pass |
+  </Accordion>
+
+  <Accordion title="Banking details">
+    | Field | Notes |
+    | --- | --- |
+    | **Bank account** | Canadian institution number, transit number, and account number |
+    | **Government-issued ID** | Stripe may request a photo of a driver's licence or passport for higher-volume accounts |
+  </Accordion>
+</AccordionGroup>
+
+<Warning>
+  Local Pass **never stores, views, or processes** any sensitive personal or financial data. All KYC information is submitted directly to and held by Stripe on their PCI-DSS compliant infrastructure.
+</Warning>
+
+<Note>
+  **If you don't have a website, use [LOCALPASS.](http://LOCALPASS.ca)CA or your store link**
+</Note>
+
+---
+
+<Note>
+  Stripe verification can take a few minutes to a few business days depending on the information provided and any additional document requests Stripe makes. Vendors can check their current verification status inside their Stripe Express dashboard at any time.
+</Note>
+
+---
+
+## Common issues
+
+<AccordionGroup>
+  <Accordion title="Account not verified / restricted">
+    Stripe may require additional documents for identity verification. The vendor must log in to their [Stripe Express dashboard](https://dashboard.stripe.com) to see what's required and resolve any outstanding items. Local Pass cannot intervene in the Stripe verification process.
+  </Accordion>
+
+  <Accordion title="Invalid Stripe Account ID">
+    The entered `acct_XXXXXX` ID does not exist or is not an Express-type account. The vendor should double-check the ID from their Stripe dashboard under **Settings → Account Details**.
+  </Accordion>
+
+  <Accordion title="Onboarding link expired">
+    Stripe onboarding links are time-limited. If the vendor waited too long before clicking the link, they should re-initiate the setup flow from **Dashboard → Payments → Stripe Setup** to generate a fresh link.
+  </Accordion>
+
+  <Accordion title="Bank details rejected">
+    Incorrect branch, institution, or transit numbers. The vendor must update their banking information directly inside their Stripe Express dashboard.
+  </Accordion>
+
+  <Accordion title="Stripe account already connected to another platform">
+    Some Stripe Connect Express accounts cannot be connected to multiple platforms simultaneously. The vendor may need to create a new separate Stripe account for Local Pass.
+  </Accordion>
+</AccordionGroup>

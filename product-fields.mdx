@@ -1,0 +1,349 @@
+---
+title: "Product Fields Reference"
+---
+
+This page is a detailed reference for every field available on the product form. Use it to understand exactly what each field does, how it affects what customers see, and what happens in the system when you fill it in.
+
+## Basic Information
+
+### Product Name
+
+**What it is:** The main title of your product as it appears to customers in your store, in search results, and in the Local Pass marketplace.
+
+**Tips:**
+
+- Be descriptive but concise — aim for 3 to 8 words
+- Include key attributes customers search for: type, variety, size, or origin
+- Avoid internal codes, abbreviations, or shorthand
+
+**Examples:**
+
+- ✅ `Free-Range Brown Eggs — 12 Pack`
+- ✅ `Cold-Pressed Extra Virgin Olive Oil 500mL`
+- ❌ `EGG-BR-12` or `EVOO`
+
+---
+
+### Description
+
+**What it is:** A short block of text below the product name that gives customers more detail about what they're buying.
+
+**What to include:**
+
+- Key ingredients or materials
+- Flavour profile, texture, or aroma (for food)
+- Origin or production method (local, organic, farm-name)
+- How to use or serve the product
+- Any important notes (e.g., contains seasonal produce, made to order)
+
+**Character limit:** There is no hard limit, but shorter descriptions (2–5 sentences) tend to perform better. Customers rarely read long paragraphs on a product page.
+
+**AI assist:** Click **"Generate description with Local Pass AI"** to produce a starting draft based on your product name. Always review and personalise the result before saving.
+
+---
+
+## Pricing
+
+### Regular Price
+
+**What it is:** The standard price customers pay for this product, shown in Canadian dollars (CAD).
+
+**Important:** This field is the base price that appears on the product listing. If a sale price is also set, the regular price appears crossed out alongside the sale price.
+
+**Format:** Enter numbers with a decimal point — `4.99`, `12.50`, `0.99`. Do not use dollar signs or commas.
+
+---
+
+### Promotion Price (Sale Price)
+
+**What it is:** A temporary reduced price displayed in place of or alongside the regular price.
+
+**How it works:**
+
+- If the promotion price is greater than or equal to `$1.00`, the product is shown as being on sale. Customers see the regular price crossed out and the promotion price highlighted.
+- If the promotion price is `$0.00` or blank, it is ignored and only the regular price is shown.
+
+**Use it for:** Flash sales, seasonal promotions, clearance pricing, or bundle discounts.
+
+<Warning>
+  Promotion price per product is separate from [Promotions →](/restaurants/promotions-manager/start-here). Keep in mind that sale per product will be added on top of existing promotions if you currently run any. 
+</Warning>
+
+---
+
+### Unit & Unit Measurement
+
+**What it is:** Together, these two fields describe the quantity and unit included for the listed price.
+
+| Field | Example Values |
+| --- | --- |
+| **Unit Quantity** | `1`, `500`, `2.5`, `12` |
+| **Unit Measurement** | `pcs`, `kg`, `g`, `L`, `mL`, `bag`, `box`, `lb`, `oz`, `dz` |
+
+**How it appears to customers:** The price is displayed as `$X.XX / [quantity] [unit]` — for example, `$6.99 / 500g` or `$3.50 / 1 bag`.
+
+**Full list of available units:** `bag`, `bales`, `box`, `bsh`, `buckets`, `bunches`, `c`, `cases`, `cm`, `dz`, `ea`, `eggs`, `ft`, `g`, `gal`, `in`, `kg`, `L`, `lb`, `mL`, `mm`, `oz`, `packs`, `pallets`, `pcs`, `pkg`, `pt`, `qt`, `trays`
+
+---
+
+## Operations
+
+### Preparation Time
+
+**What it is:** The estimated time (in days) needed to prepare or process this product before it is ready for pickup or delivery.
+
+**Why it matters:** This field is used internally to manage order fulfilment timing. It sets customer expectations and helps coordinate when orders are ready.
+
+**What to enter:** Whole numbers only. Enter `0` if the product is available immediately. For products that need processing, enter a realistic estimate — for example, `2` for two days, `5`for five days and so on.
+
+---
+
+### Stock Level
+
+**What it is:** The number of units currently available for sale.
+
+**How it works:**
+
+- Enter your current on-hand quantity as a whole number
+- When stock reaches **5 units or fewer**, the number turns red in your Inventory dashboard as a low-stock alert
+- Stock can be updated at any time from the Inventory page — individually via the Edit form, or in bulk using the **Stock** bulk action
+
+---
+
+## Shipping
+
+### Requires Shipping
+
+**What it is:** A toggle that indicates whether this product needs to be physically shipped to customers.
+
+- **ON** — the product must be shipped. Weight fields appear so you can enter the shipping weight.
+- **OFF** — the product is available for pickup only, or shipping is handled outside the platform.
+
+<Warning>
+  If a customer’s cart contains at least one product marked for “Pickup,” "Express" or “Delivery,” the entire cart will be assigned to one of these fulfillment methods, eliminating the Shipping option. Shipping information will only be displayed at checkout when all products in the cart are marked as “requires shipping.”
+</Warning>
+
+---
+
+### Product Weight & Weight Unit
+
+**What it is:** The physical weight of the product used to calculate shipping rates.
+
+**Enter:** The numeric weight value and select the unit from the dropdown.
+
+**Available weight units:** `kg`, `lb`, `g`, `oz`, `bag`, `box`, `pcs`, `pkg`, and more.
+
+---
+
+## Location & Availability
+
+### Sell at All Store Locations (toggle)
+
+**What it is:** Controls whether this product is available at all of your store's service locations.
+
+- **ON (default)** — the product is associated with every location your store operates from
+- **OFF** — you manually select which locations carry this product using the location dropdown that appears
+
+**Use the OFF setting when:** You have multiple locations but this product is only available at one (e.g., a farmers market location but not your online store, or vice versa).
+
+---
+
+## Classification
+
+### Category
+
+**What it is:** The primary classification for your product within the Local Pass marketplace.
+
+**Important rules:**
+
+- Categories come from a fixed platform list — you cannot create your own
+- Select from the dropdown; use the search box inside it to filter options quickly
+- Categories are required before publishing
+
+**How the category is stored:** The system converts the category name to a lowercase ID (e.g., `Grain Products` → `grain_products`) and uses this ID to link the product to the correct marketplace section.
+
+---
+
+### Subcategory
+
+**What it is:** A more specific grouping within your selected category.
+
+**Important rules:**
+
+- Like categories, subcategories come from the platform list
+- Subcategory is recommended but not strictly required for publishing
+- If you don't see a subcategory that fits, click **"Don't see your product category? Request one"**
+
+---
+
+## Product Options
+
+Product options let customers make choices when placing an order. There are two types:
+
+### Variants
+
+Variants are different versions of the same product that each have their own fixed price. Selecting a variant **replaces** the base product price entirely.
+
+**Use variants for:** sizes, weights, configurations — anything where each version has a distinct price.
+
+**Example:** A jam available in a 250g jar ($5.99) and a 500g jar ($9.99). The customer picks one jar size and pays that price.
+
+---
+
+### Add-On Options
+
+Add-ons are extras that customers can choose to add to their order. Each add-on **adds to** the base product price.
+
+**Use add-ons for:** toppings, customisations, extras — anything layered on top of the product.
+
+**Example:** A pizza ($14.99) with optional extra toppings: Pepperoni (+$2.00), Extra Cheese (\+$1.50). The customer pays $14.99 plus whatever they add.
+
+---
+
+## Sales Model
+
+### Wholesale, Retail, Both
+
+**What it is:** Defines what type of buyer can see and purchase this product.
+
+| Setting | Who Sees It |
+| --- | --- |
+| **Retail** | Individual customers shopping for themselves |
+| **Wholesale** | Businesses or buyers purchasing in larger quantities |
+| **Both** | Both customer types |
+
+At least one must be enabled. Most vendors selling directly to consumers should select **Retail** or **Both**.
+
+---
+
+## Flags & Labels
+
+### Featured Item
+
+**What it is:** Highlights this product with a visible badge in your store profile.
+
+**Use it for:** Hero products, seasonal highlights, or your top sellers. Featured status is a visual cue — it does not affect search ranking directly.
+
+**Recommendation:** Keep featured items to a small selection (3–6 products) so the designation stays meaningful.
+
+---
+
+### Cross-Selling Item
+
+**What it is:** When enabled, this product is suggested to customers at checkout.
+
+**Use it for:** Complementary products — items that pair well together. For example, a jar of pasta sauce shown alongside dry pasta.
+
+---
+
+### Product Bundle
+
+**What it is:** Marks this product as a curated collection of other individual products sold together as one listing.
+
+**How it works:** Enabling this flag reveals a product search field where you add the component items that make up the bundle. The bundle product has its own price, separate from the individual items' prices.
+
+**Use it for:** Gift baskets, meal kits, variety packs, or any offering made up of multiple distinct items.
+
+---
+
+### Soon to Go
+
+**What it is:** A label that signals to customers that this product has limited remaining availability or is being discontinued.
+
+**How to apply it:** This flag is set from the Inventory page using the bulk action **Soon-to-Go**, rather than directly on the product form. You can set or remove the flag for multiple products at once.
+
+**Tip:** Use this for end-of-season produce, limited batches, or clearance items. It creates urgency and can increase conversions on items you need to move.
+
+---
+
+## Product SKU
+
+**What it is:** Your internal product identifier or barcode reference.
+
+**Important:** This is for your own tracking purposes only. It is not visible to customers at any point.
+
+**Format:** Alphanumeric, any style you use internally — `AP-1010`, `ORG-HNY-500`, `SKU00423`.
+
+---
+
+## Search Keywords
+
+**What it is:** A list of words or short phrases that help customers find this product when searching on Local Pass.
+
+**How they work:** Keywords are used behind the scenes in search indexing. Adding relevant keywords makes your product appear in results even when a customer doesn't use the exact product name.
+
+**Best practices:**
+
+- Think about synonyms: if your product is called "natural honey," add `raw honey` and `wildflower honey` as keywords
+- Include the variety, brand, origin, or common use case
+- Don't repeat words already in the product name — they're already indexed
+
+---
+
+## Dietary Labels
+
+**What it is:** Standardised badges displayed on your product listing to inform customers about how the product fits their diet.
+
+**How they appear:** As visual tags on the product card — customers can also filter by dietary labels when browsing.
+
+**Available labels include:** Vegan, Vegetarian, Gluten-Free, Dairy-Free, Halal, Kosher, Nut-Free, Organic, and others as provided by the platform.
+
+---
+
+## Allergen Information
+
+**What it is:** A list of allergens present in or potentially in contact with this product.
+
+**How it appears:** Listed on the product page to alert customers with food sensitivities or allergies.
+
+**How to add allergens:**
+
+1. Toggle **Contains Allergens** to ON
+2. Type each allergen in the input field
+3. Click the checkmark to save it as a tag
+4. Repeat for each allergen
+
+**Common allergens to consider:** nuts, peanuts, dairy, gluten, wheat, soy, eggs, fish, shellfish, sesame.
+
+---
+
+## Pickup Locations
+
+**What it is:** Associates this product with specific pickup points if your store has designated collection spots (e.g., a farm gate, a market stall, a warehouse).
+
+**How it works:** Customers selecting pickup will only be shown the locations you've linked to this product. If no pickup locations are selected, your store's default pickup point is used.
+
+---
+
+## Product Photo
+
+**What it is:** The primary image shown on your product listing.
+
+**If no photo is uploaded:** A generic placeholder image is displayed. This is fine for draft products but should be updated before publishing.
+
+**Upload options:**
+
+- **Gallery** — choose from images you've previously uploaded to your account
+- **Upload Photo** — add a new image from your device
+
+**Technical requirements:**
+
+- Accepted formats: JPEG, JPG
+- Recommended: square crop, minimum 800 × 800px, clean background
+
+---
+
+## Custom Order
+
+**What it is:** Enables customers to order this product in bulk quantities — for example, a specific weight of bulk grain or a custom-cut piece of cheese.
+
+**Fields that appear when enabled:**
+
+| Field | What to Enter |
+| --- | --- |
+| **Processing Amount** | Maximum quantity you can fulfil in a single custom order |
+| **Unit Price** | Price per unit for custom quantities |
+| **Unit Quantity** | The base unit amount (e.g., `100` for per 100g) |
+| **Unit Measurement** | The measurement type (e.g., `g`, `kg`, `oz`) |
+| **Percentage Discount** | Optional bulk discount rate (e.g., `10` for 10% off) |
+| **Amount for Discount** | Minimum quantity a customer must order to qualify for the discount |

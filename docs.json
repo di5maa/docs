@@ -23,7 +23,7 @@
         "icon": "location-check",
         "tabs": [
           {
-            "tab": "Local Pass ",
+            "tab": "Account",
             "pages": [
               "customers/getting-started",
               {
@@ -35,30 +35,14 @@
                 "pages": [
                   "customers/payments/local-coins"
                 ]
-              },
-              {
-                "group": "Getting Started",
-                "pages": [
-                  "customers/intro",
-                  "customers/account-setup"
-                ]
-              },
-              {
-                "group": "Services",
-                "pages": [
-                  "customers/ordering-food",
-                  "customers/marketplace",
-                  "customers/ride-share"
-                ]
-              },
-              {
-                "group": "Updates & Features",
-                "pages": [
-                  "customers/changelog",
-                  "customers/roadmap"
-                ]
               }
             ]
+          },
+          {
+            "tab": "Restaurants"
+          },
+          {
+            "tab": "Food Marketplace"
           }
         ]
       },
@@ -74,10 +58,21 @@
               {
                 "group": "Create account",
                 "pages": [
-                  "agrifood-merchants/sign-in",
-                  "agrifood-merchants/sign-up",
-                  "agrifood-merchants/account-set-up",
-                  "agrifood-merchants/onboarding"
+                  "merchants/create-account/sign-in",
+                  "merchants/create-account/sign-up",
+                  "merchants/create-account/account-set-up",
+                  "merchants/create-account/onboarding"
+                ]
+              },
+              {
+                "group": "Payments",
+                "pages": [
+                  "restaurants/payments/overview",
+                  "restaurants/payments/onboarding",
+                  "restaurants/payments/Add-Payment-Method",
+                  "restaurants/payments/automated-payouts",
+                  "restaurants/payments/manual-payouts",
+                  "restaurants/payments/delivery-modes"
                 ]
               },
               {
@@ -102,9 +97,23 @@
                   "merchants/restaurants/menu-management",
                   "restaurants/menu/add-new-item",
                   "merchants/restaurants/categories",
-                  "merchants/restaurants/qr-code"
+                  "merchants/restaurants/qr-code",
+                  "merchants/restaurants/menu-options-and-variants"
                 ]
               },
+              {
+                "group": "Inventory Management - Agrifood",
+                "pages": [
+                  "getting-started",
+                  "legal",
+                  "create-product",
+                  "bulk-upload",
+                  "product-fields",
+                  "best-practices",
+                  "product-options"
+                ]
+              },
+              "restaurants/soon-to-go-labels",
               {
                 "group": "Promotions",
                 "pages": [
@@ -141,33 +150,19 @@
                 ]
               },
               {
-                "group": "Payments",
-                "pages": [
-                  "restaurants/payments/payment-structure",
-                  "restaurants/payments/Add-Payment-Method",
-                  "restaurants/payments/new-account",
-                  "restaurants/payments/payouts"
-                ]
-              },
-              "agrifood-merchants/analytics",
-              {
                 "group": "Orders",
                 "pages": [
                   "order-history",
-                  "order-details"
+                  "order-details",
+                  "order-details-restaurants"
                 ]
               },
-              {
-                "group": "Inventory Management - Agrifood",
-                "pages": []
-              }
+              "agrifood-merchants/analytics",
+              "restaurants/analytics-restaurants"
             ]
           },
           {
-            "tab": "Academy",
-            "pages": [
-              "local-pass-business/academy/untitled-page"
-            ]
+            "tab": "Academy"
           }
         ]
       },
@@ -193,7 +188,6 @@
                     ]
                   },
                   "drivers/verification",
-                  "drivers/getting-started/contract-agreement-and-terms",
                   "drivers/getting-started/sign-in"
                 ]
               },

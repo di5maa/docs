@@ -1,0 +1,177 @@
+---
+title: "Menu Options & Modifiers"
+---
+
+Almost every restaurant menu item has some degree of customisation. A burger can come plain or dressed. A smoothie can have a dozen ingredient swaps. A main can include a choice of side. **Menu Options** let you build all of that flexibility directly into each item — so customers can personalise their order and you receive exactly what you need to prepare it.
+
+This guide covers how to set up and manage modifiers and add-ons for your restaurant menu on Local Pass.
+
+---
+
+## How Options Work
+
+Every option you add to a menu item **adds to** the item's base price. The base price you set on the item form is always the starting point — options stack on top of it based on what the customer selects.
+
+**Examples of how price builds up:**
+
+- Burger base price: **\$13.00**
+- Customer adds bacon: **\+\$2.00**
+- Customer adds avocado: **\+\$2.50**
+- **Total: \$17.50**
+
+If an option is included at no extra charge (like a sauce swap or a spice level preference), you set its price to `$0.00` — it still appears as a choice and gets communicated to the kitchen, but doesn't change what the customer pays.
+
+---
+
+## Getting to the Options Builder
+
+On the item creation or edit form, scroll to the **Product Options** section. Click **"This item has options"** to open the builder. Once your first option group is created, a **\+** icon appears so you can add additional groups.
+
+---
+
+## Building a Modifier Group
+
+A modifier group is a set of related choices that belong together — for example, all the sauce choices for a dish, or all the protein options for a bowl.
+
+<Steps>
+  <Step title="Name the group">
+    In the **Option Name** field, enter a label that describes the choice customers are making. This label appears directly above the choices on the item page.
+
+    Good group names: `Sauce`, `Add-Ons`, `Protein`, `Spice Level`, `Extras`, `Sides`, `Milk Type`, `Toppings`
+  </Step>
+  <Step title="Configure the group settings">
+    Two toggles control how the group behaves:
+
+    - **Required** — turn ON if the customer must make a selection before they can add the item to their cart. Turn OFF for optional extras.
+    - **Multi-select** — turn ON if customers can pick more than one option from the group (e.g., multiple toppings). Turn OFF if they must pick exactly one (e.g., one sauce choice).
+  </Step>
+  <Step title="Add the choices">
+    Click **"Add another option"** for each choice in the group. For each one, enter:
+
+    - **Name** — the label customers see (e.g., `BBQ Sauce`, `Spicy Mayo`, `No Sauce`)
+    - **Price** — the amount added to the subtotal. Enter `0` for no-charge choices.
+  </Step>
+  <Step title="Order the choices">
+    Use the **up and down arrows** next to each option to rearrange the order they appear to customers. Put your most popular or default choice first.
+  </Step>
+</Steps>
+
+---
+
+## Common Modifier Patterns
+
+### Required Choice — Single Pick
+
+Use this when every order of this item needs a response and the customer picks exactly one option.
+
+**Example: Protein for a grain bowl**
+
+- Group name: `Choose your protein`
+- Required: **ON**
+- Multi-select: **OFF**
+- Options: `Chicken +$0.00`, `Tofu +$0.00`, `Steak +$3.00`, `Shrimp +$2.50`
+
+Customers must pick a protein before adding to cart. The choice adds its listed price (or nothing, for the \$0.00 options) to the item total.
+
+---
+
+### Optional Choice — Single Pick
+
+Use this when you want to offer a choice but it's not mandatory — the item can be ordered without one.
+
+**Example: Dipping sauce**
+
+- Group name: `Dipping Sauce`
+- Required: **OFF**
+- Multi-select: **OFF**
+- Options: `Ranch +$0.00`, `Chipotle Mayo +$0.00`, `Hot Sauce +$0.00`, `None +$0.00`
+
+---
+
+### Optional Multi-Pick — Toppings or Extras
+
+Use this when customers can select any combination of items from the group.
+
+**Example: Pizza toppings**
+
+- Group name: `Extra Toppings`
+- Required: **OFF**
+- Multi-select: **ON**
+- Options: `Pepperoni +$1.50`, `Mushrooms +$1.00`, `Jalapeños +$0.75`, `Extra Cheese +$1.50`, `Olives +$1.00`
+
+Each topping selected adds its price to the item subtotal. Customers can pick as many as they like.
+
+---
+
+### Zero-Charge Customisations
+
+Not every modification adds cost. Use `$0.00` as the price for:
+
+- Dietary notes: `No onion`, `Sauce on the side`, `No cheese`
+- Included swaps: `Gluten-free bun` (if included at no extra charge)
+- Spice level: `Mild`, `Medium`, `Hot`, `Extra Hot`
+- Temperature: `Iced`, `Hot`
+
+These choices appear to customers and are sent through to the kitchen as part of the order — they just don't affect the price.
+
+---
+
+## Using Multiple Option Groups on One Item
+
+You can add as many option groups as needed to a single item. A common pattern for a customisable main:
+
+**Example — Build-Your-Own Burger (\$13.00 base):**
+
+- **Sauce** (Required, single pick)
+  - House Sauce → \+\$0.00
+  - Chipotle → \+\$0.00
+  - None → \+\$0.00
+- **Add-Ons** (Optional, multi-select)
+  - Bacon → \+\$2.00
+  - Avocado → \+\$2.50
+  - Fried Egg → \+\$1.50
+  - Extra Cheese → \+\$1.00
+- **Spice Level** (Optional, single pick)
+  - Mild → \+\$0.00
+  - Medium → \+\$0.00
+  - Hot → \+\$0.00
+
+If a customer orders with Chipotle, adds Bacon and Avocado, and picks Hot, their item total is: $13.00 + $**0.00 \+ **$2.00 + $**2.50 \+ **$0.00 = $**17.50**
+
+---
+
+## Managing Option Groups
+
+Add more groups using the **\+** button that appears after your first group is created.
+
+To **remove an entire group**, click the **trash icon** at the bottom right of that group's block.
+
+Groups appear to customers in the order they're listed in the builder.
+
+---
+
+## Tips for Restaurant Menu Options
+
+**Name groups from the customer's perspective.** Instead of `Protein Group`, use `Choose your protein`. Customers see these labels — they should read naturally.
+
+**Keep required choices to a minimum.** Every Required group is a mandatory tap before the customer can add to cart. Too many required groups create friction. Only mark something Required if the order genuinely can't be fulfilled without that information.
+
+**Use \$0.00 options to talk to the kitchen.** A "No onion" option at no charge still appears on the order receipt and gets communicated through to the kitchen. This is far more reliable than hoping a customer uses the order notes.
+
+**Put the most popular choice first.** Many customers will tap the first option without reading all the way through. If 80% of orders come with the house sauce, list it first.
+
+**Keep option names short.** On mobile, long labels wrap or get cut off. `Gluten-free bun` is better than `Substitute regular bun for a gluten-free option`.
+
+**Keep options up to date.** When you stop carrying a topping or change your sauce lineup, update the options at the same time. Stale options — choices customers can select that no longer exist — create confusion and kitchen errors.
+
+---
+
+## Quick Reference
+
+| I want to... | Setting |
+| --- | --- |
+| Make a choice mandatory before ordering | Required **ON** |
+| Let customers pick multiple items from a group | Multi-select **ON** |
+| Offer a choice that doesn't change the price | Option at price `$0.00` |
+| Add a paid upgrade or extra | Option with a price \> `$0.00` |
+| Offer multiple independent groups of choices | Add additional option groups with the **\+** button |

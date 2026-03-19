@@ -1,0 +1,201 @@
+---
+title: "Bulk Product Upload"
+---
+
+If you have many products to add, the bulk upload tool lets you import them all at once from a CSV file. This is ideal for new vendors setting up their store for the first time, or for merchants migrating an existing catalog.
+
+The importer walks you through three steps: uploading your file, mapping your columns to the right fields, and previewing the data before it goes live.
+
+<Note>
+  Our team is always happy to assist you with product uploads and store set up. If you experience issues, drop us a line in live chat accessed via an app **Support **page or at **vendors@imlocal.ca.**
+</Note>
+
+---
+
+## Before You Begin
+
+<Warning>
+  All products imported via bulk upload are created with a status of **Draft**. They will not be visible to customers until you publish them from your Inventory page.
+</Warning>
+
+### What You'll Need
+
+- A CSV file (`.csv`) containing your product data — one row per product
+- Categories that already exist in the Local Pass system
+- Subcategories that already exist in the Local Pass system
+
+<Note>
+  You **cannot** create new categories or subcategories through the bulk upload. If a product's category or subcategory doesn't exist in the system yet, that product will fail validation and won't be imported. Contact the Local Pass team to request new categories before uploading.
+</Note>
+
+---
+
+## Step 1 — Prepare Your CSV File
+
+Your CSV file must have column headers in the first row. The importer will ask you to match your column names to the system's fields in the next step, so your headers don't need to match exactly — but clear names help avoid mistakes.
+
+### Supported Fields
+
+The following fields can be included in your CSV. Required fields must be present for every row.
+
+| Field | Required | Description |
+| --- | --- | --- |
+| `name` | ✅ Yes | Product name as it appears to customers |
+| `category` | ✅ Yes | Must exactly match a category name in the system (e.g., `Grains`) |
+| `description` | No | Short product description |
+| `regular_price` | No | Selling price in CAD (e.g., `4.99`) |
+| `sale_price` | No | Promotional price — leave blank if no sale is active |
+| `stock` | No | Current available quantity (whole number) |
+| `sku` | No | Your internal product code |
+| `subcategory` | No | Must match a subcategory name in the system |
+| `prep_time` | No | Preparation time in minutes (whole number) |
+| `unit` | No | Unit of measurement (e.g., `pcs`, `kg`, `bag`) |
+| `dietary` | No | Comma-separated dietary labels (e.g., `vegan, gluten-free`) |
+| `allergenes` | No | Comma-separated allergens (e.g., `nuts, dairy`) |
+| `flag_featured` | No | `true` to mark as featured, `false` or leave blank otherwise |
+| `flag_soon_to_go` | No | `true` to mark as soon-to-go, `false` or leave blank otherwise |
+| `search_keywords` | No | Comma-separated search keywords (e.g., `organic, local, gala`) |
+| `menu_options` | No | Structured string for variants/add-ons — see format below |
+
+---
+
+### Formatting Rules
+
+**Category names must match exactly.** The system converts your category name to a lowercase, underscored ID (e.g., `Grain Products` becomes `grain_products`). If that ID doesn't exist in the system, the row will fail validation. Check the category list in your product form before preparing your file.
+
+**Prices use decimal notation.** Use a period as the decimal separator: `4.99`, not `4,99`. Do not include currency symbols.
+
+**Comma-separated fields.** For dietary labels, allergens, and keywords, separate multiple values with commas inside a single cell: `vegan, gluten-free, nut-free`
+
+**Boolean fields.** Use `true` or `false` (lowercase). For featured and soon-to-go flags, anything other than `true` is treated as false.
+
+---
+
+### Formatting Menu Options
+
+Menu options follow a specific format. Each option group uses this structure:
+
+```text
+GroupName:IsVariant|Option1Name:Price,Option2Name:Price
+```
+
+- `IsVariant` is `true` if selecting this option changes the product's price entirely, or `false` if it adds to the base price
+- Separate multiple option groups with a semicolon `;`
+
+**Example — Size variants that replace the base price:**
+
+```text
+Size:true|Small:8.99,Medium:10.99,Large:12.99
+```
+
+**Example — Add-ons that stack on top of the base price:**
+
+```text
+Toppings:false|Extra Cheese:2.00,Jalapeños:1.50
+```
+
+**Example — Multiple groups:**
+
+```text
+Size:true|Small:8.99,Large:12.99;Sauce:false|Hot:0.50,BBQ:0.50
+```
+
+<Tip>
+  If menu options feel complex, leave that column blank and set them up manually after importing through the product Edit form.
+</Tip>
+
+---
+
+### Sample CSV Structure
+
+```csv
+name,category,subcategory,regular_price,stock,unit,dietary,search_keywords
+Organic Gala Apples,Produce,Fresh Fruit,4.99,50,bag,organic,"apple, gala, organic"
+Sourdough Loaf,Grains,Artisan Breads,7.50,20,pcs,vegan,"bread, sourdough, artisan"
+Raw Wildflower Honey,Pantry,Honey & Syrups,14.99,30,jar,,"honey, local, raw"
+```
+
+---
+
+## Step 2 — Upload Your File
+
+1. Go to **Inventory** in your dashboard
+2. Click **Bulk Import** (or the import button in your interface)
+3. The importer opens and shows the **Upload** step
+4. Click the upload area and select your `.csv` file, or drag and drop it in
+5. Once the file loads, the importer automatically moves to the next step
+
+<Note>
+  The importer accepts `.csv` and `.txt` files. Maximum import size is **490 products per upload**. If your catalog is larger, split it into multiple files and import them one at a time.
+</Note>
+
+---
+
+## Step 3 — Map Your Columns
+
+After uploading, you'll see a list of all the system fields on the left, and a dropdown on the right for each one. Use the dropdowns to match each system field to the corresponding column header from your CSV.
+
+- If the importer detects a column name that exactly matches a system field (e.g., your CSV has a column called `name`), it maps that column automatically.
+- For columns that don't match automatically, select the correct one from the dropdown.
+- If a field doesn't apply to your products, select **Ignore**.
+
+<Warning>
+  You must map at minimum the **Product Name** and **Category** columns. The importer will not proceed without these two mappings.
+</Warning>
+
+Once your columns are mapped, click **Preview Data**.
+
+---
+
+## Step 4 — Preview and Validate
+
+The preview shows a summary of your products. Each row is colour-coded:
+
+| Indicator | Meaning |
+| --- | --- |
+| 🟢 Green left border \+ checkmark | This row passed all validation checks and is ready to import |
+| 🔴 Red left border \+ warning icon | This row has a problem that must be fixed before importing |
+
+### Common Validation Errors
+
+| Error Message | What It Means | How to Fix |
+| --- | --- | --- |
+| `Missing Name` | The name field is empty for this row | Add a product name in your CSV |
+| `Invalid Category 'X' (ID: Y not found)` | The category name doesn't match any existing category | Check the spelling exactly — it is case-sensitive after conversion. Contact support if the category doesn't exist yet. |
+| `Invalid Subcategory 'X'` | The subcategory name doesn't match any existing subcategory | Correct the spelling or remove the subcategory value |
+
+<Warning>
+  If **any** row has a validation error, the entire import is blocked. You cannot import a partial batch — all rows must pass before you can proceed. Fix the errors in your CSV file and re-upload.
+</Warning>
+
+The preview also shows the total number of products in the file so you can confirm the count looks right before proceeding.
+
+---
+
+## Step 5 — Confirm and Import
+
+When all rows show a green indicator, the **Confirm Import** button becomes active. Click it to start the import.
+
+A loading spinner appears while the import runs. Do not close the page during this time.
+
+When complete, you'll see a success message confirming how many products were imported.
+
+---
+
+## After Importing
+
+Your imported products are now in your Inventory with **Draft** status.
+
+**To review them:** Go to **Inventory** and filter by **Status → Draft** to see all newly imported products.
+
+**To publish them:** Select individual products and use the **Edit** button to review and publish them one by one, or select multiple products using the checkboxes and use **Update Status → Published** to bulk-publish.
+
+<Tip>
+  It's a good idea to review a sample of imported products before bulk-publishing to confirm photos, descriptions, and pricing look right. Add photos to any products that need them — imported products use a default placeholder image.
+</Tip>
+
+---
+
+## Starting Over
+
+If you make a mistake at any step, use the **Back** button to return to the previous step. If you want to start completely over, click **Back** until you reach the upload step, then upload a new file.

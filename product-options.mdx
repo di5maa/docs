@@ -1,0 +1,213 @@
+---
+title: "Product Options & Variants"
+---
+
+Many agrifood products come in more than one form. A jar of honey might be available in 250g and 500g sizes. A bag of flour might come in 1kg, 5kg, and 25kg. A cheese wheel might be sold as a wedge, a half, or whole. Product Options let you present these choices cleanly to customers within a single listing — no need to create a separate product for every size or configuration.
+
+This guide explains how both **Variants** and **Options (Add-Ons)** work for agrifood vendors, and when to use each one.
+
+---
+
+## The Core Difference
+
+There are two types of product options, and understanding the difference is important before you start building them.
+
+|  | Variants | Options / Add-Ons |
+| --- | --- | --- |
+| **What they do** | Replace the product's base price | Add to the product's base price |
+| **How they work** | Customer picks one — that choice sets the price | Customer picks any — each adds to the subtotal |
+| **Best for** | Sizes, weights, configurations | Extras, customisations, complementary items |
+
+The key distinction for agrifood vendors: **when a product has a variant, the base price you set on the product form is no longer the price the customer pays.** The variant's price replaces it entirely. Think of the base price as a placeholder — it's overridden the moment a customer selects a variant.
+
+---
+
+## Variants
+
+### When to Use Variants
+
+Use variants when your product comes in distinct configurations that each have their own price — where the customer picks exactly one option and that choice determines what they're buying and what they pay.
+
+**Classic agrifood use cases:**
+
+- A jar of honey available in **250g (**$7.99)**, **500g ($**13.99)**, and **1kg (\$24.99)**
+- A bag of flour in **2kg (**$6.50)**, **5kg ($**13.00)**, and **10kg (\$22.00)**
+- A cheese sold by the **wedge (**$9.00)**, **half wheel ($**32.00)**, or **whole wheel (\$58.00)**
+- A meat package in **500g (**$12.99)** or **1kg ($**23.00)**
+- A plant sold as a **seedling (**$4.50)**, **4-inch pot ($**8.00)**, or **1-gallon (\$18.00)**
+
+In all of these examples, the customer is choosing one version of the product. The price changes based on what they choose.
+
+---
+
+### How Variants Replace the Base Price
+
+This is the most important thing to understand about variants on Local Pass.
+
+When you set up variants for a product, **the base price you entered on the product form is replaced** by the variant's price at checkout. The customer never pays the base price — they pay the price of the variant they selected.
+
+**Example:**
+
+You list _Raw Wildflower Honey_ with a regular price of `$7.99` (because that's your smallest size). You then create a variant group called **Jar Size** with these options:
+
+- 250g Jar → \$7.99
+- 500g Jar → \$13.99
+- 1kg Jar → \$24.99
+
+When a customer selects "500g Jar," the price shown and charged is \*\*$13.99** — the base price of $7.99 is completely replaced.
+
+<Warning>
+  If you set up variants but a customer somehow proceeds without selecting one (which the platform prevents if the option group is marked **Required**), the base product price would apply by default. Always mark variant groups as **Required** to ensure a selection is always made.
+</Warning>
+
+---
+
+### Setting Up a Variant Group
+
+<Steps>
+  <Step title="Open the Product Options section">
+    On the product form, scroll to the **Product Options** section. Click **"This product has options/attributes"** to open the options builder.
+  </Step>
+  <Step title="Name your option group">
+    In the **Option Name** field, enter a clear label that describes what the customer is choosing. Examples: `Jar Size`, `Bag Weight`, `Pack Size`, `Cut Type`.
+  </Step>
+  <Step title="Enable the Attribute toggle">
+    Turn on the **Attribute** toggle (labelled "Product has variants"). This is what tells the system that the selections in this group should **replace** the base price rather than add to it.
+  </Step>
+  <Step title="Set Required to ON">
+    Turn on the **Required** toggle to ensure customers must make a selection before adding to cart. This is strongly recommended for all variant groups.
+  </Step>
+  <Step title="Add your size or weight options">
+    Click **"Add another option"** for each variant. For each one, fill in:
+
+    - **Name** — the label customers see (e.g., `250g Jar`, `5kg Bag`, `Whole Wheel`)
+    - **Price** — the price for this specific variant
+    - **Unit** (optional) — the unit of measurement (e.g., `g`, `kg`, `L`)
+    - **Quantity** (optional) — the quantity value (e.g., `250`, `5`, `1`)
+  </Step>
+  <Step title="Save">
+    Click **Save** or **Publish**. Your product now shows the variant selector on the listing page, and customers choose their size before purchasing.
+  </Step>
+</Steps>
+
+---
+
+### Ordering Your Variants
+
+The order in which variants appear to customers can be adjusted using the **up and down arrows** next to each option row. It's generally best to list from smallest to largest (or cheapest to most expensive) as this matches how customers tend to browse.
+
+---
+
+### A Note on the Base Price When Using Variants
+
+Since variants replace the base price, the base price you enter on the main product form is less critical — but it's still used in a few places:
+
+- It appears in your Inventory list view as the default price display
+- It's used as a fallback if a variant isn't selected (which shouldn't happen if Required is on)
+
+**Best practice:** Set the base price to your most common or lowest-priced variant so your Inventory list is representative and any edge cases are handled reasonably.
+
+---
+
+## Options (Add-Ons)
+
+### When to Use Add-Ons
+
+Use add-ons when you want to offer customers the ability to customise or supplement their purchase — where each selection they make **adds to** the product's price rather than replacing it.
+
+**Agrifood add-on examples:**
+
+- A fresh pasta order that lets customers add a **house sauce (**$3.00)** or **truffle shavings ($**5.00)**
+- A fruit box with an optional **gift wrapping upgrade (\$2.50)**
+- A bulk grain order that can include **grinding into flour (\+\$4.00)**
+- A cheese purchase paired with optional **charcuterie additions** (\+various prices)
+- A CSA box with optional **add-on items** from your farm store
+
+In all of these cases, the customer starts with a base product price and the add-ons they select stack on top of it.
+
+---
+
+### Setting Up an Add-On Group
+
+<Steps>
+  <Step title="Open the Product Options section">
+    Click **"This product has options/attributes"** to open the builder.
+  </Step>
+  <Step title="Name your option group">
+    Give the group a clear label: `Add-Ons`, `Extras`, `Processing Options`, `Enhancements`.
+  </Step>
+  <Step title="Leave the Attribute toggle OFF">
+    Do not enable the **Attribute** toggle. Add-ons should leave it off so the system knows to add prices rather than replace them.
+  </Step>
+  <Step title="Configure Required and Multi-Select">
+    - **Required** — turn ON only if every customer must make a selection from this group. For most add-on groups, leave it OFF so the add-ons are optional.
+    - **Multi-select** — turn ON if customers can select more than one option from the group simultaneously (e.g., multiple sauce choices).
+  </Step>
+  <Step title="Add your options">
+    For each add-on, fill in:
+
+    - **Name** — what customers see (e.g., `Gift Wrap`, `Ground to Flour`, `Extra Sauce`)
+    - **Price** — the amount added to the subtotal for this option
+  </Step>
+  <Step title="Save">
+    Click **Save** or **Publish**.
+  </Step>
+</Steps>
+
+---
+
+## Using Variants and Add-Ons Together
+
+You can combine both types on the same product. A common pattern:
+
+1. **Variant group** for size/weight — replaces the base price (Attribute ON)
+2. **Add-on group** for extras — adds to whichever variant price was selected (Attribute OFF)
+
+**Example — Artisan Jam:**
+
+- Variant: Jar Size (Required, Attribute ON)
+  - 250g → \$6.99
+  - 500g → \$11.99
+- Add-on: Gift Options (Optional, Attribute OFF)
+  - Gift wrapping → \+\$2.00
+  - Personalised note card → \+\$1.50
+
+If a customer selects the 500g jar and adds gift wrapping, their total is $11.99 + $**2.00 = \$13.99**.
+
+---
+
+## Multi-Select vs. Single-Select
+
+Every option group can be set to allow single or multiple selections:
+
+| Setting | What It Means | When to Use |
+| --- | --- | --- |
+| **Multi-select OFF** (default) | Customer picks exactly one option from this group | Sizes, weights, configurations — mutually exclusive choices |
+| **Multi-select ON** | Customer can pick any number of options from this group | Add-ons, extras — where combinations are valid |
+
+For variant groups (where a customer is choosing a size), **always leave multi-select OFF** — a customer should select one size, not two.
+
+For add-on groups (where a customer might want multiple extras), **turn multi-select ON** so they can select more than one.
+
+---
+
+## Managing Multiple Option Groups
+
+You can add more than one option group to a product by clicking the **\+ (add) icon** that appears next to the "This product has options/attributes" button once your first group has been created.
+
+Each group is its own block with its own name, toggle settings, and list of options. Groups are presented to customers in the order they appear in the builder — use the ordering arrows to adjust their sequence if needed.
+
+To remove an entire option group, click the **trash icon** at the bottom right of that group's block.
+
+---
+
+## Quick Reference
+
+| I want to... | Use this |
+| --- | --- |
+| Offer the same product in different sizes with different prices | **Variant** (Attribute ON) |
+| Let customers choose between weights of a product | **Variant** (Attribute ON) |
+| Offer optional extras that add to the price | **Add-On** (Attribute OFF) |
+| Let customers pick multiple add-ons | **Add-On \+ Multi-select ON** |
+| Make a selection mandatory before purchasing | **Required ON** (any type) |
+| Offer both sizes AND optional extras on one product | Both a **Variant group** AND an **Add-On group** |
