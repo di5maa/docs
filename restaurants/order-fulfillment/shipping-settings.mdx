@@ -1,0 +1,146 @@
+---
+title: "Shipping settings"
+---
+
+Shipping lets you send orders anywhere in Canada via carriers like Canada Post or UPS. The platform calculates live rates at checkout based on your package dimensions and the customer's address.
+
+This page explains how to configure everything shipping-related.
+
+---
+
+## Turning Shipping On or Off
+
+1. Go to **Fulfillment Settings → Shipping**.
+2. Use the toggle at the top right to enable or disable shipping.
+
+The toggle shows **"Offering shipping"** or **"Not offering shipping"**.
+
+---
+
+## Fulfillment Location
+
+Your fulfillment location (the address you ship from) is pulled automatically from your **default pickup location**. You do not set it here.
+
+If the address shown is wrong, go to [Pickup Settings](/fulfillment/pickup-settings) and update your default location there.
+
+---
+
+## Processing Time
+
+Processing time is how many business days it takes you to prepare and pack an order before it leaves your facility.
+
+**To set it:**
+
+1. Scroll to the **Processing time in days** field.
+2. Enter a number. Example: `3` means you need 3 days to pack after an order is placed.
+3. This value is added to carrier delivery estimates so customers see an accurate expected arrival date.
+
+<Tip>
+  Be realistic. It is better to set 4 days and ship early than to set 1 day and run late. Customers appreciate accurate estimates.
+</Tip>
+
+---
+
+## Default Package Dimensions
+
+The default package is used to get shipping rate quotes at checkout. It should match the box or bag you most commonly ship in.
+
+**To edit the default package:**
+
+1. Find the **Default Package Dimensions** card.
+2. Click the **⋯ (options)** button on the right.
+3. Update the fields:
+   - **Package name** — a label for your reference (e.g. "Medium Box")
+   - **Length, Width, Height** — in centimetres
+   - **Empty weight** — the weight of the box itself, in the unit you select (kg or lbs)
+   - **Dimension unit** and **Weight unit** — choose your preferred units
+4. Save.
+
+<Note>
+  Carriers calculate rates based on both size and weight. An inaccurate package size can result in the wrong rate being charged at checkout. Weigh and measure your most common shipping box before filling this in.
+</Note>
+
+---
+
+## Shipping Zones
+
+Shipping zones define which provinces or regions you will ship to, and what rates apply in each zone. You need at least one zone configured before shipping will work at checkout.
+
+### Creating a Zone
+
+1. Click **Add zone**.
+2. Select the **provinces** this zone covers (you can select multiple).
+3. Save the zone.
+
+### Adding Rates to a Zone
+
+Each zone needs at least one rate. A rate defines what the customer pays for shipping within that zone.
+
+**To add a rate:**
+
+1. After creating a zone, click **Add rate** below it.
+2. Choose a **rate type**:
+
+| Rate type | How it works |
+| --- | --- |
+| **Flat rate** | A fixed fee regardless of order size or weight. |
+| **Free shipping** | No charge. Can be tied to a minimum order value. |
+| **Weight-based** | Fee varies depending on total order weight (kg). |
+| **Value-based** | Fee varies depending on order total (\$). |
+
+3. Fill in the relevant fields based on your chosen rate type.
+4. Optionally add a **handling fee** — a fixed amount added on top of the carrier rate.
+5. Save.
+
+### Example Zone Setup
+
+A common setup for a small agrifood operation shipping within Canada:
+
+**Zone 1 — Western Canada (BC, AB, SK, MB)**
+
+- Rate: Flat rate — \$18.00
+
+**Zone 2 — Ontario & Quebec (ON, QC)**
+
+- Rate: Flat rate — \$14.00
+- Second rate: Free shipping on orders over \$150
+
+**Zone 3 — Atlantic Canada (NS, NB, NL, PE)**
+
+- Rate: Flat rate — \$22.00
+
+<Tip>
+  You can add multiple rates to a single zone. This lets you offer free shipping above a threshold while still charging below it.
+</Tip>
+
+---
+
+## Editing or Deleting Rates
+
+Click the **⋯ (options)** button on any rate card to open the edit dialog. From there you can update the rate or delete it.
+
+---
+
+## Live Carrier Rates 
+
+When a customer checks out, the platform requests live rates from carriers (Canada Post, UPS, etc.) using your package dimensions and their delivery address. The rates shown to the customer are real-time quotes.
+
+When you purchase a shipping label (see [Buying Shipping Labels](/fulfillment/shipping-labels)), the actual carrier cost is charged to your account.
+
+<Note>
+  Your manual shipping zones and rates are shown at checkout as your store's offered rates. Live carrier rates are fetched separately when you go to buy a label for a specific order. These two systems work independently — your zone rates are what customers pay, and the label cost is what you pay the carrier.
+</Note>
+
+---
+
+## Saving Your Settings
+
+Changes to processing time and the shipping toggle are saved via the **Save** floating button (bottom right). Zone and rate changes are saved immediately when you confirm them in their dialogs.
+
+---
+
+## Next Steps
+
+- [Buying Shipping Labels](/fulfillment/shipping-labels) — purchase and print labels for outgoing orders
+- [Managing Orders](/fulfillment/managing-orders) — how shipping orders move through your fulfillment queue
+- [Picking Orders](/fulfillment/picklist) — pick and pack before you ship

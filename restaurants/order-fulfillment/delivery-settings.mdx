@@ -1,0 +1,119 @@
+---
+title: "Delivery settings"
+---
+
+Use this page to set up delivery for customers in your local area. You control the distance you cover, what you charge, and when you deliver.
+
+---
+
+## Turning Delivery On or Off
+
+1. Go to **Fulfillment Settings → Delivery**.
+2. Use the toggle at the top right of the page to enable or disable delivery.
+
+The toggle shows your current state: **"Offering delivery"** or **"Not offering delivery"**.
+
+Turning delivery off does not delete your settings — it just hides the delivery option from customers until you turn it back on.
+
+---
+
+## Standard Delivery (Default Settings)
+
+Standard delivery is the baseline configuration applied to all orders unless you set up custom zones. Fill in these four fields:
+
+| Field | What to enter |
+| --- | --- |
+| **Min order amount (\$)** | The smallest order total that qualifies for delivery. Example: `50.00` |
+| **Radius (km)** | How far you will deliver from your pickup location. Example: `20` |
+| **Delivery fee (\$)** | What you charge per delivery. Example: `5.00` |
+| **Free delivery from (\$)** | Order total at which delivery becomes free. Example: `100.00` |
+
+<Note>
+  Leave **Free delivery from** blank or set it to `0` if you do not offer free delivery.
+</Note>
+
+These settings apply automatically to any customer within your radius who places a qualifying order.
+
+---
+
+## Delivery Hours
+
+You can choose whether delivery runs during your normal business hours, or set separate hours.
+
+**To use your regular business hours:**
+
+- Toggle **"Delivery available during normal business hours"** to on.
+
+**To set custom delivery hours:**
+
+- Toggle the option to off.
+- A weekly schedule will appear with a row for each day.
+- For each day, set an open and close time, or mark the day as **Closed**.
+- Click **Save** when done.
+
+<Tip>
+  If you only deliver on Tuesdays and Thursdays (e.g. CSA drop days), turn off all other days in the custom schedule.
+</Tip>
+
+---
+
+## Delivery Zones
+
+Zones let you define different fees and minimums for different distances or areas. For example, you might charge less for customers within 10 km and more for those between 10–25 km.
+
+**To enable zones:**
+
+1. Toggle **"Enable delivery zones"** to on.
+2. Click **Add radius** to create your first zone.
+3. For each zone, enter:
+   - **Zone name** — a label for your reference (e.g. "Local", "Extended")
+   - **Radius (km)** — the outer edge of this zone
+   - **Fee (\$)** — the delivery charge for this zone
+   - **Min order (\$)** — minimum order to qualify
+4. Add more zones by clicking **Add radius** again.
+5. Click **Save** (floating button, bottom right).
+
+Zones are applied from smallest to largest radius. If a customer falls within multiple zones, the smallest matching zone applies.
+
+<Warning>
+  If you enable zones, the standard delivery settings above are overridden by zone-specific settings. Make sure your zones cover your full service area.
+</Warning>
+
+---
+
+## On-Demand Delivery
+
+On-demand delivery connects your orders to a network of drivers managed by Local Pass. When enabled, a driver is dispatched automatically when you mark an order as **Ready for Pickup**. 
+
+**To enable on-demand delivery:**
+
+- Scroll to the **On-demand delivery** section.
+- Toggle it to on. It automatically enables your store for on-demand delivery. 
+
+<Note>
+  On-demand delivery is best suited for same-day orders (e.g. a farm stand or prepared food operation). For scheduled weekly CSA deliveries, use your own fleet or standard delivery.
+</Note>
+
+<Warning>
+  When On-demand delivery is enabled, **LIVE ORDERS SECTION **should be used to fulfill this type of orders. Live orders do not appear in your [**→ fulfillment dashboard.**](/restaurants/order-fulfillment/managing-orders)** **
+
+  To help you stay informed, Local Pass sends you a notification about new live orders as well as you get to see a notification bell in home dashboard. 
+</Warning>
+
+<Tip>
+  Treat on-demand deliveries the same way as if you were a restaurant partner who fulfils live orders where time plays the most critical part.  
+</Tip>
+
+---
+
+## Saving Your Settings
+
+Click the **Save** button (floating, bottom right of the page) after making any changes. You will see a confirmation dialog when your changes are saved.
+
+---
+
+## Next Steps
+
+- [Pickup Settings](/fulfillment/pickup-settings) — set where customers collect orders
+- [Shipping Settings](/fulfillment/shipping-settings) — send orders by parcel
+- [Managing Orders](/fulfillment/managing-orders) — handle incoming orders

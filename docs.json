@@ -42,10 +42,6 @@
                   "deleting-your-account"
                 ]
               },
-              {
-                "group": "Payments",
-                "pages": []
-              },
               "customers/activity-history",
               "customers/referrals",
               {
@@ -170,23 +166,30 @@
                   {
                     "group": "Restaurants",
                     "pages": [
-                      "restaurants/order-fulfillment/configuration",
+                      "restaurants/order-fulfillment/getting-started",
                       "restaurants/order-fulfillment/delivery-zones",
-                      "restaurants/order-fulfillment/driver-fleet"
+                      "restaurants/order-fulfillment/driver-fleet",
+                      "restaurants/order-fulfillment/delivery",
+                      "restaurants/order-fulfillment/pickup",
+                      "restaurants/order-fulfillment/general"
                     ]
                   },
                   {
                     "group": "Live Orders",
                     "pages": [
-                      "accepting-orders",
-                      "fulfillment",
-                      "Fulfillment-with-own-drivers"
+                      "accepting-orders"
                     ]
                   },
                   {
                     "group": "Agrifood",
                     "pages": [
-                      "restaurants/order-fulfillment/dashboard"
+                      "restaurants/order-fulfillment/getting-started-1",
+                      "restaurants/order-fulfillment/managing-orders",
+                      "restaurants/order-fulfillment/delivery-settings",
+                      "restaurants/order-fulfillment/pickup-settings",
+                      "restaurants/order-fulfillment/shipping-settings",
+                      "restaurants/order-fulfillment/picking-orders",
+                      "restaurants/order-fulfillment/buying-shipping-labels"
                     ]
                   }
                 ]

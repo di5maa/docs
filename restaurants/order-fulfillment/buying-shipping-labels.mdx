@@ -1,0 +1,137 @@
+---
+title: "Buying shipping labels"
+---
+
+When a customer places a shipping order, you need to purchase a carrier label before you can hand the parcel over. The platform handles this end to end: it fetches live rates, charges your card, and gives you a printable label URL.
+
+<Note>
+  Once shipment label is created or manually added to order, Local Pass automatically tracks shipping statuses and updates order record as well as sends automated notifications to a customer. 
+</Note>
+
+---
+
+## How It Works
+
+1. You pick and pack the order (see [Picking Orders](/fulfillment/picklist)).
+2. You open the order and request shipping rates.
+3. You choose a rate and confirm the purchase.
+4. The platform authorises your card, buys the label from the carrier, then captures the payment.
+5. You receive a label URL to print.
+
+If the label purchase fails for any reason, your card is **not charged**.
+
+---
+
+## Before You Start
+
+Make sure the following are in place before buying a label:
+
+- Your **default pickup location** is set with a complete address. This is the ship-from address.
+- The **customer's delivery address** is filled in on the order.
+- A **payment method** (credit or debit card) is on file in your account settings under Billing.
+- Your **default package dimensions** are set in [Shipping Settings](/fulfillment/shipping-settings).
+
+<Warning>
+  If no payment method is found on your account, the label purchase will fail with a billing error. Add a card under Account → Billing before proceeding.
+</Warning>
+
+---
+
+## Getting Rates
+
+From the fulfillment dashboard, open the order you want to ship. Tap the **shipping icon** (box or truck icon) in the order card's action row.
+
+This triggers a live rate request to the carrier network using:
+
+- Your pickup location (ship-from)
+- The customer's address (ship-to)
+- Your default package dimensions and weight
+
+Available rates are returned in a few seconds. Each rate shows:
+
+| Field | Description |
+| --- | --- |
+| **Carrier** | The shipping company (e.g. Canada Post, UPS) |
+| **Service** | The service level (e.g. Regular Parcel, Xpresspost) |
+| **Rate** | The cost in CAD |
+| **Delivery days** | Estimated transit time |
+
+---
+
+## Choosing a Rate and Buying the Label
+
+1. Review the available rates.
+2. Select the one that fits your needs — balance speed against cost.
+3. Confirm the purchase.
+
+The platform will:
+
+1. **Authorise** your card for the label amount (a temporary hold).
+2. **Purchase** the label from the carrier.
+3. **Capture** the payment once the label is confirmed.
+
+If the carrier fails to generate the label, the hold on your card is released automatically and you are not charged.
+
+---
+
+## Printing the Label
+
+Once the label is purchased, you receive:
+
+- A **label URL** — opens a printable PDF of your shipping label
+- A **tracking code** — used to track the parcel
+- The **carrier** and **cost** for your records
+
+Print the label and attach it to your parcel. Hand the parcel to the carrier as usual.
+
+<Tip>
+  Print on a standard label printer (4×6 in) or on regular A4/letter paper and tape it to your box. The label includes a barcode, your ship-from address, the customer's address, and the order number.
+</Tip>
+
+---
+
+## What Is on the Label
+
+The platform also lets you print a basic **manual shipping label** (without carrier data) directly from the order. This is a simple PDF that shows:
+
+- Your business name and address (ship-from)
+- The customer's name and address (ship-to)
+- Order number and date
+- A QR code linking to the order
+
+This manual label is useful for local courier handoffs or situations where you have a carrier account outside the platform.
+
+---
+
+## Tracking
+
+After purchase, the tracking code is associated with the order. You can view it on the order detail page.
+
+The customer can track their parcel using the code directly on the carrier's website.
+
+---
+
+## Troubleshooting
+
+**"No payment method found"** Add a card under Account → Billing and try again.
+
+**"The selected shipping rate is no longer valid"** Rates expire after a short window. Start the rate request again to get fresh quotes.
+
+**"The carrier failed to generate the label"** This occasionally happens due to address validation issues. Check that the customer's address (especially postal code) is complete and correct, then try again.
+
+**"Card declined"** Check that your card has sufficient funds and is not expired. Update your billing details if needed.
+
+---
+
+## Advancing the Order After Shipping
+
+Once the label is purchased and the parcel is with the carrier, return to the fulfillment dashboard and advance the order to **Shipped**.
+
+The customer receives a notification that their order is on its way.
+
+---
+
+## Next Steps
+
+- [Managing Orders](/fulfillment/managing-orders) — mark the order as Shipped after the label is printed
+- [Shipping Settings](/fulfillment/shipping-settings) — update your package dimensions or shipping zones
