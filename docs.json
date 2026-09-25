@@ -278,8 +278,7 @@
           {
             "tab": "Rides",
             "pages": [
-              "drivers/rides/getting-started",
-              "drivers/rides/fare-bidding"
+              "drivers/rides/getting-started"
             ]
           },
           {
