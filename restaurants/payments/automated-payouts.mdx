@@ -4,9 +4,9 @@ title: "Automated payouts"
 
 Local Pass runs a Firebase Cloud Function every **night at 3:00 AM Pacific Time** (America/Vancouver) to automatically process payouts for all active vendors. No vendor or admin action is required — eligible wallets are settled and Stripe transfers are initiated without intervention.
 
-<Tip>
-  Vendors who want same-day access to their funds instead of waiting for the nightly run can use [Manual Cash Out](/payments/manual-payouts) from the mobile app at any time.
-</Tip>
+<Note>
+  **There's no manual cash-out.** Payouts only happen on this nightly schedule — there's no button anywhere (app or web) to trigger one early. See [Payouts & the Wallet page](/payments/manual-payouts) for what vendors can actually see and do.
+</Note>
 
 ## Technical specification
 
