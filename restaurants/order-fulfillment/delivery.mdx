@@ -2,69 +2,60 @@
 title: "Delivery"
 ---
 
-Go to **Fulfillment Settings → Delivery** to configure everything related to how orders reach your customers.
+Go to **Fulfillment Settings → Delivery Settings** to configure everything related to how orders reach your customers.
 
 ## Enable or disable delivery
 
-At the top of the page you'll see a toggle labeled **Offering delivery / Not offering delivery**. Toggle it on to activate delivery. Toggling it off hides delivery from customers immediately — useful if you run out of drivers or close early.
+At the top of the page you'll see a toggle labeled **Offering Delivery**. Turn it on to activate delivery. Turning it off hides delivery from customers immediately — useful if you run out of drivers or close early.
 
-## Delivery hours
+## Use Own Delivery Fleet
 
-By default, delivery is available during your normal business hours.
+Right below it is **Use Own Delivery Fleet**, described in-app as: _"By enabling this, local dispatch networks will not process your deliveries."_
 
-If you want to restrict delivery to different hours, turn off the **Delivery available during normal business hours** toggle. A weekly schedule will appear where you can set open and close times per day.
+<Warning>
+  **This toggle does more than route your deliveries — it's also what unlocks your fee and zone settings.** With it off, Local Pass's own dispatch network handles your deliveries and this page shows only the on/off toggle and your delivery hours — there's no fee, minimum order, radius, or zone configuration here at all while it's off. Turn it on to reveal **Driver Fleet** and **Standard Delivery Rules** (fees, radius, zones) below.
+</Warning>
 
-<Note>
-  If a day is marked as closed in your delivery hours, customers will not see delivery as an option that day, even if your restaurant is open for pickup.
-</Note>
+## Driver Fleet
 
-## Default delivery settings
+Appears once **Use Own Delivery Fleet** is on: generate an invite code or manage your restaurant's own drivers. See [Driver Fleet](/restaurants/order-fulfillment/driver-fleet) — and note the app-only caveat on that page, since the web link here currently doesn't open.
 
-The **Default delivery** section sets your baseline delivery rules. All orders default to these unless you add delivery zones (see below).
+## Standard Delivery Rules
+
+Also appears only with Use Own Delivery Fleet on. These are your baseline delivery rules — calculated using Mapbox's dynamic drive-time routing — and apply whenever a custom zone (below) doesn't match.
 
 | Field | What it does |
 | --- | --- |
 | **Min order \$** | The minimum order value required for delivery |
-| **Radius (in min)** | Maximum drive time in minutes from your location |
 | **Delivery fee (\$)** | The flat fee charged to the customer |
-| **Free delivery from** | Orders above this amount get free delivery |
-
-<Tip>
-  Learn about delivery zones [here →](/restaurants/order-fulfillment/delivery-zones)
-</Tip>
-
-To edit these fields, click the **Edit** button in the Default delivery section. A panel will slide up where you can update each value.
+| **Max Drive Time** | A slider from 5 to 60 minutes (5-minute steps) — your maximum delivery radius, by drive time rather than straight-line distance |
+| **Free delivery from (\$)** | Orders above this amount get free delivery |
 
 <Warning>
   If you leave the delivery fee at \$0.00, customers will not be charged for delivery. Set this intentionally.
 </Warning>
 
-## Delivery zones
+## Custom Delivery Zones
 
-Delivery zones let you charge different fees or set different minimums based on how far the customer is from you.
+Toggle **Custom Delivery Zones** on to override the standard rules above for specific drive-time radii — for example, a lower fee close by and a higher fee further out.
 
-**To enable zones:**
-
-1. Toggle on **Enable delivery zones**
-2. Click **Add radius** to create your first zone
-3. Give the zone a name, set a radius in drive-time minutes, a fee, and a minimum order
+1. Toggle it on, then tap **Add Custom Zone**
+2. Give the zone a name, set a **Delivery Fee**, a **Min Order**, and a **Drive Time Range** (same 5–60 minute slider)
+3. Tap **Save Zone**
 4. Repeat for each tier you want (e.g. 0–15 min, 15–30 min)
 
-<Tip>
-  A common setup is a low fee for close customers and a higher fee (or no delivery) for customers farther away. Start with two zones and adjust based on driver feedback.
-</Tip>
+See [Delivery zones](/restaurants/order-fulfillment/delivery-zones) for more on how drive-time zones are calculated, including why the map only shows on mobile.
 
-Once zones are saved, the zone rules override your default delivery settings for matching customers.
+## Delivery hours
 
-## Own delivery vs. platform delivery
+By default, delivery is available during your normal business hours — this section is visible whenever delivery is on, regardless of the Own Delivery Fleet toggle.
 
-The **Own Delivery** toggle controls whether you use your own drivers.
+Turn off **Deliver during normal business hours** to set a separate weekly schedule for delivery specifically, with its own open/close times per day.
 
-- **On** — your drivers handle deliveries, and the Driver Fleet page becomes active
-- **Off** — delivery is handled outside this system (e.g. third-party couriers)
-
-If you turn on Own Delivery, a **delivery fleet** section appears at the bottom of the page. See [Driver Fleet](/order-settings/driver-fleet) for setup instructions.
+<Note>
+  If a day is marked as closed in your delivery hours, customers will not see delivery as an option that day, even if your restaurant is open for pickup.
+</Note>
 
 ## Saving changes
 
-Tap the floating **Save** button at the bottom right of the screen to save all changes. Changes to fees and hours take effect immediately after saving.
+Tap **Save Settings** at the top of the page. Changes to fees and hours take effect immediately after saving.
