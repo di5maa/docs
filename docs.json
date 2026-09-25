@@ -103,6 +103,7 @@
                 ]
               },
               "merchants/media-gallery",
+              "merchants/order-sheet",
               {
                 "group": "Payments",
                 "pages": [
