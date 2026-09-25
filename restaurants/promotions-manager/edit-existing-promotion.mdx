@@ -1,53 +1,45 @@
 ---
 title: "Editing an Existing Promotion"
-description: "If you need to update the terms, duration, or details of a campaign, you can edit an existing promotion.
-To access the editor, navigate to your Promotions list and select the promotion you wish to modify."
+description: "If you need to update the terms, duration, or details of a campaign, you can edit an existing promotion. To access the editor, navigate to your Promotions list and select the promotion you wish to modify."
 ---
 
-## 1. Modifying General Details
+## 1. Modifying Internal Details
 
 The following internal details can be updated to help you organize your campaigns:
 
 - **Internal Title:** Update the name used for your own reference.
 - **Description:** Modify the internal notes regarding the promotion.
 
-## 2. Changing the Discount Method
-
-You can switch how the discount is applied, even after the promotion has been created:
-
-- **Automatic Discount:** Switch to this to apply the discount immediately when cart conditions are met.
-- **Discount Code:** Switch to this to require a code.
-  - **Code Name:** You can edit the existing code string or generate a new random code.
-  - _Note: changing the code on an active promotion will immediately invalidate the old code._
-
-## 3. Updating Offer Logic
-
-Depending on the Promotion Type, you can adjust the specific rules.
-
 <Note>
-  **Note:** You cannot change the fundamental "Type" (e.g., changing a "Buy X Get Y" to "Amount Off Order") once created. You must create a new promotion for a different type.
+  **You can't change the promotion's Type** (e.g., turning a "Buy X Get Y" into an "Amount off Order") once it's created. Create a new promotion instead if you need a different type.
 </Note>
 
-### Values and Requirements
+## 2. Updating Offer Logic
 
-- **Reward Value:** Update the **Percentage (%)** or **Fixed Amount (\$)** being offered.
-- **Minimums:** Adjust the **Minimum Purchase Amount** or **Minimum Quantity** of items required to trigger the discount.
-- **Products:**
-  - Click **"Browse"** to change which products are eligible for the discount.
-  - Use the **trash icon** next to a listed product to remove it from the promotion.
+Depending on the Promotion Type, you can adjust the specific rules described in [Add new promotion](/restaurants/promotions-manager/add-new-promotion):
 
-## 4. Scheduling and Duration
+- **Discount Value:** Update the **Percentage (%)** or **Fixed Amount (\$)** being offered.
+- **Minimum Requirement:** Adjust the minimum purchase amount or item quantity required to trigger the discount.
+- **Products or Categories:**
+  - Tap **Browse** to change which products or categories are eligible.
+  - Use the **trash icon** next to a listed item to remove it from the promotion.
+
+<Warning>
+  On Buy X Get Y and Discount on Products, you can't save with an empty picker on a required side — add at least one product or category, or switch that side to "Any product."
+</Warning>
+
+## 3. Scheduling and Duration
 
 - **Start Date:** Modify when the promotion begins.
 - **End Date:** Enable or disable the end date switch. If enabled, pick a new expiration date and time.
+- **Restrict by Day & Time:** Turn scheduling on or off, and adjust which days and hours it applies to.
 
-## 5. Usage Limits and Visibility
+## 4. Usage Limits and Visibility
 
-- **Total Usage Limit:** Toggle the switch to define a specific number of times this discount can be redeemed in total across all customers.
-- **Per Customer Limit:** Toggle "Limit to one use per customer" to restrict or allow repeat redemptions by the same user.
+- **Per Customer Limit:** Toggle "Limit to one use per customer" to restrict or allow repeat redemptions by the same customer.
 - **Featured Status:** Toggle **Featured** on or off. Turning this ON puts the promotion in the featured carousel on your storefront.
 
-## 6. Saving Changes
+## 5. Saving Changes
 
 When you are done editing, you have two options to save your changes:
 
@@ -66,3 +58,13 @@ Clicking **Publish** will:
 1. Save all your changes.
 2. **Activate** the promotion immediately (assuming the Start Date has passed).
 3. Ensure the promotion is live and usable by customers.
+
+<Note>
+  **There's no separate "pause" action.** Saving as Draft is how you take a promotion offline temporarily. Deleting a promotion removes it permanently and can't be undone.
+</Note>
+
+## Troubleshooting
+
+| Issue | What's happening |
+| :-- | :-- |
+| **My promotion shows "Inactive" in a list, but I know I published it** | Open it in Edit and check its Status directly — that's the source of truth. If it says Active there, customers can already redeem it, even if a list view elsewhere hasn't caught up yet. |

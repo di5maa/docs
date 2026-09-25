@@ -5,52 +5,89 @@ description: "Promotions are a powerful tool to increase conversion rates, incre
 
 ## Types of Promotions
 
-We currently support two distinct types of promotions, each serving a different strategic purpose for your business.
+Local Pass supports four types of storefront promotions, all managed from your Promotions dashboard.
 
 <Columns cols={2}>
-  <Card title="Amount of order" icon="sparkles">
-    **Mechanism:** A flat currency discount applied to the total order value (e.g., "Spend \$30, save \$5").
+  <Card title="Discount on Products" icon="tag">
+    **Mechanism:** A percentage or dollar discount on specific products you choose.
 
-    - **Best for:** Increasing **Average Order Value (AOV)**. By setting a minimum spend requirement just above your average basket size, you incentivize customers to add "one more item" to unlock the deal.
-    - **Customer Experience:** The discount is applied **automatically** at checkout once the customer's cart meets the criteria.
-    - **Visibility:** These often appear as "tags" on your store listing in the marketplace, helping you stand out in search results.
+    - **Best for:** Highlighting particular items — a new dish, a slow-moving product, a seasonal favorite.
+    - **Customer Experience:** The item shows its original price crossed out with the sale price highlighted, right on your storefront.
+    - You can optionally require a minimum purchase or item quantity before the discount applies.
   </Card>
-  <Card title="Buy X Get Y" icon="money-bill-1">
-    **Mechanism:** Discounts specific products or collections when a customer purchases a qualifying item (e.g., "Buy a Burger, get a Drink for 50% off" or "Buy one Pizza, get one free").
+  <Card title="Buy X Get Y" icon="gift">
+    **Mechanism:** Discount or give away a reward item when a customer buys a qualifying item (e.g., "Buy a Burger, get a Drink 50% off" or "Buy one Pizza, get one free").
 
-    - **Best for:**
-      - **New Product Launch:** Encourage customers to try a new item by pairing it with a best-seller.
-      - **Inventory Management:** Quickly move stock of specific items (e.g., perishables) by bundling them.
-    - **Customer Experience:** Users see the offer details on your storefront. Once they meet the requirement (buying Product X), they are presented with the option to claim Product Y.
-    - **Constraints:** Currently, this promotion type supports linking **one specific product** as the "Get Y" reward.
+    - **Best for:** Launching a new product, or clearing inventory by bundling it with a best-seller.
+    - **Customer Experience:** Once a customer's cart has what's needed on the "Buy" side, they're offered the "Get" reward.
+    - **What you can pick:** Both the "Buy" and "Get" side can be one or more specific products, one or more categories, or "Any product" — it's not limited to a single item.
   </Card>
 </Columns>
 
 <Columns cols={2}>
-  <Card title="Individual Product Sale (Standalone)" icon="sparkles">
-    **Mechanism:** Setting a specific "Promotion Price" directly on an item's configuration page, independent of a cart rule.
+  <Card title="Amount off Order" icon="sparkles">
+    **Mechanism:** A percentage or flat discount off the entire order once it meets your rules (e.g., "Spend $$30, save $$5").
 
-    - **Best for:** Highlighting specific menu items to drive volume without complex requirements.
-    - **Customer Experience:** The item appears with its original price crossed out and the new sale price highlighted.
+    - **Best for:** Increasing average order size — set the minimum just above your typical basket to nudge a customer to add one more item.
+    - **Customer Experience:** Applies automatically at checkout once the cart qualifies.
+
+    <Warning>
+      **A percentage discount here only works in the Local Pass app — not on localpass.ca.** If you want a promotion that works everywhere, including the website, use a **fixed dollar amount** instead.
+    </Warning>
   </Card>
-  <Card title="Soon-to-Go" icon="sparkles">
-    **Mechanism:** Tagging specific items as "Soon-to-Go" via the Menu Management bulk tools.
+  <Card title="Free Shipping" icon="truck">
+    **Mechanism:** Waives the shipping cost on a qualifying order.
 
-    - **Effect:** This applies a clearance sale price to the item and adds a specific badge.
-    - **Best for:** Clearing perishable inventory at the end of the day to reduce food waste. These items often get boosted visibility in "Rescue" or "Eco-friendly" sections of the marketplace.
+    <Warning>
+      **Not available for restaurants, and not usable yet anywhere else.** No checkout — in the app or on the website — currently applies a free-shipping promotion. Hold off creating one until this is confirmed working; existing ones can still be edited.
+    </Warning>
+  </Card>
+</Columns>
+
+## Discounts Beyond the Promotions Manager
+
+Two related tools live outside the main Promotions list, for quicker one-off changes:
+
+<Columns cols={2}>
+  <Card title="Individual Product Sale" icon="tags">
+    Set a **Sale Price** directly on a product's own page (see [Create or Edit Product](/create-product)), separate from any Promotions Manager rule.
+
+    - **Best for:** A quick markdown on one item without setting up a full promotion.
+    - **Customer Experience:** Shows the regular price crossed out with the sale price next to it.
+  </Card>
+
+  <Card title="Soon-to-Go" icon="clock">
+    Mark specific items as **Soon-to-Go** from Menu Management or the product editor, then pick a discount from a quick calculator (10%, 20%, 30%, or 50% off).
+
+    - **Best for:** Clearing perishable inventory before it expires and reducing food waste.
+    - These items also get a badge and boosted visibility in "Rescue"/eco-friendly sections of the marketplace.
   </Card>
 </Columns>
 
 <Warning>
-  **Stacking Warning:** Individual product discounts are applied **in addition** to order-level promotions. For example, if you discount a Burger to \$5 (down from \$10) and also run a "Spend \$20, Get \$5 Off" promo, a customer purchasing 4 sale burgers will receive both the item discount AND the order discount.
+  **Stacking:** individual product discounts (Sale Price, Soon-to-Go) apply **in addition to** any order-level promotion that's also active. A customer buying a marked-down item can also trigger a "Spend $$20, get $$5 off" promotion on top of it — plan your numbers with that in mind.
+</Warning>
+
+## How Promotions Apply
+
+All four promotion types apply **automatically** — a customer never has to enter a code. Once their cart meets your rules, the discount shows up on its own.
+
+Every promotion also supports:
+
+- **A minimum requirement** — a minimum quantity of items, or a minimum dollar amount, before the promotion kicks in (optional; leave it off to apply to any qualifying cart).
+- **A schedule** — restrict the promotion to specific days of the week and hours of the day (e.g., only weekday lunch).
+- **Limit to one use per customer** — stop the same person from redeeming it more than once.
+
+<Warning>
+  **On Buy X Get Y and Discount on Products, you must select at least one product or category** for any side that isn't set to "Any product" — the app won't let you save a promotion with an empty reward. If you want the promotion to apply broadly, choose "Any product" instead of leaving the picker empty.
 </Warning>
 
 ## Creating a Promotion
 
 1. Navigate to the **Promotions** tab in your dashboard.
 2. Click the **"Create promotion +"** button in the top right corner.
-3. Select your promotion type and configure the rules (minimum spend, specific products, discount value).
-4. **Dates:** Set a **Start Date** and **End Date** to schedule campaigns in advance.
+3. Select your promotion type and configure the rules — see [Add new promotion](/restaurants/promotions-manager/add-new-promotion) for a full walkthrough of every field.
+4. **Dates:** Set a **Start Date** and, optionally, an **End Date** to schedule campaigns in advance.
 
 ## Managing Promotions
 
@@ -60,10 +97,8 @@ Your dashboard gives you a comprehensive view of all campaigns.
 
 The top section of the page displays a carousel of your **Featured Promotions**. These are typically high-priority offers that are highlighted on your storefront.
 
-- **Visual Cues:**
-  - **Green Card:** Active promotion currently live to customers.
-  - **Gray/Neutral Card:** Draft promotion (not yet visible).
-- **Quick Actions:** Each card shows the discount value (e.g., "30%" or "\$5.00"). Use the **Edit** or **Remove** buttons directly on the card to modify them.
+- **Green Card:** Active promotion currently live to customers.
+- **Gray/Neutral Card:** Draft promotion (not yet visible).
 
 ### All Promotions List
 
@@ -73,5 +108,13 @@ Below the featured section is a detailed data table of every promotion you have 
 - **Used:** This column tracks the number of times customers have successfully redeemed the offer, helping you measure ROI.
 
 <Note>
-  **Analytics Tip:** Periodically review the "Used" count in the table. If a promotion has low usage, consider lowering the minimum spend requirement or changing the "Buy X" trigger product to something more popular. 
+  **There's currently no "pause" button.** To take a live promotion offline, save it back to **Draft**, or edit its End Date. Deleting a promotion removes it permanently — there's no way to bring it back once it's gone.
 </Note>
+
+## Troubleshooting
+
+| Issue | What's happening |
+| :-- | :-- |
+| **My promotion shows "Inactive" even though I just published it** | Open the promotion in **Edit** and check its Status there directly — that's the source of truth. If it says Active, customers can already redeem it, even if a list view elsewhere hasn't caught up yet. |
+| **I can't save my Buy X Get Y or Discount on Products promotion** | You've likely left a required side of the picker empty. Add at least one product or category, or switch that side to "Any product." |
+| **My percentage discount isn't showing up on the website** | Percentage-based "Amount off Order" promotions only apply in the Local Pass app right now. Switch to a fixed dollar amount if you need the promotion to also work on localpass.ca. |
