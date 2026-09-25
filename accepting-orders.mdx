@@ -57,7 +57,23 @@ A full breakdown of everything in the order: item name and quantity, selected op
 
 > **Mark as out of stock?** The customer is notified right away and asked whether to drop the item or cancel the order.
 
-Choose **Keep it** to back out, or **Mark OOS** to confirm. The item shows a strikethrough and an "OOS" tag in the list, and this can't be undone from here — the customer decides whether to drop the item or cancel the whole order.
+Choose **Keep it** to back out, or **Mark OOS** to confirm. The item shows a strikethrough and an "OOS" tag in the list, and this can't be undone from here — resolving it is entirely in the customer's hands from this point.
+
+### What the customer actually sees
+
+The in-app confirmation above undersells it a little — the customer isn't just choosing between dropping the item or cancelling everything. As soon as you mark an item OOS, they get a notification and a sheet titled **"[Item name] is out of stock — Choose how you'd like to resolve this — up to \$[item price]."** with three options:
+
+| Option | What it does |
+| --- | --- |
+| **Local Coins credit** | "+\$X.XX to your balance, instantly" — credited to their Local Coins right away. |
+| **Partial refund** | "\$X.XX back to your original payment method" — a real Stripe refund for just that item. |
+| **Swap for another item** | "Pick anything else in stock, up to the same price" — they browse your other in-stock products and pick a replacement. If nothing qualifies, they see a note suggesting credit or refund instead. |
+
+<Note>
+  **A substitution can only be for something at or under the original item's price.** If they pick something cheaper, the difference is automatically refunded to their card — they never pay more for swapping. **You're only notified (with a push alert to prepare the new item) if they choose the swap** — a credit or refund resolution doesn't page you, since there's nothing left for you to do.
+</Note>
+
+Once resolved, the item shows what happened right in their order: "Credited $$X.XX in Local Coins," "Refunded $$X.XX," or "Substituted (was: [original item])." This can only happen once per item — it can't be re-resolved or reversed after their choice goes through.
 
 ---
 
