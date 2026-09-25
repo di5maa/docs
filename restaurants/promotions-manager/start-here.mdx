@@ -11,9 +11,9 @@ Local Pass supports four types of storefront promotions, all managed from your P
   <Card title="Discount on Products" icon="tag">
     **Mechanism:** A percentage or dollar discount on specific products you choose.
 
-    - **Best for:** Highlighting particular items — a new dish, a slow-moving product, a seasonal favorite.
+    - **Best for:** Highlighting particular items — a new dish, a slow-moving product, a seasonal favorite. Can also make an item entirely free.
     - **Customer Experience:** The item shows its original price crossed out with the sale price highlighted, right on your storefront.
-    - You can optionally require a minimum purchase or item quantity before the discount applies.
+    - **Different from a promotion:** this behaves like a live sale price — there's no "redemption" to track, so it can't be limited to one use per customer.
   </Card>
   <Card title="Buy X Get Y" icon="gift">
     **Mechanism:** Discount or give away a reward item when a customer buys a qualifying item (e.g., "Buy a Burger, get a Drink 50% off" or "Buy one Pizza, get one free").
@@ -74,9 +74,13 @@ All four promotion types apply **automatically** — a customer never has to ent
 
 Every promotion also supports:
 
-- **A minimum requirement** — a minimum quantity of items, or a minimum dollar amount, before the promotion kicks in (optional; leave it off to apply to any qualifying cart).
+- **A minimum requirement** — choose one: no minimum, a minimum quantity of items, or a minimum dollar amount, before the promotion kicks in.
 - **A schedule** — restrict the promotion to specific days of the week and hours of the day (e.g., only weekday lunch).
 - **Limit to one use per customer** — stop the same person from redeeming it more than once.
+
+<Warning>
+  **A promotion can't be combined with another promotion.** Only one Promotions Manager promotion applies to a customer's order at a time — if you need two offers to potentially stack, one of them should be an Individual Product Sale or Soon-to-Go markdown instead (see below), not a second promotion.
+</Warning>
 
 <Warning>
   **On Buy X Get Y and Discount on Products, you must select at least one product or category** for any side that isn't set to "Any product" — the app won't let you save a promotion with an empty reward. If you want the promotion to apply broadly, choose "Any product" instead of leaving the picker empty.

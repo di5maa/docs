@@ -302,5 +302,11 @@
     "color": {
       "light": "#ffffff"
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/restaurants/promotions/start-here",
+      "destination": "/restaurants/promotions-manager/start-here"
+    }
+  ]
 }
