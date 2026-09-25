@@ -104,6 +104,7 @@
               },
               "merchants/media-gallery",
               "merchants/order-sheet",
+              "merchants/inbox",
               {
                 "group": "Payments",
                 "pages": [
@@ -134,6 +135,7 @@
               {
                 "group": "Menu - Restaurants",
                 "pages": [
+                  "merchants/digital-menu",
                   "merchants/restaurants/menu-management",
                   "restaurants/menu/add-new-item",
                   "merchants/restaurants/categories",
