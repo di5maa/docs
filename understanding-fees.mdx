@@ -41,9 +41,13 @@ The service fee covers the cost of running the Local Pass platform — including
 It is made up of several components:
 
 - **Platform fee** — covers technology and operational costs
-- **Regulatory fee** — applies to delivery orders to help cover driver compliance costs (not charged on pickup orders)
+- **Regulatory fee** — helps cover driver compliance costs
 - **Small order surcharge** — applies when your cart is below a certain threshold (see below)
 - **Payment processing fee** — a flat Stripe fee of \$0.30 included per transaction
+
+<Note>
+  The regulatory fee and small order surcharge only apply when Local Pass itself is dispatching the driver — that's restaurant Delivery, and Express in the Food Marketplace. They're **not** charged on Pickup, Shipping, or standard Food Marketplace Delivery (which always uses the vendor's own driver). Pickup instead uses a simpler flat platform fee: 5% of your subtotal, capped at a few dollars.
+</Note>
 
 <Info>
   The service fee is always shown before you confirm payment. There are no surprise charges after checkout.
@@ -55,7 +59,7 @@ It is made up of several components:
 
 When your cart subtotal is below a vendor's minimum order threshold, a small order fee is added to your service fee. This is not a penalty — it covers the baseline cost of processing a small order (payment processing, packaging handling, etc.).
 
-You can **avoid the small order fee** by adding more items to your cart. The [Order Goal Tracker](/checkout/goal-tracker) in your cart will show you exactly how much more you need to add to waive it.
+You can **avoid the small order fee** by adding more items to your cart. The [Order Goal Tracker](/mystery-box) in your cart will show you exactly how much more you need to add to waive it.
 
 <Tip>
   The Goal Tracker in your cart will label this milestone as **"Fee"** so you always know when you're close to waiving it.
@@ -81,11 +85,7 @@ No delivery fee is charged.
 
 ### Shipping
 
-Shipping fees are set by the carrier (Canada Post, Purolator, etc.) based on your address and the weight/dimensions of your order. 
-
-Alternatively, each vendor can set a flat shipping rate, which will be different from the carrier fees. 
-
-Local Pass does not mark up shipping rates.
+Shipping fees are the real rates quoted by the carrier (Canada Post, Purolator, etc.) based on your address and the weight/dimensions of your order. Local Pass does not mark them up. 
 
 ---
 
@@ -97,7 +97,11 @@ If your delivery address is significantly further than the vendor's standard del
 
 ## Bag Fee
 
-A **\$0.25 bag fee** is applied to delivery orders. This is a provincially mandated charge in BC (and other provinces) for single-use bags. It is remitted to the appropriate regulatory authority and is not kept by Local Pass.
+A **\$0.25 bag fee** may be applied. This is a provincially mandated charge in BC (and other provinces) for single-use bags. It is remitted to the appropriate regulatory authority and is not kept by Local Pass.
+
+<Note>
+  This isn't a delivery-only fee everywhere. On **restaurant orders**, it's charged on Pickup too, not just Delivery — packaging still needs a bag even when you're the one picking it up. On **Food Marketplace orders**, it only applies to Delivery and Express, not Pickup or Shipping.
+</Note>
 
 ---
 
@@ -105,25 +109,23 @@ A **\$0.25 bag fee** is applied to delivery orders. This is a provincially manda
 
 Tips are optional and go **100% to the driver** who delivers your order. Local Pass does not take any portion of tips.
 
-For delivery orders, you'll see preset tip options:
+Where it's shown, you'll see preset tip options:
 
 - \$1.50
-- \$2.50 _(default)_
+- \$2.50 _(default, marked Popular)_
 - \$3.50
-- Custom amount
-- No tip
-
-For pickup and shipping orders, no tip is shown.
+- Other
+- No Tip
 
 <Note>
-  Tips are only available for orders fulfilled by Local Pass drivers or vendor-operated delivery. They are not shown for pickup or shipping orders.
+  Tips aren't shown everywhere delivery happens. On **restaurant orders**, the tip option appears for any Delivery order, regardless of whether a Local Pass driver or the vendor's own driver ends up delivering it. On **Food Marketplace orders**, tipping only appears for **Express** — standard Delivery (the vendor's own driver) has no tip option, since there's no Local Pass driver in that flow. Pickup and Shipping never show a tip.
 </Note>
 
 ---
 
 ## Discount
 
-If a promotion has been applied to your order, the discount will appear as a negative line item (e.g. **-\$5.00**). Promotions are applied automatically — you don't need to enter a code. See [Promotions & Discounts](/checkout/promotions) for details.
+If a promotion has been applied to your order, the discount will appear as a negative line item (e.g. **-\$5.00**). Promotions are applied automatically — you don't need to enter a code. See [Promotions & Discounts](/local-coins#promotions-discounts) for details.
 
 ---
 
@@ -131,7 +133,7 @@ If a promotion has been applied to your order, the discount will appear as a neg
 
 Local Coins are rewards earned from previous orders on Local Pass. You can redeem them at checkout to reduce your total. The amount redeemed appears as a negative line item.
 
-See [Local Coins & Rewards](/account/local-coins) to learn how to earn and use them.
+See [Local Coins](/local-coins) to learn how to earn and use them.
 
 ---
 
@@ -164,7 +166,7 @@ We want to be fully transparent about how every dollar is allocated. Here is the
 | --- | --- |
 | Subtotal | The vendor (minus a small platform commission) |
 | Service fee | Local Pass (operations, tech, support) |
-| Delivery fee | Local Pass drivers and driver operations |
+| Delivery fee | Whoever is actually delivering — a Local Pass driver, or the vendor if they're using their own driver |
 | Long distance charge | Additional driver compensation |
 | Regulatory fee | Driver compliance and regulatory costs |
 | Bag fee | Government (remitted by Local Pass) |
