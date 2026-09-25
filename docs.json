@@ -197,6 +197,7 @@
               {
                 "group": "Orders",
                 "pages": [
+                  "merchants/catering",
                   "order-history",
                   "order-details",
                   "order-details-restaurants"
