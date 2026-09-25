@@ -102,6 +102,7 @@
                   "merchants/create-account/onboarding"
                 ]
               },
+              "merchants/media-gallery",
               {
                 "group": "Payments",
                 "pages": [
