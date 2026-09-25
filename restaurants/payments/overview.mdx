@@ -8,7 +8,11 @@ title: "Overview"
 
 ## How it works
 
-Local Pass uses a **wallet-based settlement model**. Revenue accumulates in a vendor's merchant wallet as orders are completed. Funds are then transferred to the vendor's connected Stripe Express account — either automatically every Monday or manually on demand.
+Local Pass uses a **wallet-based settlement model**. Revenue accumulates in a vendor's merchant wallet as orders are completed. Funds are then transferred to the vendor's connected Stripe Express account automatically every night — or manually on demand from the **Local Pass Business mobile app**.
+
+<Note>
+  **Manual Cash Out and Instant Payout are only available in the mobile app.** The web dashboard currently shows only the automatic nightly payout — there's no manual cash-out button there yet.
+</Note>
 
 <CardGroup cols={2}>
   <Card title="Stripe Onboarding" icon="stripe" href="/payments/stripe-onboarding">
@@ -36,9 +40,9 @@ Local Pass uses a **wallet-based settlement model**. Revenue accumulates in a ve
 
 ## Payout methods at a glance
 
-|  | Auto Weekly | Manual Cash Out | Instant Payout |
+|  | Auto (Nightly) | Manual Cash Out (app only) | Instant Payout (app only) |
 | --- | --- | --- | --- |
-| **Trigger** | Every Monday 3 AM PT | Vendor taps "Cash Out" | Vendor taps "Instant Payout" |
+| **Trigger** | Every night, 3 AM PT | Vendor taps "Cash Out" | Vendor taps "Instant Payout" |
 | **Fee** | None | None | \$1.00 CAD |
 | **Arrival** | 2–7 business days | 2–7 business days | Within minutes |
 | **Minimum** | \$5.00 CAD | Wallet \> \$0 | Wallet \> \$0 |
@@ -59,6 +63,6 @@ Local Pass uses a **wallet-based settlement model**. Revenue accumulates in a ve
     Products cannot be published without a connected Stripe account. The wallet will not accumulate a balance until orders are placed.
   </Step>
   <Step title="Receive your first payout">
-    Once orders complete, your wallet balance builds. The next Monday at 3 AM PT, the automated run will process the transfer — or you can cash out manually at any time.
+    Once orders complete, your wallet balance builds. That night at 3 AM PT, the automated run will process the transfer — or, from the mobile app, you can cash out manually at any time.
   </Step>
 </Steps>
