@@ -2,6 +2,10 @@
 title: 'Accepting Orders'
 ---
 
+<Note>
+  **This is the Local Pass Business mobile app experience for restaurants.** On the web dashboard, restaurant order pages are a read-only summary — live order management happens here, in the app. (Agrifood/store vendors manage orders on the web instead — see [Managing order fulfillment](/restaurants/order-fulfillment/managing-orders-1).)
+</Note>
+
 **Where to find it:** Tap any order in your orders list to open the panel
 
 The Order Fulfillment Panel gives you full control over a single order from the moment it arrives to the moment it's completed. It's designed for fast, confident action with minimal taps.
@@ -12,20 +16,48 @@ The Order Fulfillment Panel gives you full control over a single order from the 
 
 At the top of the panel you'll see:
 - The **order number**
-- Current **status** (e.g., "Placed", "Preparing", "Ready for pickup")
+- Current **status**
 - Whether it is a **Pickup** or **Delivery** order
-- A subtle spinner if a **payment capture** is processing in the background
+- A **printer icon** in the top right — tap it for **Reprint ticket** or **Printer settings**
 
 ---
 
 ## Adjusting the Ready Time
 
-The large time display in the centre of the panel shows when the order needs to be ready.
+The **"Prepare by"** time display in the centre of the panel shows when the order needs to be ready.
 
 - Tap **− 5** to subtract 5 minutes from the ready time
 - Tap **+ 5** to add 5 minutes
 
 When you've changed the time, a **SAVE** button appears below. Tap it to confirm — the customer and any assigned driver will both receive a push notification with the updated time automatically.
+
+---
+
+## Customer Notes
+
+If a customer left special instructions (e.g., "no onions", "please double-bag", "allergy to nuts"), they appear in a highlighted card right below the ready-time display — before the item list, so you see it while you're still deciding what to prepare.
+
+---
+
+## Items That Need Weighing
+
+If the order includes anything sold by weight (produce, deli items, etc.), a banner reading **"N items need weighing"** appears above the item list. Tap it any time to open the scale entry sheet and key in the actual price from your scale for each item.
+
+<Warning>
+  **Weigh these before tapping "Ready for Pickup."** The price shown at checkout was only an estimate with a card hold — once you tap Ready for Pickup, the final charge is captured immediately using whatever price is on record at that moment. If you haven't weighed an item yet, the customer is charged the original estimate, and there's no way to correct it afterward without a separate refund.
+</Warning>
+
+---
+
+## Items Table
+
+A full breakdown of everything in the order: item name and quantity, selected options or customisations, and price per line item.
+
+**Tap any item row** to mark it out of stock. A confirmation sheet appears:
+
+> **Mark as out of stock?** The customer is notified right away and asked whether to drop the item or cancel the order.
+
+Choose **Keep it** to back out, or **Mark OOS** to confirm. The item shows a strikethrough and an "OOS" tag in the list, and this can't be undone from here — the customer decides whether to drop the item or cancel the whole order.
 
 ---
 
@@ -35,101 +67,98 @@ When you've changed the time, a **SAVE** button appears below. Tap it to confirm
 Shows the customer's first name and phone number so you can contact them if needed.
 
 ### Driver row (delivery orders only)
-Shows the name of the assigned driver and their estimated arrival time at your location. If no driver has been matched yet, a live search animation shows the system is actively looking for a nearby driver.
+
+- Before you accept the order: **"Accept order to initiate driver search."**
+- After accepting, before a driver is matched: a live search animation shows the system is actively looking.
+- Once a driver is assigned: their name appears, along with an arrival estimate once the order reaches Preparing or Ready for pickup.
+
+---
+
+## Action Button
+
+The main button at the bottom of the panel changes based on where the order is:
+
+| Situation | Button Shown |
+| --- | --- |
+| Order just arrived | **Accept Order** |
+| Accepted, not yet marked ready | **Ready for Pickup** |
+| Accepted, and the driver already arrived and collected before you marked it ready | **Driver Collected — Confirm** |
+| Marked ready, waiting on final handoff | **Order picked up** |
 
 <Note>
-  For delivery orders, the driver search begins automatically when you tap **Accept Order**. You don't need to do anything to initiate it.
+  **"Driver Collected — Confirm" isn't a bug** — a driver can occasionally reach and collect an order before you've tapped Ready for Pickup. The button relabels itself because asking you to confirm something that's already happened would look stuck otherwise. It does the same thing either way: captures payment (using the weighed total if applicable) and advances the order.
 </Note>
 
----
-
-## Customer Notes
-
-If a customer left special instructions (e.g., "no onions", "please double-bag", "allergy to nuts"), they appear in a **blue card** below the customer info row.
-
-Always check this before preparing the order.
-
----
-
-## Items Table
-
-A full breakdown of everything in the order, showing:
-- Item name and quantity (e.g., "2 × Sourdough Loaf")
-- Selected options or customisations (e.g., "...Extra seeds", "...No salt")
-- Price per line item
-
----
-
-## Action Buttons
-
-The main action button at the bottom of the panel changes based on the current order status:
-
-| Current Status | Button Shown |
-|---|---|
-| Placed | **Accept Order** |
-| Accepted / Preparing / Packaged / Ready | **Ready for Pickup** |
-| Ready for pickup | **Order Picked Up** |
-
 ### Accept Order
-Tapping this confirms you've received the order and will prepare it. For delivery orders, this simultaneously:
-- Creates a delivery request
-- Begins searching for an available driver
+Confirms you've received the order and will prepare it. For delivery orders, this simultaneously creates a delivery request and begins searching for an available driver. If you have a receipt printer connected, the ticket prints automatically at this point — see below.
 
-### Ready for Pickup
-Tapping this marks the order as prepared and ready to hand off. It also:
-- Notifies the customer (for pickup orders) that their order is ready
-- Notifies the assigned driver (for delivery orders) to come collect it
-- Starts an early payment capture in the background so handoff is instant
+### Ready for Pickup / Driver Collected — Confirm
 
-### Order Picked Up
-Tapping this completes the order and finalises payment. For pickup orders, it marks the order as **Completed**. For delivery orders, it marks the order as handed to the courier.
+Captures payment and marks the order prepared. If any items still need weighing, the scale entry sheet opens first and **blocks** until you've entered a price — the capture uses whatever is on record the moment you confirm, so weigh first.
 
-<Tip>
-  The system starts capturing payment when you tap **Ready for Pickup**. By the time you tap **Order Picked Up**, the payment is already processed — so there's no delay at the handoff moment.
-</Tip>
+### Order picked up
+
+Completes the order. For pickup orders, marks it **Completed**. For delivery orders, marks it as handed to the courier.
+
+---
+
+## Receipt Printing
+
+If you've connected a receipt printer, tickets print automatically the moment you tap **Accept Order** — you don't need to do anything else.
+
+**If no printer is connected**, a prompt appears instead:
+
+> **No printer connected** Connect a receipt printer and tickets print themselves when you accept an order.
+
+You can dismiss this and set it up later from the printer icon in the header, or connect one on the spot. Use the **printer icon → Reprint ticket** any time a ticket is lost, jammed, or never came out.
 
 ---
 
 ## Cancelling an order
 
-Tap the **Cancel** button (to the right of the main action button) to cancel the order.
+Tap **Cancel order** below the main action button. A confirmation dialog shows the refund amount before you confirm.
 
-A confirmation sheet will appear asking you to confirm. Once cancelled:
+Once cancelled:
 - The payment hold on the customer's card is **automatically released** — no charge is made
 - The customer receives a push notification
 - The order disappears from your active queue
 
 <Warning>
-  The Cancel button is hidden once a driver has already picked up the food. Cancelling after this point is not supported to protect the driver and customer.
+  **Cancel is hidden once a driver has already collected the food** (i.e. the order has reached "En route to drop-off"). Cancelling after that point isn't supported, to protect the driver and customer who are already mid-delivery.
 </Warning>
-
----
-
-## Payment capture errors
-
-If something goes wrong when capturing payment, a **red error banner** appears at the top of the panel explaining what failed.
-
-Tap **Retry** to attempt the capture again. Common causes of failure include temporary network issues or card problems — retrying usually resolves it. If the problem persists, contact support.
 
 ---
 
 ## Support button
 
-Tap the **headset icon** (bottom right of the action bar) to open a live support chat with the Local Pass team. This is pre-filled with your order details so support can help faster.
+Tap the **headset icon** next to the action button (visible once an order has been accepted) to open a live support chat with the Local Pass team, pre-filled with your order details so support can help faster.
 
 ---
 
-## Completed orders
+## Completed Orders
 
-When an order is fully completed, a **green overlay** appears on the panel showing:
-- A pulsing green checkmark
-- A delivery timeline animation (Kitchen → Driver → Customer)
-- A note confirming the customer has been notified
+When an order is fully completed, a green overlay appears:When an order is fully completed, a green overlay appears:
 
-Tap **Got it** to dismiss the overlay and move on to your next order.
+> **Nice work! Order is on its way 👍** The customer has been notified. This order is off your plate — the rest is on us.
 
----
+Below that, a delivery timeline shows the order's progress, and a note reminds you: _"Order removed from your queue. Find it any time in Order History."_ Tap **Got it** to dismiss and move on to your next order.
 
-## Cancelled orders
+## Cancelled Orders
 
-If an order is cancelled (by you or by the system), a **grey overlay** appears explaining that the payment hold has been released and no charge was made. Tap **Close** to return to your order list.
+If an order is cancelled, an overlay confirms:
+
+> **Order has been cancelled** This order has been cancelled and the payment hold released. No charge was made.
+
+Tap **Close** to return to your order list.
+
+> **Nice work! Order is on its way** The customer has been notified. This order is off your plate — the rest is on us.
+
+Below that, a delivery timeline shows the order's progress, and a note reminds you: "Order removed from your queue. Find it any time in Order History." Tap **Got it** to dismiss and move on to your next order.
+
+## Cancelled Orders
+
+If an order is cancelled, an overlay confirms:
+
+> **Order has been cancelled** This order has been cancelled and the payment hold released. No charge was made.
+
+Tap **Close** to return to your order list.
