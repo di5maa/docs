@@ -276,6 +276,13 @@
             ]
           },
           {
+            "tab": "Rides",
+            "pages": [
+              "drivers/rides/getting-started",
+              "drivers/rides/fare-bidding"
+            ]
+          },
+          {
             "tab": "Changelog",
             "versions": [
               {
