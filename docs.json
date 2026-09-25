@@ -102,6 +102,9 @@
                   "merchants/create-account/onboarding"
                 ]
               },
+              "merchants/media-gallery",
+              "merchants/order-sheet",
+              "merchants/inbox",
               {
                 "group": "Payments",
                 "pages": [
@@ -132,6 +135,7 @@
               {
                 "group": "Menu - Restaurants",
                 "pages": [
+                  "merchants/digital-menu",
                   "merchants/restaurants/menu-management",
                   "restaurants/menu/add-new-item",
                   "merchants/restaurants/categories",
@@ -197,6 +201,7 @@
               {
                 "group": "Orders",
                 "pages": [
+                  "merchants/catering",
                   "order-history",
                   "order-details",
                   "order-details-restaurants"
@@ -205,9 +210,6 @@
               "agrifood-merchants/analytics",
               "restaurants/analytics-restaurants"
             ]
-          },
-          {
-            "tab": "Academy"
           }
         ]
       },
@@ -274,6 +276,12 @@
             ]
           },
           {
+            "tab": "Rides",
+            "pages": [
+              "drivers/rides/getting-started"
+            ]
+          },
+          {
             "tab": "Changelog",
             "versions": [
               {
@@ -302,5 +310,11 @@
     "color": {
       "light": "#ffffff"
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/restaurants/promotions/start-here",
+      "destination": "/restaurants/promotions-manager/start-here"
+    }
+  ]
 }

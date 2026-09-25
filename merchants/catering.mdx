@@ -1,0 +1,67 @@
+---
+title: "Catering"
+description: "Take catering orders with guest counts, dietary notes, and either Pay Now or invoiced Pay Later billing."
+---
+
+Catering is a separate order type from your regular menu or storefront orders — available to both restaurants and agrifood/store vendors. It's built for larger, planned orders: a guest count, dietary notes, an event date, and (unlike every other order type on Local Pass) the option to invoice the customer instead of charging them immediately.
+
+<Info>
+  Catering orders don't appear on your regular live-orders board — they're managed entirely from this page, under **Orders → Catering**.
+</Info>
+
+## Two tabs: Orders and Menu
+
+### Orders
+
+A table of every catering order, split into **Upcoming** and **Past** (by event date — orders with no date set are always shown as upcoming rather than hidden). Each row shows the order number, customer, event date, guest count, total, and payment status. Tap through to the normal order detail page for the full breakdown.
+
+### Menu
+
+A quick toggle list of every product, grouped by category, with a switch to add or remove it from your catering menu. Only items you turn on here are offered to customers placing a catering order — turning an item on doesn't change anything about how it behaves on your regular menu.
+
+## Pay Now vs. Pay Later — this changes what you need to do
+
+A customer chooses one of two payment paths when they place a catering order:
+
+- **Pay Now** — charged immediately, like any other order. Nothing further to collect.
+- **Pay Later (invoiced)** — you don't charge them anything at order time. Instead, Local Pass automatically emails and texts them a Stripe invoice, due **within 48 hours**, with a "Pay invoice" button and a PDF. The confirmation email tells them plainly: _"Please pay your invoice within 48 hours to hold your date."_
+
+<Warning>
+  **If a Pay Later invoice goes unpaid past its due date, the order is automatically cancelled and your reserved event date is released.** This isn't a reminder nudge — it's a real cancellation, the same as if you'd cancelled it yourself. If a customer says they still want the date, they'll need to place a new order.
+</Warning>
+
+## Payment status, explained
+
+The status shown on each order is more specific than most other order types:
+
+| Status | What it means |
+| --- | --- |
+| **Paid** | Charged in full — Pay Now, or a Pay Later invoice that's been paid. |
+| **Invoice sent** | Pay Later — the invoice has gone out and is waiting on the customer. |
+| **Pay at pickup** | Pay Later, but the invoice hasn't gone out yet. |
+| **Authorized** | A charge has been authorized but not yet finalized. |
+| **Action required** | The customer's bank needs an extra verification step before the payment can go through — they've been emailed and texted a link to complete it. |
+| **Payment failed** | The customer's payment attempt didn't go through — they've been notified and can retry from the same invoice link. |
+| **Overdue** | The invoice passed its due date unpaid. **The order has already been cancelled and the date released** — see the warning above. |
+| **Voided** | The invoice was voided and is no longer payable. |
+| **Invoice error** | Something went wrong generating the invoice — contact support. |
+
+## Resending an invoice
+
+You can resend a Pay Later invoice from the order detail page. It reuses the exact same invoice — same amount, same items, same customer — it just re-sends the payment email.
+
+<Note>
+  Resending only works while the order is in **Invoice sent**, **Payment failed**, or **Action required** status. You can't resend a **Paid**, **Voided**, or **Overdue** invoice — an overdue one is already cancelled, and resending it would wrongly suggest the booking is still live.
+</Note>
+
+## Group discounts
+
+From the **Menu** tab, you can turn on a group discount for larger catering orders — off by default. Set a minimum guest count and a percentage off (e.g. "5+ guests, 10% off"), and customers who meet that minimum see the discount applied automatically. It shows as its own line — "Group discount (N+ guests)" — on both the customer's invoice and your own order summary.
+
+## What you're paid
+
+Catering carries its own commission rate — a flat **5%**, lower than the standard rate other order types use — deducted from the order subtotal (after any group discount) before GST/PST on that commission. Your payout amount is included in the notification email and SMS you get for every new catering order, and the funds transfer automatically once the customer's payment clears.
+
+## Notifications
+
+Every new catering order emails and texts you the full details — customer contact info, event date, guest count, dietary notes and allergies, itemized order, and your payout amount — with a link straight to the order in your dashboard. The customer gets their own confirmation, with dietary/allergy notes echoed back so both sides have the same record.

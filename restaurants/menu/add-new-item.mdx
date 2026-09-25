@@ -15,11 +15,6 @@ When you open the product editor (Add or Edit mode), start by configuring the co
 
 - **Name:** The display name of the item as it appears to customers. Use clear, capitalized names (e.g., "Double Cheeseburger").
 - **Description:** A detailed explanation of the dish, ingredients, and potential allergens.
-
-  <Tip>
-    **Use AI for Speed**\
-    Click the **"Ask Kyla to generate description"** button (Sparkles icon) next to the description field. Our AI will analyze your product name and generate a mouth-watering description automatically.
-  </Tip>
 - **Preparation Time:** An approximate time (in minutes) it takes to prepare this specific item. This helps calculate accurate delivery/pickup estimates.
 
 ### Pricing Strategies
@@ -33,7 +28,7 @@ Manage how your product is priced and displayed.
    - Show the item as "On Sale."
 
      <Info>
-       \*\*Note, \*\*promotion price is a separate value from a standalone **Promotion** that you run at the store level.
+       Promotion price is a separate value from a standalone **Promotion** that you run at the store level — see [Start here](/restaurants/promotions-manager/start-here).
      </Info>
 
 ## Media & Gallery
@@ -41,21 +36,64 @@ Manage how your product is priced and displayed.
 Visuals are the #1 driver for menu conversion. You can manage your product imagery directly from this form.
 
 - **Upload Photo:** Upload a new image directly from your device.
-- **Gallery:** Select from images you have previously uploaded to your media library.
+- **Gallery:** Select from images you have previously uploaded to your media library — see [Media Gallery](/merchants/media-gallery).
 
 <Warning>
   **File Requirements:** The system supports **JPEG** and **JPG** formats. Ensure your images are high-quality and centered, as they may be cropped for different device sizes.
 </Warning>
 
-## Product Visibility & Flags
+## Item Flags
 
-Toggle specific attributes to change how the product is displayed or recommended in the app.
+Four independent toggles that change how the item is treated elsewhere in the app — none of them affect the item's core listing, they just add it to a specific surface or behavior.
 
-| Setting                | Function                                                    | Impact on App                                                                                 |
-| :--------------------- | :---------------------------------------------------------- | :-------------------------------------------------------------------------------------------- |
-| **Featured item**      | Highlights the product.                                     | Adds a "Featured" badge to the card and may place it in a special carousel on your menu page. |
-| **Cross-selling item** | Suggests the product at checkout.                           | Prompts the user to add this item (e.g., drinks, sides) right before they pay.                |
-| Soon-to-go             | Discounts product that is nearing its <br />expiration date | Adds a "Soon-to-go" badge to the product and sets discount price you selected.                |
+| Flag | What it does |
+| :-- | :-- |
+| **Featured item** | Adds a highlighted badge to this item on your menu. |
+| **Cross-sell item** | Suggests this item to customers at checkout — typically drinks, sides, or add-ons someone might want alongside what's already in their cart. |
+| **Soon-to-go** | Marks the item down to move stock fast — opens a quick percent-off calculator (10/20/30/50%) rather than making you type a new price by hand. See [Start here](/restaurants/promotions-manager/start-here) for how this relates to your other promotion tools. |
+| **Catering menu** | Makes this item available on your [catering page](/merchants/catering). |
+
+<Tip>
+  **Catering menu can be toggled from two places, and they stay in sync.** You can turn it on here, or from the Menu tab on your Catering page itself — whichever is more convenient in the moment. Either way flips the same switch.
+</Tip>
+
+## Dietary Labels and Allergens
+
+Two more sections live right below Item Flags, and both matter specifically **because they're shown to customers on your catering page**, not just your regular menu — someone booking catering for a group is far more likely to be checking dietary fit for multiple people than someone ordering one meal for themselves.
+
+- **Dietary Labels** — select from a standard list (Gluten-Free, Vegan, Vegetarian, Local, Dairy-Free, Nut-Free, and more) describing what the dish **is suitable for**.
+- **Allergens** — toggle **Contains Allergens** on, then add free-text tags for what the dish **contains** (e.g. `nuts`, `dairy`, `gluten`, `shellfish`).
+
+<Warning>
+  These two sections describe opposite things and it's easy to set one without meaning to touch the other — a "Nut-Free" dietary label and a "Contains nuts" allergen tag can both technically be set on the same item if you're not paying attention. Double check both before publishing.
+</Warning>
+
+## Item Badges
+
+Separate from Dietary Labels, Item Badges are **handling and content warnings** — practical, at-a-glance information about how the item should be treated, not what diet it fits. They show as chips directly on the item in the customer app.
+
+| Badge | What it signals |
+| :-- | :-- |
+| **Contains dairy** | Milk, cream, butter, cheese |
+| **Heat sensitive** | Can spoil in warm weather |
+| **Keep refrigerated** | Refrigerate on arrival |
+| **Keep frozen** | Must stay frozen |
+| **Best same day** | Quality drops after today |
+| **Fragile** | Handle with care in transit |
+| **Contains nuts** | Peanuts or tree nuts |
+| **Contains eggs** | — |
+| **Contains gluten** | — |
+| **Contains shellfish** | — |
+| **Contains alcohol** | ID may be required |
+| **Raw / undercooked** | Raw or lightly cooked ingredients |
+| **Spicy** | — |
+| **Made fresh daily** | — |
+
+<Tip>
+  **Why this matters beyond the customer app:** several of these badges are really instructions for whoever handles the order after you — "Keep frozen" and "Heat sensitive" tell a driver how to transport it, "Fragile" tells them how to carry it, and "Best same day" sets expectations if a delivery is delayed. Tag honestly rather than sparingly; an accurate badge is what prevents a spoiled or crushed item from becoming a refund.
+</Tip>
+
+Don't see the badge you need? Type your own — it's added as a plain-text chip rather than one of the curated icons, but it still shows on the item.
 
 ## Menu Options & Modifiers
 
@@ -66,16 +104,16 @@ If your product has variations (like sizes) or add-ons (like toppings), use the 
     Click the **"This item has options"** button (or the **\+** icon) to create a container for your choices.
   </Step>
   <Step stepNumber={2} title="Configure Logic">
-    Define how the customer interacts with this group: \\
+    Define how the customer interacts with this group:
 
-    - **Name:** e.g., "Select Size", "Choice of Sauce". \\
-    - **Required:** Toggle **ON** if a choice is mandatory (e.g., Size). Toggle **OFF** for optional add-ons. \\
+    - **Name:** e.g., "Select Size", "Choice of Sauce".
+    - **Required:** Toggle **ON** if a choice is mandatory (e.g., Size). Toggle **OFF** for optional add-ons.
     - **Multiple Selection:** Toggle **ON** to allow selecting more than one option (e.g., "Add Extra Toppings"). Toggle **OFF** for single-choice lists (e.g., "Cook Style").
   </Step>
   <Step stepNumber={3} title="Add Choices">
-    Add specific items to the group: \\
+    Add specific items to the group:
 
-    - **Name:** "Small", "Medium", "Large". \\
+    - **Name:** "Small", "Medium", "Large".
     - **Price:** Enter the _additional cost_ for this choice. Enter `0.00` if it's free.
   </Step>
 </Steps>
@@ -101,3 +139,4 @@ In the top right corner of the editor, you will see a status badge:
 - **Draft:** The item is being created.
 - **Published:** The item is live.
 - **Out-of-stock:** The item is currently unavailable to customers. (To change this, use the main inventory toggle on the menu list page).
+- **Archived:** The item is removed from your active menu but kept in your history. Use the bulk actions on Menu Management to archive or restore items.

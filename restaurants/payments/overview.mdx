@@ -8,23 +8,23 @@ title: "Overview"
 
 ## How it works
 
-Local Pass uses a **wallet-based settlement model**. Revenue accumulates in a vendor's merchant wallet as orders are completed. Funds are then transferred to the vendor's connected Stripe Express account — either automatically every Monday or manually on demand.
+Local Pass uses a **wallet-based settlement model**. Revenue accumulates in a vendor's merchant wallet as orders are completed. Funds are then transferred to the vendor's connected Stripe Express account automatically every night — that's the only way money moves.
+
+<Note>
+  **There's no manual cash-out, anywhere.** Not in the mobile app, not on the web dashboard. Every vendor is paid out on the same nightly schedule, with no way to trigger a transfer early. The mobile app's "Cash Out" and "Access Wallet" buttons just open the web Wallet page in your browser — that page shows your balance and history, but has no cash-out button either.
+</Note>
 
 <CardGroup cols={2}>
-  <Card title="Stripe Onboarding" icon="stripe" href="/payments/stripe-onboarding">
+  <Card title="Stripe Onboarding" icon="stripe" href="/payments/onboarding">
     Connect a new or existing Stripe Express account to receive payouts.
   </Card>
 
-  <Card title="Wallet Structure" icon="wallet" href="/payments/wallet-structure">
-    Understand every field in the merchant wallet and how earnings are calculated.
-  </Card>
-
   <Card title="Automated Payouts" icon="clock" href="/payments/automated-payouts">
-    Weekly cloud-function schedule, processing logic, and audit logs.
+    Nightly cloud-function schedule, processing logic, and minimum threshold.
   </Card>
 
-  <Card title="Manual Payouts" icon="hand-holding-dollar" href="/payments/manual-payouts">
-    Cash Out and Instant Payout — vendor-initiated transfers.
+  <Card title="Payouts & the Wallet page" icon="wallet" href="/payments/manual-payouts">
+    What the Wallet page shows — balance, breakdown, transfer/payout history, and why there's no cash-out button.
   </Card>
 
   <Card title="Delivery Modes" icon="truck" href="/payments/delivery-modes">
@@ -34,23 +34,11 @@ Local Pass uses a **wallet-based settlement model**. Revenue accumulates in a ve
 
 ---
 
-## Payout methods at a glance
-
-|  | Auto Weekly | Manual Cash Out | Instant Payout |
-| --- | --- | --- | --- |
-| **Trigger** | Every Monday 3 AM PT | Vendor taps "Cash Out" | Vendor taps "Instant Payout" |
-| **Fee** | None | None | \$1.00 CAD |
-| **Arrival** | 2–7 business days | 2–7 business days | Within minutes |
-| **Minimum** | \$5.00 CAD | Wallet \> \$0 | Wallet \> \$0 |
-| **Eligibility** | All active vendors | All vendors | `Debit card must be connected to your Stripe account` |
-
----
-
 ## Prerequisites checklist
 
 <Steps>
   <Step title="Connect Stripe Express">
-    Complete onboarding at **Dashboard → Payments → Stripe Setup**. See [Stripe Onboarding](/payments/stripe-onboarding).
+    Complete onboarding at **Dashboard → Payments → Stripe Setup**. See [Stripe Onboarding](/payments/onboarding).
   </Step>
   <Step title="Stripe verification approved">
     Stripe reviews the submitted identity and banking details. This can take a few minutes to a few business days.
@@ -59,6 +47,6 @@ Local Pass uses a **wallet-based settlement model**. Revenue accumulates in a ve
     Products cannot be published without a connected Stripe account. The wallet will not accumulate a balance until orders are placed.
   </Step>
   <Step title="Receive your first payout">
-    Once orders complete, your wallet balance builds. The next Monday at 3 AM PT, the automated run will process the transfer — or you can cash out manually at any time.
+    Once orders complete, your wallet balance builds. That night at 3 AM PT, the automated run processes the transfer to your Stripe account — there's no way to speed this up manually.
   </Step>
 </Steps>

@@ -16,7 +16,7 @@ There are up to three types of milestones:
 
 | Milestone | Icon | What it means |
 | --- | --- | --- |
-| Small Order Fee threshold | Receipt | Add more to waive the small order fee |
+| Small Order Fee / Minimum Order threshold | Receipt or bag | Add more to waive the fee, or to meet the minimum to check out |
 | Free Delivery | Truck | Add more to unlock free delivery |
 | Mystery Box | Gift | Add more to unlock a surprise bonus item |
 
@@ -24,13 +24,16 @@ As you add items to your cart, the progress bar fills in real time.
 
 ---
 
-## The Small Order Fee Threshold
+## The Small Order Fee — and Minimum Order Required
 
-Some vendors set a minimum cart value for orders. If your subtotal is below this amount, a **small order fee** is added to your service fee at checkout.
+Some vendors set a minimum cart value. What happens below it depends on the kind of order:
 
-This fee exists because processing a very small order has a baseline cost regardless of order size — payment processing, packaging, and handling all apply equally 5 order as they do to 50 orders. Rather than building this into product prices, vendors use a small order threshold so that customers with larger orders aren't penalized.
+- **Restaurant order, delivered by a Local Pass driver:** a **small order fee** is added to your service fee at checkout if you're below the threshold.
+- **Local Market (shop) orders, or a restaurant delivering with its own drivers:** there's no fee — instead you'll see a plain **Minimum Order Required**, and you simply need to reach it before you can check out.
 
-**The good news:** You can always avoid it by adding a bit more to your cart.
+The fee version exists because processing a very small order has a baseline cost regardless of order size — payment processing, packaging, and handling apply about equally to a small order as to a large one. Rather than building this into product prices, vendors use a small order threshold so customers with larger orders aren't penalized.
+
+**The good news:** You can always clear either version by adding a bit more to your cart.
 
 The Goal Tracker will show you exactly how much more you need:
 
@@ -39,10 +42,6 @@ The Goal Tracker will show you exactly how much more you need:
 Once you pass the threshold, the milestone turns green and the label changes to:
 
 > _"Small order fee waived"_
-
-<Info>
-  The small order fee threshold only applies to marketplace and restaurant orders where the vendor uses the Local Pass platform for delivery. It is not applied to pickup orders or shipping orders.
-</Info>
 
 ---
 
@@ -58,18 +57,17 @@ Once reached, your delivery fee at checkout will show as **Free**.
   If a vendor offers free delivery and you're close to the threshold, it's often worth adding one more item — the delivery savings will likely exceed the item's cost.
 </Tip>
 
+<Note>
+  This node only appears at all when delivery is actually available for that vendor — if you're set up for pickup only, or the vendor doesn't deliver, you won't see it.
+</Note>
+
 ---
 
 ## Mystery Box
 
-The Mystery Box is a special reward offered by select vendors on Local Pass. When your cart reaches the Mystery Box threshold, a surprise bonus item is automatically added to your order — at no extra charge.
+The Mystery Box is a special reward offered by select vendors on Local Pass. When your cart reaches the Mystery Box threshold, a surprise bonus item is automatically added to your order — at no extra charge. Some vendors give it their own name in place of "Mystery Box."
 
-What's inside? That's up to the vendor. It could be:
-
-- A complimentary product sample
-- A bonus portion of something you already ordered
-- A seasonal or promotional item
-- A vendor-exclusive surprise
+What's inside is entirely up to the vendor — Local Pass doesn't set or describe the contents. If you have dietary restrictions or allergies, contact the vendor directly before placing your order rather than relying on the surprise.
 
 The Goal Tracker will show the milestone as:
 
@@ -85,17 +83,17 @@ Once you hit the threshold, the gift icon turns purple and the tracker confirms 
 
 ## How All Three Work Together
 
-If a vendor has set all three goals, the tracker shows all three milestones on a single progress bar. As your cart value increases, each milestone lights up in order.
+If a vendor has set multiple goals, the tracker shows all of them on a single progress bar, and the text above the bar always points you toward the _nearest_ one you haven't reached yet.
 
 Here's an example:
 
 | Cart Value | What's unlocked |
 | --- | --- |
-| $0 – $ 14.99 | Small order fee applies, nothing unlocked |
+| \$0 – \$14.99 | Small order fee applies, nothing unlocked |
 | \$15.00 | Small order fee waived ✅ |
-| $15.00 – $ 34.99 | Working toward free delivery and Mystery Box |
+| \$15.00 – \$34.99 | Working toward free delivery and Mystery Box |
 | \$35.00 | Free delivery unlocked ✅ |
-| $35.00 – $ 49.99 | Working toward Mystery Box |
+| \$35.00 – \$49.99 | Working toward Mystery Box |
 | \$50.00 | Mystery Box unlocked 🎁 |
 
 When all goals are met, the tracker shows:
@@ -112,7 +110,7 @@ When all goals are met, the tracker shows:
   </Accordion>
 
   <Accordion title="What happens if I remove items from my cart after unlocking a goal?">
-    If your cart value drops below a threshold, the milestone becomes unmet again. At checkout, the small order fee will reapply if you're below the threshold. The Mystery Box item will be removed from your order if your cart drops below that threshold.
+    If your cart value drops below a threshold, the milestone becomes unmet again. At checkout, the small order fee (or minimum order requirement) will reapply if you're below the threshold. The Mystery Box item will be removed from your order if your cart drops below that threshold.
   </Accordion>
 
   <Accordion title="Is the small order fee the same at every vendor?">
