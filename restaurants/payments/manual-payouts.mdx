@@ -3,13 +3,13 @@ title: "Payouts & the Wallet page"
 ---
 
 <Note>
-  **There is no manual cash-out or instant payout.** Every vendor's wallet balance is paid out automatically every night — see [Automated Payouts](/payments/automated-payouts). There is no "Cash Out" or "Instant Payout" button anywhere, in the app or on the web. This page describes what the Wallet page actually shows, and why the buttons in the mobile app just open it in a browser.
+  **There is no manual cash-out or instant payout.** Every vendor's wallet balance is paid out automatically every night — see [Automated Payouts](/restaurants/payments/automated-payouts). There is no "Cash Out" or "Instant Payout" button anywhere, in the app or on the web. This page describes what the Wallet page actually shows, and why the buttons in the mobile app just open it in a browser.
 </Note>
 
 ## Where to find it
 
 - **Web dashboard:** Settings → Payments → Wallet.
-- **Mobile app (Local Pass Business):** Payments → **Access Wallet** or **Cash Out**. Both buttons open the same web Wallet page in your device's browser — the mobile app has no payments screen of its own; it hands off to the web dashboard for everything past the Stripe connection banner.
+- **Mobile app (Local Pass Business):** Payments → **Access Wallet** or **Cash Out**. Both buttons open the same web Wallet page in your device's browser — the mobile app has no payments screen of its own; it hands off to the web dashboard for everything past the payment setup banner.
 
 ---
 
@@ -35,7 +35,7 @@ The top card shows **net earnings + taxes** and the **platform fee**, updated li
 A panel explains the nightly schedule and shows a live countdown to the next payout (e.g. "tomorrow at 3:00 AM PST, in about 7 hours"). Two warnings can appear here:
 
 - If your balance is below the **\$5.00 CAD** minimum, a note explains it will roll over into the next payout that clears it.
-- If your Stripe account isn't verified yet, a warning explains payouts are on hold, with a link back to finish verification.
+- If your payment account isn't verified yet, a warning explains payouts are on hold, with a link back to finish verification.
 
 ### Payment breakdown
 
@@ -54,14 +54,14 @@ A line-item view of the current balance:
 
 ### Payout balance
 
-A separate card shows the balance sitting at Stripe itself — **Available** (ready to reach your bank) and **Pending** (still settling) — with a refresh button. This is money already released from your Local Pass wallet; it's on its way to your bank account on Stripe's own schedule.
+A separate card shows the balance sitting with your payment account — **Available** (ready to reach your bank) and **Pending** (still settling) — with a refresh button. This is money already released from your Local Pass wallet; it's on its way to your bank account on the payment processor's own schedule.
 
 ### Transfers, Payouts, Summary, and Statements
 
 Four tabs below the balance:
 
-- **Transfers** — money moved from your Local Pass wallet to your Stripe account (the nightly runs).
-- **Payouts** — money moved from Stripe to your bank, with a status badge (Paid, Pending, In transit, Canceled, Failed) and an "Instant" tag if Stripe itself expedited that particular bank deposit.
+- **Transfers** — money moved from your Local Pass wallet to your payment account (the nightly runs).
+- **Payouts** — money moved from your payment account to your bank, with a status badge (Paid, Pending, In transit, Canceled, Failed) and an "Instant" tag if that particular bank deposit was expedited.
 - **Summary** — Received / Paid out / Retained totals over the last 7 days, this month, or this year.
 - **Statements** — downloadable statements, described on their own page.
 
@@ -75,4 +75,4 @@ The **Help** button in the top right shows the current payout policy text (kept 
 
 ## Failure modes
 
-If a nightly transfer or a subsequent Stripe payout to the bank fails, nothing is lost — the balance simply isn't cleared and is retried on the next scheduled run. There's no vendor action to take beyond making sure Stripe verification stays complete. If a balance seems stuck for more than a couple of days, contact support at [vendors@imlocal.ca](mailto:vendors@imlocal.ca).
+If a nightly transfer or a subsequent payout to the bank fails, nothing is lost — the balance simply isn't cleared and is retried on the next scheduled run. There's no vendor action to take beyond making sure your payment account verification stays complete. If a balance seems stuck for more than a couple of days, contact support at [vendors@imlocal.ca](mailto:vendors@imlocal.ca).

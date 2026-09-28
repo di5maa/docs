@@ -3,31 +3,31 @@ title: "Overview"
 ---
 
 <Note>
-  Before any payouts can be processed, a vendor must connect a **Stripe Express account**. Vendors without one will see a warning banner across their Inventory and Payments screens.
+  Before any payouts can be processed, a vendor must connect a **payment account** (powered by Stripe). Vendors without one will see a warning banner across their Inventory and Payments screens.
 </Note>
 
 ## How it works
 
-Local Pass uses a **wallet-based settlement model**. Revenue accumulates in a vendor's merchant wallet as orders are completed. Funds are then transferred to the vendor's connected Stripe Express account automatically every night — that's the only way money moves.
+Local Pass uses a **wallet-based settlement model**. Revenue accumulates in a vendor's merchant wallet as orders are completed. Funds are then transferred to the vendor's connected payment account automatically every night — that's the only way money moves.
 
 <Note>
   **There's no manual cash-out, anywhere.** Not in the mobile app, not on the web dashboard. Every vendor is paid out on the same nightly schedule, with no way to trigger a transfer early. The mobile app's "Cash Out" and "Access Wallet" buttons just open the web Wallet page in your browser — that page shows your balance and history, but has no cash-out button either.
 </Note>
 
 <CardGroup cols={2}>
-  <Card title="Stripe Onboarding" icon="stripe" href="/payments/onboarding">
-    Connect a new or existing Stripe Express account to receive payouts.
+  <Card title="Payment Setup" icon="credit-card" href="/restaurants/payments/onboarding">
+    Connect a new or existing payment account to receive payouts.
   </Card>
 
-  <Card title="Automated Payouts" icon="clock" href="/payments/automated-payouts">
-    Nightly cloud-function schedule, processing logic, and minimum threshold.
+  <Card title="Automated Payouts" icon="clock" href="/restaurants/payments/automated-payouts">
+    Nightly payout schedule and minimum threshold.
   </Card>
 
-  <Card title="Payouts & the Wallet page" icon="wallet" href="/payments/manual-payouts">
+  <Card title="Payouts & the Wallet page" icon="wallet" href="/restaurants/payments/manual-payouts">
     What the Wallet page shows — balance, breakdown, transfer/payout history, and why there's no cash-out button.
   </Card>
 
-  <Card title="Delivery Modes" icon="truck" href="/payments/delivery-modes">
+  <Card title="Delivery Modes" icon="truck" href="/restaurants/payments/delivery-modes">
     How Local Pass Delivery, Pickup, and Vendor Delivery affect fees.
   </Card>
 </CardGroup>
@@ -37,16 +37,16 @@ Local Pass uses a **wallet-based settlement model**. Revenue accumulates in a ve
 ## Prerequisites checklist
 
 <Steps>
-  <Step title="Connect Stripe Express">
-    Complete onboarding at **Dashboard → Payments → Stripe Setup**. See [Stripe Onboarding](/payments/onboarding).
+  <Step title="Connect your payment account">
+    Complete onboarding at **Dashboard → Payments → Payment Setup**. See [Payment Setup](/restaurants/payments/onboarding).
   </Step>
-  <Step title="Stripe verification approved">
-    Stripe reviews the submitted identity and banking details. This can take a few minutes to a few business days.
+  <Step title="Verification approved">
+    Identity and banking details are reviewed. This can take a few minutes to a few business days.
   </Step>
   <Step title="Publish at least one product">
-    Products cannot be published without a connected Stripe account. The wallet will not accumulate a balance until orders are placed.
+    Products cannot be published without a connected payment account. The wallet will not accumulate a balance until orders are placed.
   </Step>
   <Step title="Receive your first payout">
-    Once orders complete, your wallet balance builds. That night at 3 AM PT, the automated run processes the transfer to your Stripe account — there's no way to speed this up manually.
+    Once orders complete, your wallet balance builds. That night at 3 AM PT, the automated run processes the transfer to your payment account — there's no way to speed this up manually.
   </Step>
 </Steps>
