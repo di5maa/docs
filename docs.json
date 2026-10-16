@@ -93,6 +93,7 @@
             "pages": [
               "restaurants/start-here",
               "restaurants/dashboard",
+              "merchants/whats-new",
               {
                 "group": "Create account",
                 "pages": [
