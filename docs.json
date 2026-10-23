@@ -79,7 +79,14 @@
               "product-page",
               "merchant-store",
               "shopping-cart",
-              "merchant-chat"
+              "merchant-chat",
+              {
+                "group": "Farm boxes",
+                "pages": [
+                  "customers/farm-boxes/subscribe",
+                  "customers/farm-boxes/manage"
+                ]
+              }
             ]
           }
         ]
@@ -114,6 +121,18 @@
                   "merchants/producers",
                   "merchants/producer-page",
                   "merchants/paying-producers"
+                ]
+              },
+              {
+                "group": "Farm boxes",
+                "pages": [
+                  "merchants/farm-boxes/overview",
+                  "merchants/farm-boxes/set-up-a-box",
+                  "merchants/farm-boxes/the-week",
+                  "merchants/farm-boxes/members",
+                  "merchants/farm-boxes/import-customers",
+                  "merchants/farm-boxes/website-widget",
+                  "merchants/farm-boxes/payouts"
                 ]
               },
               {
