@@ -107,6 +107,13 @@
               "merchants/order-sheet",
               "merchants/inbox",
               {
+                "group": "Producers",
+                "pages": [
+                  "merchants/producers",
+                  "merchants/producer-page"
+                ]
+              },
+              {
                 "group": "Payments",
                 "pages": [
                   "restaurants/payments/overview",
