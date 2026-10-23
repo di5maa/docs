@@ -93,12 +93,14 @@
             "pages": [
               "restaurants/start-here",
               "restaurants/dashboard",
+              "merchants/search",
               "merchants/whats-new",
               {
                 "group": "Create account",
                 "pages": [
                   "merchants/create-account/sign-in",
                   "merchants/create-account/sign-up",
+                  "merchants/create-account/verification",
                   "merchants/create-account/account-set-up",
                   "merchants/create-account/onboarding"
                 ]
@@ -110,7 +112,8 @@
                 "group": "Producers",
                 "pages": [
                   "merchants/producers",
-                  "merchants/producer-page"
+                  "merchants/producer-page",
+                  "merchants/paying-producers"
                 ]
               },
               {
@@ -121,7 +124,8 @@
                   "restaurants/payments/Add-Payment-Method",
                   "restaurants/payments/automated-payouts",
                   "restaurants/payments/manual-payouts",
-                  "restaurants/payments/delivery-modes"
+                  "restaurants/payments/delivery-modes",
+                  "merchants/accounting-export"
                 ]
               },
               {
@@ -160,7 +164,8 @@
                   "bulk-upload",
                   "product-fields",
                   "best-practices",
-                  "product-options"
+                  "product-options",
+                  "merchants/food-labels"
                 ]
               },
               "restaurants/soon-to-go-labels",
@@ -198,6 +203,7 @@
                       "restaurants/order-fulfillment/getting-started-1",
                       "restaurants/order-fulfillment/managing-orders",
                       "restaurants/order-fulfillment/delivery-settings",
+                      "merchants/delivery-routes",
                       "restaurants/order-fulfillment/pickup-settings",
                       "restaurants/order-fulfillment/shipping-settings",
                       "restaurants/order-fulfillment/picking-orders",

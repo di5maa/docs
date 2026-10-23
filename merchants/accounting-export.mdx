@@ -1,0 +1,73 @@
+---
+title: "Export for your accountant"
+description: "Download one journal entry per Local Pass payout, ready to import into QuickBooks Online or Xero, or as a plain CSV."
+---
+
+Each payout Local Pass sends you is made of several parts: your sales, the GST your customers paid, our commission and the tax on it, card and refund fees, and your promotions. Your bank only sees one deposit. **Export for your accountant** splits each payout into those parts, as one journal entry per payout, so your books match.
+
+<Note>
+We're not accountants. Ask your accountant which accounts to use and how to file your GST.
+</Note>
+
+## Find it
+
+1. Go to **Settings → Payments** and press **Access Wallet**.
+2. Open the **Statements** tab.
+3. Press **Export for your accountant**.
+
+## Make an export
+
+1. Under **Payouts made**, pick the dates: **This week**, **Last week**, **This month**, **Last month**, **This quarter**, **Year to date** or **Custom range**.
+2. Under **For**, pick **QuickBooks Online**, **Xero** or **Other (CSV)**.
+3. The first time, open **Your account names, date format** (for Xero, **Your account codes, date format and tax rate**) and check them. See below.
+4. Press **Prepare export**. You see how many payouts it holds, what was sent to you, and the total for each account.
+5. Press **Download for QuickBooks Online** (or Xero, or Other).
+
+If you've recorded [payments to producers](/merchants/paying-producers) in those dates, tick **Include payments to producers** to add them too.
+
+## Your accounts
+
+Use the names exactly as they are in your chart of accounts (Parent:Sub for a sub-account). For Xero, use your account codes. Your accountant can tell you which to use. Press **Save these** to keep them for next time. Only the store's owner can save them.
+
+| Account | What goes there |
+| --- | --- |
+| **Payouts go to** | A clearing account (asset). Match each bank deposit to it as a transfer. QuickBooks users can name their bank account instead. |
+| **Sales** | Income. Sales after refunds. |
+| **GST collected** | Liability. GST your customers paid on your sales. |
+| **Local Pass commission** | Expense. |
+| **GST on the commission** | Input tax credit you can claim back. |
+| **PST on the commission** | Not recoverable, so it usually sits with the fees. |
+| **Card and refund fees** | Expense. |
+| **Driver subsidy** | Expense. |
+| **Your promotions** | Contra-income or expense. |
+| **Differences** | Only used when a payout doesn't add up to the cent. Ask Local Pass about any amount here. |
+| **Paid to producers** | Cost of goods: what you pay farms and makers. |
+| **Producers paid from** | The account the e-Transfers and cheques come out of. |
+
+Also set the **Date format** to match your software's company settings. For Xero, the **Xero tax rate** should be a no-tax rate: the GST is already on its own lines.
+
+## Import it
+
+<Tabs>
+  <Tab title="QuickBooks Online">
+    1. In QuickBooks: **Settings ⚙ → Import data → Journal entries**, and pick the file.
+    2. Pick the same date format when it asks. Turn account numbers off while you import, and add any account you don't have yet.
+    3. When the payout reaches your bank, categorize the deposit as a transfer from your **Payouts go to** account, so it nets to zero.
+  </Tab>
+  <Tab title="Xero">
+    1. In Xero: **Accounting → Manual journals → Import**, and pick the file.
+    2. Use your Xero account codes. Xero doesn't take bank accounts in a manual journal, so keep **Payouts go to** as a clearing account.
+    3. When the payout reaches your bank, reconcile it as a transfer from that clearing account.
+  </Tab>
+  <Tab title="Other (CSV)">
+    One row per line: date, account, debit, credit, and the Local Pass transfer it belongs to. Each entry balances. Hand it to your bookkeeper, or map the columns in your software's journal import.
+  </Tab>
+</Tabs>
+
+## Good to know
+
+- **Order sheets paid to you directly** aren't in these payouts. Record those deposits as you normally would.
+- If a payout doesn't add up to the cent, the difference goes on a **Differences** line so the entry still balances, and the export tells you. Ask us about it.
+- If your dates hold more rows than one export can read, you're told. Pick shorter dates so no payout is left out.
+
+See [Payments overview](/restaurants/payments/overview) for how payouts work.
