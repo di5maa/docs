@@ -113,7 +113,14 @@
                 ]
               },
               "merchants/media-gallery",
-              "merchants/order-sheet",
+              {
+                "group": "Wholesale",
+                "pages": [
+                  "merchants/order-sheet",
+                  "merchants/wholesale-customers",
+                  "merchants/pack-list"
+                ]
+              },
               "merchants/inbox",
               {
                 "group": "Producers",
@@ -232,9 +239,18 @@
                 ]
               },
               {
-                "group": "Orders",
+                "group": "Catering",
                 "pages": [
                   "merchants/catering",
+                  "merchants/catering-menu",
+                  "merchants/catering-settings",
+                  "merchants/catering-orders",
+                  "merchants/catering-calendar"
+                ]
+              },
+              {
+                "group": "Orders",
+                "pages": [
                   "order-history",
                   "order-details",
                   "order-details-restaurants"
