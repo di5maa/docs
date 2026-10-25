@@ -16,7 +16,7 @@ The button reads **Resume packing** once something is ticked, and **Open packing
 
 Any filters you set on the Pack list tab carry into packing mode. The top of the screen then says what's shown, for example "Only: Deliveries".
 
-To leave, tap the **×** at the top left. Your progress is already saved, so you can pick up where you stopped.
+To leave, tap the **×** at the top left. Your progress is already saved, so you can pick up where you stopped. If your last change didn't save, it asks before you leave.
 
 ## Pick the day (wholesale)
 
@@ -62,7 +62,7 @@ When every order is packed, tap **Check amounts**.
 
 | Flag | When |
 | --- | --- |
-| **Nothing packed** | Marked missing (0). |
+| **Missing — removed from the invoice when you confirm** (wholesale) or **Nothing packed. It doesn't change what they pay.** (pre-orders) | Marked missing (0). |
 | **Short by _n_** / **Over by _n_** | A counted item isn't the amount ordered. |
 | **_n_% from the order** | A weighed item is more than 10% off. |
 | **No weight entered** | A weighed item with no weight. |
@@ -82,6 +82,7 @@ The sheet opens when you tap the scale, or the first time you tap a weighed line
 - **Same as ordered** fills in the ordered amount.
 - A line under the number shows the difference, for example "0.4 under (8%)". It turns amber when a weight is more than 10% off.
 - **Mark missing** saves 0. **Clear amount** goes back to "as ordered". **Save** ticks the line.
+- The line under the keypad says what the amount does. Wholesale: "Fills in the invoice for you to check before sending." Pre-orders: "For your packing record. It doesn't change what the customer pays. Final weights go in their details."
 
 Weighed units include lb, kg, g and oz.
 
@@ -102,13 +103,13 @@ Ticks, amounts and checks save as you go, and show on every phone or tablet you 
 
 The business portal's pack lists keep their own ticks in the browser. They don't share ticks with the app.
 
-## Wholesale: packed weights on the invoice
+## Wholesale: packed amounts on the invoice
 
-When you send the invoice for a wholesale order from the app, the weights you packed are filled in for items sold by weight. You see "Weights from packing are filled in. Check them, change any that are wrong, then send." Each of those lines says **From packing (ordered _n_)**.
+When you send the invoice for a wholesale order from the app, what you packed is filled in: weights, short counts and missing items. You see "Amounts from packing are filled in. Check them, change any that are wrong, then send." Each line says **From packing (ordered _n_)**. A line you marked missing says "Missing — removed from the invoice when you confirm" and comes in as 0.
 
 - The lines stay editable. Change any that are wrong.
 - A line you marked missing comes in as 0, and 0 removes a line from the invoice. Change it if you're still sending that item.
-- Weights aren't filled in once you've changed a line yourself, or when the same account has two orders that day with the same product.
+- Amounts aren't filled in once you've changed a line yourself, or when the same account has two orders that day with the same product.
 - Nothing is sent until you press **Send invoice** and confirm.
 
 See [Wholesale customers](/merchants/wholesale-customers) for how invoices work.
