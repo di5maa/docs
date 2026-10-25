@@ -121,6 +121,10 @@
                   "merchants/pack-list"
                 ]
               },
+              {
+                "group": "Pre-orders",
+                "pages": []
+              },
               "merchants/inbox",
               {
                 "group": "Producers",
