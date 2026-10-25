@@ -118,9 +118,21 @@
                 "pages": [
                   "merchants/order-sheet",
                   "merchants/wholesale-customers",
-                  "merchants/pack-list"
+                  "merchants/pack-list",
+                  "merchants/packing-mode"
                 ]
               },
+              {
+                "group": "Pre-orders",
+                "pages": [
+                  "merchants/pre-orders/overview",
+                  "merchants/pre-orders/products",
+                  "merchants/pre-orders/customers-and-payments",
+                  "merchants/pre-orders/dates-and-packing",
+                  "merchants/pre-orders/settings"
+                ]
+              },
+              "merchants/customers",
               "merchants/inbox",
               {
                 "group": "Producers",
