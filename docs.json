@@ -118,7 +118,8 @@
                 "pages": [
                   "merchants/order-sheet",
                   "merchants/wholesale-customers",
-                  "merchants/pack-list"
+                  "merchants/pack-list",
+                  "merchants/packing-mode"
                 ]
               },
               {
