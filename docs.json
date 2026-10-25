@@ -125,7 +125,10 @@
                 "group": "Pre-orders",
                 "pages": [
                   "merchants/pre-orders/overview",
-                  "merchants/pre-orders/products"
+                  "merchants/pre-orders/products",
+                  "merchants/pre-orders/customers-and-payments",
+                  "merchants/pre-orders/dates-and-packing",
+                  "merchants/pre-orders/settings"
                 ]
               },
               "merchants/inbox",

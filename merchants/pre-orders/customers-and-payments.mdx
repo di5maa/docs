@@ -1,0 +1,109 @@
+---
+title: "Customers and payments"
+description: "See every pre-order and its payment. Remind or release unpaid reservations, send final bills by weight, mark orders picked up, refund and cancel."
+---
+
+The **Customers** tab of a pre-order lists every order. Each one shows the customer (with **Account** or **Guest**), the items, the total and anything owing, the payment, the place (pickup location or delivery zone) and the date.
+
+Pre-order orders also show in **Orders**, marked **Pre-order**, with **Manage in Pre-orders**. They never ring as new orders to accept. Everything you do with them happens here.
+
+## How customers pay
+
+You choose this in [Pre-order settings](/merchants/pre-orders/settings#payment):
+
+- **Pay now**: card at checkout. The order is secured at once.
+- **Reserve and pay later**: the customer reserves, and we email them an invoice. Their stock is held until they pay or you release it.
+
+Customers pay in full, or a deposit first and the rest later.
+
+### Payment states
+
+| State | What it means |
+| --- | --- |
+| **Not paid yet** | Reserved. The first invoice is open and not due yet. |
+| **Payment overdue** | The first invoice is past due. |
+| **Paid** | Paid in full. |
+| **Deposit paid** | The deposit is in. No bill for the rest yet. |
+| **Balance owing** | The bill for the rest was sent. |
+| **Balance overdue** | That bill is past due. |
+| **Picked up** / **Delivered** | Handed over. |
+| **Released** | Never paid, and you let the stock go. |
+| **Cancelled** / **Refunded** | Cancelled, or refunded. |
+
+## Find orders
+
+Use **Everyone** and **Unpaid**, the search (name, email, phone or order), and the filters for pickup or delivery, place, payment and date (**Has a date** or **No date yet**).
+
+On a tablet or computer, an order opens in a panel beside the list. On a phone, it opens as a sheet.
+
+## Unpaid reservations
+
+An unpaid order shows **Not paid yet** or **Payment overdue**, with when it's due. "The stock stays held for them until they pay or you release it." The payment system sends its own reminders.
+
+- **Remind** emails the customer their invoice again, and texts them a reminder with the link. A reminder isn't sent again within an hour of the last one, or after 10 reminders, so the count you see may be higher than what was sent.
+- **Release** cancels the invoice and puts the stock back on sale.
+
+When an invoice is overdue, the customer gets a text saying their order may be released. Nothing is released on its own: you decide.
+
+**What the customer gets when you release:** an email, "Your pre-order _n_ wasn't paid, so it was let go". It says nothing was charged, and that they can reply if they still want it.
+
+## Hand over
+
+For a pickup order that's paid in full, press **Picked up** ("Marked as picked up."). The customer isn't emailed.
+
+## Do several at once
+
+Tick orders, then use the bar at the bottom:
+
+| Button | What it does |
+| --- | --- |
+| **Remind** | Emails these customers their invoice again. |
+| **Release** | Cancels their invoices and puts the stock back on sale. |
+| **Picked up** | Pickup orders that are paid in full only. |
+| **Send balance bills** | Orders with the deposit paid: emails the bill for the rest, at the quantities they ordered. Enter final weights first if they changed. |
+
+## Final weights
+
+For items sold by weight, enter what you actually weighed in the order's **Final weights**. The order must be paid (in full or the deposit) and not handed over yet.
+
+- **Deposit orders:** press **Send the final bill**. "We bill the rest of the order at these weights." A weight more than 3 times what was ordered is refused.
+- **Paid in full:** they paid for what they ordered. If you weighed less, press **Save and refund the difference** and they get the difference back. We never charge more. If nothing changes the price, use **Save weights**.
+
+The box shows the items as ordered and about what they come to at your weights, before tax.
+
+**What the customer gets:**
+
+- A final bill: an email, "Your final bill from _your store_", with the deposit they paid, the rest and the due date, and a **Pay the rest** button. Also a text with the link.
+- A refund for lighter weights: an email, "We've refunded \$_n_ on your pre-order". It can take 5 to 10 business days to show up.
+
+Setting a date also sends the balance bill to deposit orders. See [Dates, pack list and packing](/merchants/pre-orders/dates-and-packing).
+
+## Cancel and refund one order
+
+On a paid order, press **Cancel and refund**. Choose how much to refund, up to what they paid (a partial refund is fine), then **Cancel order**.
+
+The customer gets the full refund amount from your payment account balance. Local Pass's fee and the card fee aren't returned.
+
+**What the customer gets:** an email, "Your pre-order _n_ was cancelled", with the amount refunded (it can take 5 to 10 business days to show up), or "No refund was made."
+
+To cancel every order at once, cancel the whole pre-order. See [Pre-orders](/merchants/pre-orders/overview#close-duplicate-or-cancel).
+
+## Disputes
+
+If a customer's bank opens a dispute, the order says so. Answer it in your Stripe account before the deadline.
+
+## Export and report
+
+- **Download CSV** gives every order with the customer's name, email and phone, items, place, date, payment, total, paid, owing and refunded. It holds customers' contact details: keep it safe.
+- **Report** shows totals **By item**, **By place** and **By day ordered**, for orders that weren't cancelled, refunded or released. It can be downloaded as a CSV too.
+
+## What the customer gets when they order
+
+- **Reserve and pay later:** an email, "Pay to hold your pre-order from _your store_", with the amount, the due date and a pay button, plus a text with the link. They don't need a Local Pass account.
+- **After paying:** a receipt, "Paid: your pre-order from _your store_" (or "Deposit paid").
+
+Replies to these emails come to you.
+
+## What you get when someone orders
+
+You can get an email and a text for each new order. Choose in [Pre-order settings](/merchants/pre-orders/settings#notifications).
