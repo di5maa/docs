@@ -132,6 +132,7 @@
                   "merchants/pre-orders/settings"
                 ]
               },
+              "merchants/customers",
               "merchants/inbox",
               {
                 "group": "Producers",

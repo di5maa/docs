@@ -3,34 +3,86 @@ title: "Pack list"
 description: "What to pick and pack for a wholesale pickup or delivery day, with a packing slip for each customer."
 ---
 
-The pack list adds up your wholesale orders for one day, so you know what to pick and how to pack each customer's order. Open **Wholesale → Pack list**, or **Pack list** on the **Order sheets** page.
+The pack list adds up your wholesale orders for one day, so you know what to pick and how to pack each customer's order.
+
+- **Portal:** open **Wholesale → Pack list**, or **Pack list** on the **Order sheets** page.
+- **App:** tap **Order sheets** in the menu, then the **Pack list** tab. The app also has [Packing mode](/merchants/packing-mode), a full-screen way to pack.
+
+For pre-orders, each pre-order has its own pack list. See [Dates, pack list and packing](/merchants/pre-orders/dates-and-packing).
 
 ## Pick a day
 
-The strip at the top shows today, then the next days with orders. **Other day** picks any date, including past ones. One line says what the day holds.
+The strip at the top shows **Today**, then the next days with orders. It opens on the soonest day with orders. **Other day** picks any date, including past ones. In the app, use the arrows, or tap the date to open a calendar that marks the days with orders to pack.
 
-The list counts orders you've confirmed and requests still waiting for you, so you can plan. It says how many are "not confirmed yet". Cancelled and declined orders are left out.
+One line says what the day holds, for example "4 orders · 4 accounts · 4 deliveries · 320 lb".
+
+The list counts orders you've confirmed and requests still waiting for you, so you can plan. It says how many are "not confirmed yet". Orders you entered yourself never count as waiting. Cancelled, declined and refunded orders are left out.
+
+If the day has a planned route, a **Route planned** link opens [Delivery routes](/merchants/delivery-routes).
+
+## Filter
+
+Narrow the day to what you're packing now:
+
+- Search an account or a product. An account that matches keeps all its lines; otherwise only the matching products are kept.
+- **All**, **Deliveries** or **Pickups**.
+- A van (or **Not on a route**), when the day has planned routes.
+- A type of business, for example **Restaurants** or **Grocers and markets**, when the day has more than one.
+- **Hide packed**: leave out accounts that are fully packed.
+
+The pick list adds up again for the accounts shown. A line says "Showing _n_ of _total_ accounts" with **Clear filters**. Filters aren't saved: they reset next time. In the app, these are in the **Filters** sheet.
 
 ## Pick list
 
-The day's totals by product, in each order's own units, coldest first:
+The day's totals by product, in each order's own units. It counts "_n_ of _total_ picked", and each group shows how many are done.
 
-| Group | Tip on the list |
-| --- | --- |
-| Frozen | Pick last, straight into the freezer box |
-| Cold | Keep in the cooler until it goes |
-| Fresh | Spoils quickly: keep out of the sun |
-| Room temperature | |
+**Group by** decides how the lines are grouped:
+
+- **Storage** (the default), coldest first:
+  | Group | Tip on the list |
+  | --- | --- |
+  | Frozen | Pick last, straight into the freezer box |
+  | Cold | Keep in the cooler until it goes |
+  | Fresh | Spoils quickly: keep out of the sun |
+  | Room temperature |  |
+- **Category**: your product categories, A to Z.
+- **Your groups**: groups you make for where things are picked, like "Walk-in cooler" or "Greenhouse".
+
+Your **Group by** choice is remembered on this device. In the app, it's in **Filters**, under **Group the pick list by**.
+
+Tick each line as it comes off the shelf. **Clear ticks** clears the lines shown.
+
+### Make your own groups
+
+In the portal, choose **Your groups**, then **Make groups** (or **Edit groups**):
+
+1. Add a group, or start from a suggestion: Walk-in cooler, Freezer, Greenhouse, Dry store, Field.
+2. Put it in order with the arrows. The pick list follows this order.
+3. Under **Products**, choose a group for each product. **Not in a group only** shows what's left.
+4. Press **Save groups**.
+
+You can have up to 30 groups. Groups are saved for your store, so everyone who packs sees them.
 
 ## By account
 
-Each customer's order, with its items, PO number and pickup or delivery.
+Each customer's order, with its items, order number, PO number and pickup or delivery. The business name opens their customer profile.
 
-- **Deliveries** run in the order the van gets there when the day has a planned route (**Route planned**). Otherwise they're by name. [Plan a route](/merchants/delivery-routes) to sort them by stop.
+- **Deliveries** run in the order the van gets there when the day has a planned route. Each card shows the van and stop. Otherwise they're by name. [Plan a route](/merchants/delivery-routes) to sort them by stop.
 - **Pickups** come last.
 
-Tick items as you pack them. The list counts "packed" as you go. Ticks stay in this browser only.
+An order that isn't confirmed yet says so: "Confirm it before packing, in case it changes."
+
+Tick items as you pack them. A card counts "_n_ of _total_ packed" and shows **Packed** when it's done.
+
+### Where your ticks are kept
+
+- **Portal:** on this device only, for 14 days. Pick-list ticks and account ticks are separate.
+- **App:** shared with every device you pack on in the app.
+
+The portal and the app don't share ticks.
 
 ## Print
 
-**Print** prints the pick list, then one packing slip per customer per page. Each slip has the order number, the PO number, a **Packed** column, and lines for **Received by (name and signature)** and **Date and time**. A slip for an order that isn't confirmed yet says "Not confirmed yet: check before it goes."
+In the portal, press **Print pick list and slips**. When a filter is on, it reads **Print what's shown** and prints only those accounts. In the app, tap **Print or PDF**, then **Print** or **Share PDF**.
+
+You get the pick list (grouped the way you chose), then one packing slip per customer per page. Each slip has the order number, the PO number, the van and stop if it's on a route, a tick box for each item, and lines for **Received by (name and signature)** and **Date and time**. A slip for an order that isn't confirmed yet says "Not confirmed yet: check before it goes."
