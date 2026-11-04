@@ -126,6 +126,7 @@
                 "group": "Pre-orders",
                 "pages": [
                   "merchants/pre-orders/overview",
+                  "merchants/pre-orders/shared-buys",
                   "merchants/pre-orders/products",
                   "merchants/pre-orders/customers-and-payments",
                   "merchants/pre-orders/dates-and-packing",
