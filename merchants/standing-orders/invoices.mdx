@@ -1,0 +1,170 @@
+---
+title: "Invoices"
+description: "One invoice per billing period for each standing order: check and send it, follow payment, record cheques and e-transfers, fix mistakes, add credits and export for your accountant."
+---
+
+A standing order isn't paid delivery by delivery. Everything delivered in a billing period goes on **one invoice**: every week, every 2 weeks or every month, whichever you chose for that customer. The customer pays it online by card or bank, due on your terms (7, 15 or 30 days after it's sent).
+
+<Note>
+Standing-order invoices are being switched on. Until they are, your deliveries are made and recorded as usual, but no invoice is made or sent for them yet.
+</Note>
+
+## When an invoice is made
+
+The periods run like this:
+
+| Billing | One invoice for |
+|---|---|
+| **Every week** | Monday to Sunday |
+| **Every 2 weeks** | Two Monday-to-Sunday weeks |
+| **Every month** | The calendar month |
+
+The invoice is made at **8 am the morning after the period ends**. A November invoice is made on December 1.
+
+It has a line for each delivery in the period, with what actually went out (after any [adjustments](/merchants/standing-orders/deliveries#after-a-delivery-is-made)), and a line for each delivery charge. GST is 5% on the products you ticked for GST. Deliveries that didn't go out are left off. Credits come off as minus lines (see [Credits](#credits-on-the-next-invoice)).
+
+## Check first, or send automatically
+
+How invoices go out is your choice, under **How invoices go out** in [Settings](/merchants/standing-orders/settings). Each standing order uses that default unless you pick **Let me check each invoice first** or **Send it automatically** for it when you edit its billing.
+
+- **Let me check each invoice first** (the default): "We prepare the invoice when the period ends. It goes out when you press Send." You get an email when it's ready, for example "Café Sora's November invoice is ready to check", and a reminder 2 and 5 days after the period ends if it's still waiting.
+- **Send them for me**: "We tell you a day before, then send it." You get an email saying it "goes out tomorrow at 8 am", and it's sent at 8 am the next day. Until then it reads **Goes out** with the time, and you can still check it and send it sooner.
+
+### Invoices that wait for you
+
+Even when invoices go out automatically, an invoice waits for you to check it if something looks wrong:
+
+- a delivery that isn't marked delivered yet;
+- a delivery that was cancelled in the app but not here ("Cancelled in the app. Mark it Didn't go out, or keep it on the invoice.");
+- a problem report you haven't settled yet;
+- more than 100 deliveries on one invoice.
+
+These invoices show "2 things to check" and a **Check** button instead of **Send**.
+
+## The Invoices tab
+
+Invoices are in two places: the **Invoices** tab on **Standing orders** (every customer, with a **Customer** column) and the **Invoices** tab on each standing order. The **Invoices to check** tile on **Standing orders** counts the ones waiting for you.
+
+Filter by **All**, **To check**, **Sent**, **Overdue** or **Paid**. Invoices to check come first. On **Standing orders**, type in **Search customers** to show only one customer's invoices.
+
+Each row shows the **Period**, the number of **Deliveries**, the **Total** the customer pays, the **Local Pass fee** (with its tax) and the status:
+
+| Status | Means |
+|---|---|
+| **To check** | Waiting for you to send it. |
+| **Goes out** … | Set to send automatically at that time. |
+| **Sending…**, **Voiding…**, **Recording the payment…** | You pressed **Send now**, **Void and fix** or **Record how they paid**. It's carried out within a few minutes. |
+| **Sent · due** … | Sent, and when it's due. |
+| **Overdue 3 days** | Past its due date. |
+| **Paid** … | Paid on its payment page, and when. |
+| **Paid by cheque**, **by e-transfer**, **in cash**, **outside Local Pass** | You recorded how they paid. |
+
+**PDF** opens a sent invoice as the customer sees it.
+
+## Check and send
+
+Press the period (or **Check**) to open the invoice. You see:
+
+- **Check before sending**, when something needs a look, with each problem listed. **Fix these in Deliveries** takes you to the standing order's deliveries, where you can adjust a delivery, mark it as not delivered, or settle a report. The invoice updates when you do.
+- Each delivery with its day, what went out and its amount.
+- Any **Credits**.
+- The totals: **Goods**, **GST**, **Delivery charges**, **Credits** and **They pay**.
+- The Local Pass fee and its tax, "from your payout. They don't see it."
+
+Press **Send now** (or **Send** on the row, then **Send now**). The invoice reads **Sending…** and goes out within a few minutes. If it can't be sent, the row says "Couldn't send it" and why.
+
+Once an invoice is sent, the same window has **Their payment page** (the page your customer pays on), **Record how they paid** and **Void and fix**.
+
+## What the customer gets
+
+The invoice is emailed to the customer's email address by Stripe, the payment service Local Pass uses. It shows:
+
+- **From**: your store's name, and your legal name if it's different.
+- **GST/HST no.**: if you've added it under **Settings → Store details → Invoices**.
+- **Bill to**: the customer's business and their PO number, if the standing order has one.
+- A line for each delivery, for example "Tue, Nov 4 delivery: 12 Turkey club, 8 Veggie wrap", a line for each delivery charge, one "GST (5%)" line, and any credits, for example "Credit for Tue, Nov 4: 4 sandwiches short".
+- At the foot: "Sold by" your store. "Local Pass collects this payment for them."
+
+From the email they open a payment page to pay by card or bank, or download the PDF. If the standing order has other addresses under **Also send invoices to**, each gets an email "Invoice from Daily Fresh: November 2026" with the amount, due date and PO number, and a **View and pay** button.
+
+On their own page, the **Invoices** tab lists each invoice with its status ("Due Mon, Dec 15", "Overdue 3 days", "Paid Wed, Dec 10"), a **Pay** button while it's unpaid, and **PDF**. They never see the Local Pass fee. See [The customer's page](/merchants/standing-orders/customer-page).
+
+## Reminders and overdue invoices
+
+The payment service reminds the customer about an unpaid invoice. A day after the due date, you get one email, for example "Café Sora's November invoice is 2 days overdue". The invoice shows **Overdue** in red, and the **Owed** tile on **Standing orders** shows how much is overdue.
+
+Deliveries carry on as usual. If they paid you another way, record it (below).
+
+## Record how they paid
+
+When a customer pays you directly, open the sent invoice and press **Record how they paid**. Choose **Cheque**, **E-transfer**, **Cash** or **Other**, add a **Note** such as "Cheque #1042", and press **Mark as paid**.
+
+- Their payment page closes, so they aren't asked to pay twice.
+- The invoice reads, for example, **Paid by cheque**.
+- The money went to you directly, so nothing is added to your balance. The Local Pass fee and its tax come out of your payout.
+
+## Void and fix
+
+To correct an invoice that's already sent and not paid, press **Void and fix**. "Their payment link stops working. The invoice comes back to you to check, so you can fix its deliveries and send it again."
+
+The invoice goes back to **To check**. Fix the deliveries, then send it again.
+
+Once an invoice is paid, it can't be voided. Correct it with a credit on the next invoice instead.
+
+## Credits on the next invoice
+
+A credit takes money off the customer's next invoice for a delivery they've already paid for: four sandwiches short, a damaged tray. You add one with **Add a credit** on the delivery, or **Credit next invoice** on a problem report. See [Deliveries](/merchants/standing-orders/deliveries#add-a-credit).
+
+- The credit goes on the next invoice made after you add it, as a minus line with your reason.
+- If it's more than that invoice, it waits for the one after. An invoice never goes below zero.
+- If the standing order ends before another invoice is made, the credit can't go on one. A note at the top of the standing order tells you how much is left over: settle it with the customer directly.
+
+## When the money reaches you
+
+When the customer pays on the payment page, the invoice reads **Paid** and the money goes to your Local Pass balance: the products, the GST and the delivery charges, less the Local Pass fee, its tax and the card or bank processing cost of that payment. It's paid out with your other sales.
+
+When you record a payment yourself (cheque, e-transfer, cash), you already have the money, so only the fee and its tax come out of your balance.
+
+## The Local Pass fee
+
+Local Pass keeps **2% of the products on each invoice, at most $25 for each 7 days the invoice covers, plus 12% tax on the fee** (5% GST and 7% PST).
+
+- The fee is on the products only, not on GST or delivery charges.
+- The cap is per 7 days: $25 on a weekly invoice, $50 every 2 weeks, and about $107 for a 30-day month ($110.71 for a 31-day month). A standing order that starts or ends partway through a period is capped for the days it covered.
+- Your customer never sees the fee. You see it on each invoice, in the **Local Pass fee** column and when you check it.
+- If your agreement with Local Pass sets a different rate or cap, that one applies.
+
+**Example: a weekly invoice.** A café gets five deliveries a week. Each is 40 sandwiches at $5.00 (no GST) and 10 juices at $4.00 (GST), plus a $10.00 delivery charge.
+
+| | Each delivery | The week (5 deliveries) |
+|---|---|---|
+| Products | $240.00 | $1,200.00 |
+| GST (5% on the juices) | $2.00 | $10.00 |
+| Delivery charge | $10.00 | $50.00 |
+| **The café pays** | **$252.00** | **$1,260.00** |
+
+The fee is 2% of $1,200.00 = **$24.00**, under the $25 cap for one week, plus $2.88 tax. When the café pays on the payment page, **$1,233.12** goes to your balance, less the processing cost of the payment.
+
+On a big month the cap matters: $8,000 of products in a 30-day month would be $160 at 2%, but the cap is $107.14, so the fee is $107.14 plus $12.86 tax.
+
+## Export for your accountant
+
+Press **Export** on either **Invoices** tab. On **Standing orders** it covers every customer; on a standing order, just that customer.
+
+1. Under **Invoices sent**, choose **From** and **To**. It starts on last month.
+2. Under **For**, choose the file:
+   - **Invoice list**: one row per invoice, with the customer, PO number, dates, how it was paid, and the amounts.
+   - **QuickBooks Online**: to import in QuickBooks under **Settings ⚙ → Import data → Invoices**. Pick the same date format, and choose "Exclusive" for tax. Turn on custom transaction numbers first so the invoice numbers stay as they are.
+   - **Xero**: to import in Xero under **Business → Invoices → Import**. Choose "Tax exclusive" when it asks.
+3. For QuickBooks, fill in **Tax code for items with GST** and **Tax code for items without GST** (they start as GST and Zero-rated). For Xero, fill in **Tax rate for items with GST**, **Tax rate for items without GST** and **Sales account code** (they start as GST on Sales, Zero Rated and 200). Use the names exactly as they are in your accounting software; your accountant can tell you which. Choose a **Date format**. These are remembered in this browser.
+4. Press **Download**.
+
+Only sent and paid invoices are included, up to 300 in one file (pick a shorter range for the rest).
+
+<Warning>
+Invoices paid on the payment page are also in **Payments → Export for your accountant**, as part of each payout. Import them from one place only, or your sales count twice. Invoices you marked paid by cheque, e-transfer or cash are only here. See [Export for your accountant](/merchants/accounting-export).
+</Warning>
+
+<Note>
+QuickBooks can't import a line below zero. If an invoice has a credit, the download tells you. Delete the credit's row from the file and add the credit to the invoice in QuickBooks by hand.
+</Note>

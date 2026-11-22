@@ -1,0 +1,183 @@
+---
+title: "Deliveries"
+description: "Run standing orders day to day: see what to make, change or skip a day, handle holidays and pauses, fix what was delivered and settle problem reports."
+---
+
+Once a standing order is started, its deliveries look after themselves. Each one is planned from the agreement, locked at its cut-off, and goes out on its day. This page covers what you do around that: seeing what to make, changing or skipping a day, closing for a holiday, fixing what actually went out, and answering a customer who says something was short.
+
+## The calendar
+
+Open **Wholesale → Standing orders** and pick the **Calendar** tab. It shows every standing order together.
+
+- Choose **Week** or **Month**. Use **‹** and **›** to move, and **Today** to come back.
+- Each day shows how many deliveries go out and where they stand: **Planned** (they can still change), **Final**, **Going out today**, **Went out**, or **Not made**. A day whose deliveries are all still planned has a dashed border. A B.C. holiday carries a small label with its name.
+- Press a day to open it below the calendar.
+
+### The day
+
+The day's heading shows **Today** or **Tomorrow** when it is, and then either "Planned until Mon, Nov 23, 2:00 pm" (changes are still possible until then) or **Final**.
+
+Each customer has a row with **What** they get, the **Amount** and a status:
+
+| Status | Means |
+|---|---|
+| **Planned** | Before the cut-off. **Planned · changed** if you or the customer changed that day. |
+| **Locked: being made** | Past the cut-off. It's going out. |
+| **Made**, **Delivered** | The delivery was made, or marked delivered. |
+| **On … invoice**, **Paid** | It's on an invoice, or the invoice is paid. |
+| **Didn't go out** | You marked it as not delivered. |
+| **Skipped by you** / **Skipped by the customer**, **Paused** | No delivery that day. These rows are struck through. |
+| **Waiting for them to accept** | The customer hasn't accepted the agreement yet, so nothing is made. |
+| **Not made** | The day passed without a delivery being made, so nothing was delivered or invoiced for it. Contact support if you see this. |
+
+Beside the list, **To make** adds up every product going out that day, most first. Press a customer's name to open their standing order.
+
+**Packing** (on today or a later day, once something is made for it) opens **Orders → Packing** for the day.
+
+### To make this week
+
+In the week view, **To make this week** sits under the day. It has one row per product, a column for each day and a **Total**, so you can plan a week of baking or picking at a glance. Planned days count the same way as made ones.
+
+Press **Print** to print the table on its own, on a landscape page.
+
+<Tip>
+After each cut-off you also get an email listing what's going out, for example "Standing orders for tomorrow, Tue, Nov 25: 6 deliveries". It names the customers, what each gets and its amount, which ones the customer changed, and which customers skipped. **See what to make** opens the calendar.
+</Tip>
+
+## How a delivery is made
+
+Every delivery day on a standing order goes through the same steps:
+
+1. **Planned.** Until the cut-off, you and the customer (if you let them) can change the quantities, add a note or skip it. The default cut-off is 2:00 pm the day before. You set it in [Settings](/merchants/standing-orders/settings).
+2. **Locked at the cut-off.** At the cut-off, the delivery is made as an order with that day's products and prices. From then on, the customer can't change it, and neither can **Change this day**. The customer's page says **Locked: being prepared**.
+3. **Delivered.** It goes out on its day. You mark it delivered as you would any order, or your driver does on their route.
+
+A few things to know:
+
+- If every quantity for a day is 0, nothing is made that day.
+- If the agreement needs the customer to accept it first and they haven't, nothing is made. The day reads **Waiting for them to accept**, and the customer's page says **Starts once you accept the agreement**.
+- The customer gets no email when a delivery is made.
+
+## Each standing order's own deliveries
+
+Open a standing order from the **Agreements** tab. Three of its tabs are about deliveries.
+
+- **Overview** shows **Next deliveries**: the next five delivery days and where each stands, for example "Planned · locks Mon, Nov 24, 2:00 pm" or "Skipped by them".
+- **Schedule** has a **Week** or **Month** calendar for this customer only, the day you pick underneath it, and your **Pauses**.
+- **Deliveries** has two lists. **Upcoming** shows the next 14 days, made or still planned, soonest first. **Past** shows deliveries before today, newest first; press **Show older** for more. Each row has a **⋯** menu with what you can still do to it.
+
+## Change or skip one day
+
+Before a day's cut-off, open it in **Schedule** (or use its **⋯** menu in **Deliveries**).
+
+- **Change this day** opens "Change Tue, Nov 25 only". The usual delivery stays as it is. Set that day's quantity for each product (it shows "Usually 10"), and add a **Note for this day** if you like. Press **Save**. If you changed the day earlier, **Back to the usual** undoes it.
+- **Skip** (or **Skip this day**) asks "Skip Tue, Nov 25?". There's no delivery that day; the rest of the schedule stays the same. A skipped day offers **Put it back**.
+
+You can only change days that are on the schedule. To deliver on an extra day, add a new standing order or take a regular order.
+
+**Tell the customer by email** is ticked in each of these dialogs. It's there when the standing order is active or paused and has an email address. With it ticked, the customer gets one email about that day, but only if the day really changed:
+
+- A skip: "No delivery on Thu, Dec 24". It says you skipped that delivery, their other deliveries stay the same, and they won't be invoiced for that day.
+- A change: "Your Thu, Dec 24 delivery from Daily Fresh changed", with that day's new quantities and your note.
+- Back to the usual: the same subject, saying the day is back to the usual delivery and what that is.
+
+Each email comes in your store's name and ends "Questions? Reply to this email to reach Daily Fresh", so replies come to you. On the customer's page, the day reads **Changed by Daily Fresh** or **Skipped by Daily Fresh** (with your store's name).
+
+<Note>
+If the customer changed or skipped a day themselves, you see **Planned · changed** or **Skipped by the customer** on the calendar, and "changed by them" in the email you get after the cut-off.
+</Note>
+
+## Close for a day
+
+To skip one day for every customer, for example when you're closed, open the day on the **Calendar**, press **⋯** and choose **Skip this day for every standing order**. **Tell each customer by email** is ticked. Press **Skip the day**.
+
+Each customer told gets "No delivery on Thu, Dec 24", saying your store is closed that day, that their other deliveries stay the same, and that they won't be invoiced for it.
+
+You see how many customers were skipped. A delivery that's already locked can't be skipped this way; the message names it. If it really didn't go out, use **Didn't go out** on it (see below).
+
+## Holidays
+
+B.C. statutory holidays have a label with their name on every calendar, on the **Deliveries** tab and on the customer's page.
+
+When a holiday in the next two weeks still has standing deliveries planned, a blue banner at the top of **Standing orders** says so, for example "Victoria Day, Mon May 18: 3 standing deliveries."
+
+- **Skip all** asks once. Leave **Tell each customer by email** ticked to send them the "No delivery" email, then press **Skip 3 deliveries**.
+- **Keep** leaves the deliveries as they are.
+
+Either way, the banner goes away for that holiday. **Keep** doesn't put back skips you made earlier; put those back on each standing order. If you haven't decided a week before the holiday, you also get an email listing the customers with a delivery that day.
+
+## Pauses
+
+A pause stops deliveries for a stretch of days, such as "Closed for the holidays".
+
+On a standing order's **Schedule** tab, find **Pauses** and press **Add pause**. Choose the **First day** and **Last day**, add a reason under **Why** if you like, and press **Add pause**. The first day can't be one that's already locked. **Remove** takes a pause away, and deliveries go out on those days as usual.
+
+If you let customers pause, they can add their own with **Skip several days** on their page. Theirs show in your list as **Set by them**. On the customer's page, yours show as, for example, "No deliveries Thu, Dec 24 to Fri, Jan 2 · set by Daily Fresh".
+
+## Pause, resume or end a standing order
+
+These are at the top of a standing order's page.
+
+- **Pause** stops the whole standing order: "No new deliveries are made until you resume it. Deliveries already locked still go out." The customer's page says "Deliveries are paused. Call Daily Fresh to start them again." Press **Resume** to carry on.
+- **End…** is in the **⋯** menu. Choose **End now**, or **End after a date** and pick the **Last delivery day**. Deliveries already locked still go out and are invoiced. The customer's page shows "Last delivery on or before" that date, and once it has ended, "This standing order ended on" that date.
+- **Archive** appears in the **⋯** menu once a standing order has ended. It moves the standing order from **Ended** to **Archived** on the main page; nothing else changes. **Move back from archive** returns it to **Ended**.
+
+## The customer's link
+
+Your customer sees their deliveries, invoices and agreement on their own page. See [The customer's page](/merchants/standing-orders/customer-page).
+
+- **Send link** (at the top, before their link has been sent) emails them their page.
+- **Copy buyer link** in the **⋯** menu (or **Copy their link** on the **Agreement** card) copies it: "Their link is copied. Send it to them so they can see and change their deliveries."
+- **Send new link…** in the **⋯** menu makes a new link and emails it to them. Their old link stops working, and so does every device signed in with it. Use it if the link reached the wrong person.
+
+## After a delivery is made
+
+Once a delivery is made, its **⋯** menu in **Deliveries** has:
+
+- **Adjust what was delivered**: opens "What went out on Tue, Nov 25". Set what really went out for each product. "The invoice uses these quantities." To send something that wasn't planned, a substitute or an extra, search under **Add a product**, then set its price, quantity and **GST**. To swap, set the one that didn't go to 0 and add the one that did. You see **Goods now** as you go, and you can add a **Note**, such as "Out of turkey, sent ham".
+- **Didn't go out**: for a delivery that never left. Add a reason if you like and press **Mark as not delivered**. "It won't be on their invoice." If it did go out after all, choose **It went out after all**, then **Put it back**: it goes back on their next invoice as planned.
+- **Add a credit**: once the delivery is paid (see below).
+- **Open order** and **Print pick list**.
+
+You can adjust a delivery, or mark it as not delivered, until its invoice is sent. After that, fix it with a credit once it's paid, or void the invoice first. See [Invoices](/merchants/standing-orders/invoices#void-and-fix).
+
+The customer isn't emailed about these. Their **Past deliveries** show what went out, with a line such as "2 short, taken off your invoice" or "3 extra, added to your invoice", or **Didn't go out**.
+
+When the delivery is marked delivered, the row shows the time, for example "Delivered 7:42 am", and **Photo** when your driver took one. The customer sees the same, with **See the photo**.
+
+### Add a credit
+
+A credit takes money off the customer's **next** invoice, for a delivery they've already paid for. Choose **Add a credit**, enter the **Amount** and a **Reason** (it shows on their invoice), and press **Add credit**.
+
+- A delivery's credits can add up to at most what its products and GST cost. The delivery charge is never credited back.
+- If the standing order has ended and its last invoice is out, there's no next invoice, so the option isn't offered. Settle with the customer directly. A note at the top of the page reminds you if credits are left over.
+
+## Problem reports
+
+Your customer can report a problem from **Past deliveries** on their page, up to 7 days after a delivery: which product, **Short** or **Damaged**, how many, a note, and up to 3 photos. Your own driver can report one too when they mark a stop delivered in the app.
+
+When a customer reports something, you get an email such as "Café Sora reported 2 Turkey club damaged on Tue, Nov 25", with their note, the photos and a link to the standing order. The report also shows under its delivery on the **Deliveries** tab, marked **Open**, with who reported it, their note and their photos.
+
+Nothing happens until you decide. Choose one:
+
+- **Take off this delivery**: lowers that line on the delivery, for example "Turkey club: 8 → 6 on Tue, Nov 25". Their invoice uses the new quantity. Only before the delivery's invoice is sent.
+- **Credit next invoice**: once the delivery is paid. The amount and a reason are filled in for you, and you can change them (the amount up to what the delivery's products and GST cost). It comes off their next invoice.
+- **Dismiss**: say why. Only you see it.
+
+While a report is open, the invoice for that period waits for you to check it, even if your invoices go out automatically.
+
+On their page, the customer sees each report as **Reported**, **Taken off**, **Credited** or **Closed**. When you settle a report they made, they get an email "Your report about Turkey club on Tue, Nov 25" saying what you did: taken off, credited (with the amount), or looked at and closed. They never see your reason for dismissing it.
+
+## Activity
+
+The **Activity** tab is the standing order's history, newest first and grouped by day: when it was started or paused, each delivery made or skipped, changes to days, adjustments and credits, problem reports, and invoices sent and paid. Each line shows the time and who did it: **You** or **Customer**. Things Local Pass does on its own, such as making a delivery, show no name. Press **Show older** to go further back.
+
+## Where deliveries show up
+
+A made delivery is an order like any other wholesale order, so it appears:
+
+- in **Orders → Order fulfillment**, tagged **Standing order** with the customer's name. Filter by **Standing orders** to see only them.
+- in **Orders → Packing** and on the wholesale [Pack list](/merchants/pack-list), for its day.
+- in [Delivery routes](/merchants/delivery-routes) when you deliver it yourself, with the customer's receiving window.
+
+It never rings your tablet, and the customer isn't sent order emails for it.

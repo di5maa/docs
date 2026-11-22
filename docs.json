@@ -123,6 +123,18 @@
                 ]
               },
               {
+                "group": "Standing orders",
+                "pages": [
+                  "merchants/standing-orders/overview",
+                  "merchants/standing-orders/set-up",
+                  "merchants/standing-orders/agreement",
+                  "merchants/standing-orders/deliveries",
+                  "merchants/standing-orders/invoices",
+                  "merchants/standing-orders/customer-page",
+                  "merchants/standing-orders/settings"
+                ]
+              },
+              {
                 "group": "Pre-orders",
                 "pages": [
                   "merchants/pre-orders/overview",
