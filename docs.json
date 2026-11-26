@@ -86,7 +86,8 @@
                   "customers/farm-boxes/subscribe",
                   "customers/farm-boxes/manage"
                 ]
-              }
+              },
+              "customers/shared-buys"
             ]
           }
         ]
@@ -138,6 +139,9 @@
                 "group": "Pre-orders",
                 "pages": [
                   "merchants/pre-orders/overview",
+                  "merchants/pre-orders/shared-buys",
+                  "merchants/pre-orders/cut-sheets",
+                  "merchants/pre-orders/groups-and-promote",
                   "merchants/pre-orders/products",
                   "merchants/pre-orders/customers-and-payments",
                   "merchants/pre-orders/dates-and-packing",
